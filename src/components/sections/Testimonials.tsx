@@ -1,14 +1,57 @@
 import { useState } from 'react'
 
-// INSTRUÇÃO: Adicione aqui os comentários positivos do Google (máx 10)
-// Copie direto da página do Google e adicione à lista abaixo
+// Comentários positivos do Google - Rating 4.6 ⭐ (131 avaliações)
 const testimonials = [
   {
-    name: 'Nome do Cliente',
-    text: 'Adicione aqui o comentário positivo do Google',
+    name: 'Pedro Henrique',
+    text: 'Equipe Caluar com todo suporte nesse processo. Aulas teóricas explicadas com clareza e paciência. Aulas práticas com muita calma, paciência e comprometimento. Consegui tirar minha primeira habilitação de primeira. Só tenho a agradecer!',
     rating: 5,
   },
-  // Adicione mais comentários aqui (máximo 10)
+  {
+    name: 'Josilene Barreto',
+    text: 'Super recomendo! Ótima experiência durante todo esse processo. Os instrutores Ian e Washington são extremamente pacientes, atenciosos e didáticos. Me senti confiante e bem preparada para dirigir. Atendimento de qualidade e profissionalismo do início ao fim!',
+    rating: 5,
+  },
+  {
+    name: 'Daiane Mara',
+    text: 'Super indico a Auto Escola Caluar. Minha instrutora Luciana Pereira é nota 1000. Ensina com muita clareza e tem o coração gigante. Indicaria ela de olhos fechados. Ensina muito bem com amor e carinho pela profissão.',
+    rating: 5,
+  },
+  {
+    name: 'Cristiane Silva',
+    text: 'Gratidão a Equipe Caluar! Tirei minhas 2 habilitações pela Caluar e sempre vou indicar. Agradeço aos instrutores Alípio, Lucas e Luciana. Deus abençoe sempre a toda Equipe Caluar!',
+    rating: 5,
+  },
+  {
+    name: 'laah neves',
+    text: 'Sou imensamente grato à Autoescola Caluar por todo o suporte e profissionalismo. A equipe é extremamente atenciosa, os instrutores são pacientes e realmente se importam com o aprendizado dos alunos. Recomendo de olhos fechados!',
+    rating: 5,
+  },
+  {
+    name: 'Aline Raquel',
+    text: 'Imensa gratidão à equipe CALUAR. O processo foi conduzido com extrema competência, profissionalismo e organização. Agradecimento especial ao Alípio pelas aulas teóricas e ao Lucas pela paciência, dedicação e incentivos. Aprovada de primeira!',
+    rating: 5,
+  },
+  {
+    name: 'Maria Xavier',
+    text: 'Agradeço a todos os envolvidos, especialmente minha instrutora Luciana. Iniciei sem saber nada e graças a Deus consegui minha tão sonhada CNH. Não desistam, sejam persistentes. Obrigada Caluar!',
+    rating: 5,
+  },
+  {
+    name: 'Junior Silva',
+    text: 'Auto Escola Caluar está de parabéns! Ótima auto escola para tirar CNH, de confiança. Troquei de categoria nela com excelentes professores. Conquistei minha CNH D com professor Washington, passei de primeira na banca!',
+    rating: 5,
+  },
+  {
+    name: 'Carlos Gabriel',
+    text: 'Agradeço imensamente à escola e todos envolvidos, especialmente ao professor Ian, que foi um excelente profissional. Muito obrigado por acreditar no meu potencial e no resultado positivo do exame. Vocês são nota 10!',
+    rating: 5,
+  },
+  {
+    name: 'Alline Veloso',
+    text: 'Através da Caluar conquistei minhas categorias A, B e D. Sou muito grata a todos os profissionais que me incentivaram, principalmente ao instrutor Washington que nunca me deixou desanimar. Excelente auto escola, recomendo de olhos fechados!',
+    rating: 5,
+  },
 ]
 
 function StarRating({ rating }: { rating: number }) {
