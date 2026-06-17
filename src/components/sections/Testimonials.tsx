@@ -100,16 +100,22 @@ export default function Testimonials() {
               O que dizem nossos alunos
             </h2>
           </div>
-          {/* Google Score Card */}
-          <div className="flex items-center gap-5 bg-white border border-border rounded-lg p-5">
+          {/* Google Score Card - 4.6 com 1 estrela parcial */}
+          <div className="flex items-center gap-5 bg-white border border-border rounded-lg p-5 flex-shrink-0">
             <div className="text-4xl font-manrope font-800 text-primary leading-none">4.6</div>
             <div>
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-amber-400">
-                    {i < 4 ? '★' : '✩'}
-                  </span>
+              <div className="flex gap-0.5 items-center">
+                {/* 4 estrelas completas */}
+                {[...Array(4)].map((_, i) => (
+                  <span key={i} className="text-lg text-amber-400">★</span>
                 ))}
+                {/* 1 estrela parcial (60% preenchida) */}
+                <div className="relative inline-block w-5 h-5">
+                  <span className="text-lg text-gray-300 absolute">★</span>
+                  <div className="overflow-hidden" style={{ width: '60%' }}>
+                    <span className="text-lg text-amber-400">★</span>
+                  </div>
+                </div>
               </div>
               <div className="text-xs text-tx-muted font-300 mt-2">131 avaliações</div>
             </div>
