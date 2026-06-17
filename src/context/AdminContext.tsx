@@ -22,7 +22,7 @@ const DEFAULT_STATE: AdminState = {
     ctaLabel: 'Quero aproveitar',
     ctaLink: 'https://wa.me/5531988508599',
   },
-  numbers: [24, 5000, 46, 4],
+  numbers: [24, 46, 4],
   faq: [
     {
       question: 'Quais categorias de CNH a Caluar oferece?',

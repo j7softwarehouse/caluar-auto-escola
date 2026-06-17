@@ -88,10 +88,6 @@ export default function Hero() {
                     <div className="text-3xl font-manrope font-800 text-accent">4.6</div>
                     <div className="text-xs font-inter text-white/40 uppercase mt-1">Google</div>
                   </div>
-                  <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-white">5k+</div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Aprovados</div>
-                  </div>
                   <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
                     <div className="text-3xl font-manrope font-800 text-accent">100%</div>
                     <div className="text-xs font-inter text-white/40 uppercase mt-1">DETRAN</div>

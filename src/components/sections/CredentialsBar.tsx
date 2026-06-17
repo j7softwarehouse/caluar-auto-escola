@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { useAdmin } from '../../context/AdminContext'
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver'
 
-const labels = ['Anos de experiencia', 'Alunos formados', 'Nota no Google', 'Categorias']
-const suffixes = ['+', '+', '', '']
+const labels = ['Anos de experiencia', 'Nota no Google', 'Categorias']
+const suffixes = ['+', '', '']
 
 export default function CredentialsBar() {
   const { state } = useAdmin()
@@ -32,7 +32,7 @@ export default function CredentialsBar() {
           {state.numbers.map((_, idx) => (
             <div key={idx} className="text-center">
               <div className="text-4xl md:text-5xl font-manrope font-800 text-accent mb-2">
-                {idx === 2 ? `${((counts[idx] || 0) / 10).toFixed(1)}` : `${counts[idx] || 0}${suffixes[idx]}`}
+                {idx === 1 ? `${((counts[idx] || 0) / 10).toFixed(1)}` : `${counts[idx] || 0}${suffixes[idx]}`}
               </div>
               <p className="text-sm md:text-base text-white/80">{labels[idx]}</p>
             </div>

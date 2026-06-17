@@ -44,10 +44,6 @@ export default function About() {
                 <div className="text-2xl font-manrope font-800 text-primary leading-none">24+</div>
                 <div className="text-xs text-tx-muted uppercase tracking-wider font-300 mt-1">Anos de exp</div>
               </div>
-              <div className="bg-white border border-border rounded-lg px-4 py-3">
-                <div className="text-2xl font-manrope font-800 text-accent leading-none">5k+</div>
-                <div className="text-xs text-tx-muted uppercase tracking-wider font-300 mt-1">Aprovados</div>
-              </div>
             </div>
           </div>
         </div>
