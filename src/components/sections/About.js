@@ -1,0 +1,5 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+export default function About() {
+    return (_jsx("section", { id: "sobre", className: "py-20 bg-light", children: _jsxs("div", { className: "max-w-6xl mx-auto px-4", children: [_jsx("h2", { className: "text-4xl font-manrope font-700 mb-12", children: "Sobre a Caluar" }), _jsxs("div", { className: "grid md:grid-cols-2 gap-12 items-center", children: [_jsxs("div", { children: [_jsx("p", { className: "text-lg text-tx-muted mb-6", children: "Desde 2002, a Caluar tem transformado vidas atrav\u00E9s da forma\u00E7\u00E3o de condutores qualificados." }), _jsx("p", { className: "text-lg text-tx-muted", children: "Credenciada pelo DETRAN-MG, oferecemos todas as categorias com estrutura moderna e instrutores especializados." })] }), _jsx("img", { src: "/images/about.jpg", alt: "Caluar", className: "rounded-lg shadow-lg h-96 object-cover" })] })] }) }));
+}
+//# sourceMappingURL=About.js.map

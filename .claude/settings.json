@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\github\\\\j7\\\\Clientes\\\\caluar-auto-escola\" -Recurse -Depth 2 -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'chore: estrutura inicial do projeto Caluar Auto Escola *)",
+      "Bash(git commit *)",
+      "Bash(git merge *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(pkill -f \"node.*next\")",
+      "Bash(node /tmp/test-site.js)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(curl -s -o /dev/null -w \"Status: %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(npm list *)",
+      "Bash(node test-screenshot.js)",
+      "Bash(npx playwright *)",
+      "Bash(curl -s http://localhost:3003/)",
+      "Bash(pkill -f \"python -m http.server\")",
+      "PowerShell(Get-Process python -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
+      "Bash(curl -s http://localhost:3000/)",
+      "mcp__claude_ai_Linear__get_issue",
+      "Bash(curl -s http://localhost:3001/)",
+      "Bash(\n# Verificar se há .git em algum lugar\nfind C:/Users/User/github -name \".git\" -type d 2>/dev/null | head -5\n)",
+      "Read(//c/Users/User/github/**)"
+    ],
+    "additionalDirectories": [
+      "\\tmp",
+      "c:\\tmp"
+    ]
+  }
+}

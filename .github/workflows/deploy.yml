@@ -1,0 +1,69 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Determine environment
+        id: env
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "ENVIRONMENT=PRODUCTION"
+            echo "DEPLOY_ENV=production"
+            echo "CLOUDFLARE_PROD=true"
+          elif [[ "${{ github.ref }}" == "refs/heads/develop" ]]; then
+            echo "ENVIRONMENT=PREVIEW"
+            echo "DEPLOY_ENV=preview"
+            echo "CLOUDFLARE_PROD=false"
+          fi >> $GITHUB_OUTPUT
+
+      - name: Deploy to ${{ steps.env.outputs.ENVIRONMENT }} on Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PROJECT_NAME: caluar-auto-escola
+        run: |
+          echo "🚀 Iniciando deploy para ${{ steps.env.outputs.ENVIRONMENT }}..."
+
+          # Deploy para Cloudflare Pages
+          if [[ "${{ steps.env.outputs.ENVIRONMENT }}" == "PRODUCTION" ]]; then
+            echo "📦 Publicando em PRODUCTION..."
+            npx wrangler pages publish ./out --project-name=$CLOUDFLARE_PROJECT_NAME --branch=main
+          else
+            echo "📦 Publicando em PREVIEW..."
+            npx wrangler pages publish ./out --project-name=$CLOUDFLARE_PROJECT_NAME --branch=develop
+          fi
+
+          echo "✅ Deploy concluído com sucesso para ${{ steps.env.outputs.ENVIRONMENT }}"
+
+      - name: Notify deployment success
+        if: success()
+        run: |
+          echo "✅ Deployment para ${{ steps.env.outputs.ENVIRONMENT }} realizado com sucesso no Cloudflare Pages"
+
+      - name: Notify deployment failure
+        if: failure()
+        run: |
+          echo "❌ Deployment para ${{ steps.env.outputs.ENVIRONMENT }} falhou"
+          exit 1

@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+      - homol
+      - develop
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate branch origin
+        run: |
+          if [[ "${{ github.base_ref }}" == "main" ]]; then
+            if [[ "${{ github.head_ref }}" != "develop" && "${{ github.head_ref }}" != hotfix/* ]]; then
+              echo "❌ REGRA: NADA vai para main sem passar por develop!"
+              echo "   PRs para main devem vir APENAS de develop ou hotfix/*"
+              exit 1
+            fi
+          elif [[ "${{ github.base_ref }}" == "develop" ]]; then
+            if [[ "${{ github.head_ref }}" != feature/* && "${{ github.head_ref }}" != hotfix/* ]]; then
+              echo "❌ PRs para develop devem vir de feature/* ou hotfix/*"
+              exit 1
+            fi
+          fi
+
+      - name: Validate PR title
+        run: |
+          TITLE="${{ github.event.pull_request.title }}"
+          PATTERN="^(feat|fix|docs|style|refactor|test|chore):"
+          if ! [[ $TITLE =~ $PATTERN ]]; then
+            echo "❌ Título do PR deve começar com: feat|fix|docs|style|refactor|test|chore"
+            exit 1
+          fi
+
+      - name: Block sensitive files
+        run: |
+          git diff --name-only origin/${{ github.base_ref }} HEAD | while read file; do
+            if [[ "$file" =~ \.env$ ]] || [[ "$file" =~ credentials ]] || [[ "$file" =~ secret ]] || [[ "$file" =~ token ]] || [[ "$file" =~ \.pem$ ]] || [[ "$file" =~ \.key$ ]]; then
+              echo "❌ Arquivo sensível detectado: $file"
+              exit 1
+            fi
+          done
+
+  build:
+    runs-on: ubuntu-latest
+    needs: validate
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run linter
+        run: npm run lint --if-present
+
+      - name: Run tests
+        run: npm test --if-present --passWithNoTests
