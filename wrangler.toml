@@ -1,0 +1,23 @@
+name = "caluar-auto-escola"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+build = { command = "npm run build" }
+build_watch_paths = ["src/**/*.ts", "src/**/*.tsx"]
+
+[env.production]
+name = "caluar-auto-escola-prod"
+routes = [
+  { pattern = "caluar-auto-escola.pages.dev", zone_id = "" }
+]
+
+[env.preview]
+name = "caluar-auto-escola-preview"
+routes = [
+  { pattern = "develop.caluar-auto-escola.pages.dev", zone_id = "" }
+]
+
+compatibility_date = "2024-01-01"
