@@ -36,7 +36,7 @@ export default function Footer() {
             <h4 className="font-manrope font-600 text-xs text-white/40 uppercase tracking-widest mb-4">Contato</h4>
             <div className="space-y-3 text-sm font-inter text-white/65">
               <div>
-                <a href="tel:+5531988508599" className="hover:text-accent transition-colors">(31) 3563-3619</a>
+                <a href="tel:+553135633619" className="hover:text-accent transition-colors">(31) 3563-3619</a>
               </div>
               <div>
                 <a href="mailto:cfccaluar@hotmail.com" className="hover:text-accent transition-colors">cfccaluar@hotmail.com</a>

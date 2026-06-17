@@ -89,8 +89,8 @@ export default function Hero() {
                     <div className="text-xs font-inter text-white/40 uppercase mt-1">Google</div>
                   </div>
                   <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-accent">100%</div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">DETRAN</div>
+                    <div className="text-3xl font-manrope font-800 text-accent">✓</div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Motopista Própria</div>
                   </div>
                 </div>
 

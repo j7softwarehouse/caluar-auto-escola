@@ -7,7 +7,7 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const msg = `Olá! Meu nome é ${formData.name}. Email: ${formData.email} | Tel: ${formData.phone}. ${formData.message}`
-    const waLink = `https://wa.me/5531988508599?text=${encodeURIComponent(msg)}`
+    const waLink = `https://wa.me/553135633619?text=${encodeURIComponent(msg)}`
     window.open(waLink, '_blank')
     setFormData({ name: '', email: '', phone: '', message: '' })
   }
@@ -19,11 +19,14 @@ export default function ContactForm() {
           <div className="text-accent font-inter font-600 text-xs uppercase tracking-widest mb-4">
             Contato
           </div>
-          <h2 className="text-5xl md:text-6xl font-manrope font-800 text-primary mb-6 leading-tight">
-            Fale com a gente agora
+          <h2 className="text-5xl md:text-6xl font-manrope font-800 text-primary mb-4 leading-tight">
+            Sua CNH pode começar hoje
           </h2>
+          <p className="text-lg font-inter font-400 text-tx-muted mb-6">
+            Fale com a equipe da Caluar e descubra a melhor forma de iniciar sua habilitação
+          </p>
           <p className="text-base text-tx-muted font-inter font-300">
-            Preencha o formulário abaixo e em breve entraremos em contato.
+            Preencha o formulário e nossa equipe entra em contato em até 24 horas.
           </p>
         </div>
 

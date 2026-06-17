@@ -10,9 +10,12 @@ export default function LocationInfo() {
             <div className="text-accent font-inter font-600 text-xs uppercase tracking-widest mb-4">
               Localização
             </div>
-            <h2 className="text-5xl md:text-6xl font-manrope font-800 text-primary mb-8 leading-tight">
+            <h2 className="text-5xl md:text-6xl font-manrope font-800 text-primary mb-4 leading-tight">
               Venha conhecer a Caluar
             </h2>
+            <p className="text-lg font-inter font-400 text-tx-muted mb-8 leading-relaxed">
+              Estamos prontos para ajudar você a dar o primeiro passo rumo à sua habilitação.
+            </p>
 
             <div className="mb-8">
               <h3 className="font-manrope font-700 text-lg text-primary mb-2">Itabirito/MG</h3>
@@ -37,14 +40,14 @@ export default function LocationInfo() {
 
             <div className="flex gap-4">
               <Button
-                href="https://wa.me/5531988508599?text=Quero agendar uma visita"
+                href="https://wa.me/553135633619?text=Quero agendar uma visita"
                 variant="accent"
                 size="lg"
               >
                 WhatsApp
               </Button>
               <Button
-                href="tel:+5531988508599"
+                href="tel:+553135633619"
                 variant="outline"
                 size="lg"
               >

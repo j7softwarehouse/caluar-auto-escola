@@ -19,11 +19,11 @@ const dores = [
   },
   {
     title: 'Condições que ajudam você a começar agora',
-    text: 'Parcelamento facilitado e possibilidade de participação no programa CNH Brasil. Você pode parcelar no cartão ou na nota promissória, com condições pensadas para caber no seu orçamento.'
+    text: 'Parcelamento facilitado e possibilidade de participação no programa CNH Brasil. Você pode parcelar no cartão ou na nota promissória, com condições pensadas para caber no seu orçamento.\n\nPorque conquistar sua habilitação também precisa ser possível financeiramente.'
   },
   {
     title: 'Suporte completo no curso teórico',
-    text: 'Aulas presenciais ou on-line na modalidade remota, com transmissão ao vivo de terça a sexta, nos períodos da manhã, tarde ou noite. Tudo para você chegar mais preparado.'
+    text: 'Aulas presenciais ou on-line na modalidade remota, com transmissão ao vivo de terça a sexta, nos períodos da manhã, tarde ou noite.\n\nAlém das aulas, você conta com acompanhamento, revisões e preparação especial para a prova aos sábados. Tudo para você chegar mais preparado, mais confiante e mais próximo da aprovação.'
   },
 ]
 
@@ -72,7 +72,7 @@ export default function Dores() {
             </p>
           </div>
           <Button
-            href="https://wa.me/5531988508599?text=Quero%20começar%20agora"
+            href="https://wa.me/553135633619?text=Quero%20começar%20agora"
             variant="accent"
             size="lg"
           >

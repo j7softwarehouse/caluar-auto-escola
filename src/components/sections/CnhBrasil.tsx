@@ -6,7 +6,7 @@ export default function CnhBrasil() {
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-manrope font-700 mb-6 text-primary">CNH Brasil — Gratuita para quem precisa</h2>
         <p className="text-lg mb-8 text-tx-muted">Programa de habilitacao subsidiada para pessoas em vulnerabilidade</p>
-        <Button href="https://wa.me/5531988508599" variant="primary" size="lg">
+        <Button href="https://wa.me/553135633619" variant="primary" size="lg">
           Verificar minha elegibilidade
         </Button>
       </div>
