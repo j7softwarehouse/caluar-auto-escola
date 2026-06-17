@@ -9,7 +9,7 @@ import Services from './components/sections/Services'
 import CnhBrasil from './components/sections/CnhBrasil'
 import Process from './components/sections/Process'
 import Gallery from './components/sections/Gallery'
-import Reviews from './components/sections/Reviews'
+import Testimonials from './components/sections/Testimonials'
 import Faq from './components/sections/Faq'
 import ContactForm from './components/sections/ContactForm'
 import CoursesSpecialized from './components/sections/CoursesSpecialized'
@@ -31,7 +31,7 @@ function App() {
       <CnhBrasil />
       <Process />
       <Gallery />
-      <Reviews />
+      <Testimonials />
       <Faq />
       <ContactForm />
       <CoursesSpecialized />
