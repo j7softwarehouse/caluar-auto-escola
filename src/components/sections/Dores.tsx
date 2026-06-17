@@ -28,7 +28,7 @@ export default function Dores() {
           {dores.map((dor, idx) => (
             <div
               key={idx}
-              className="bg-white border-l-4 border-accent rounded-lg p-6 fade-in"
+              className="bg-white border border-border border-l-4 border-l-accent rounded-lg p-6 fade-in transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-accent/25"
             >
               <p className="font-inter font-500 text-tx text-base">
                 {dor.title}
