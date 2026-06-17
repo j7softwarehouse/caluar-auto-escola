@@ -1,7 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useCarousel } from '../../hooks/useCarousel';
-export default function Carousel({ children, itemsPerView = 3, autoPlay = true }) {
-    const { currentIndex, next, prev, goTo, setIsAutoPlay } = useCarousel(children.length);
-    return (_jsxs("div", { className: "relative w-full", onMouseEnter: () => setIsAutoPlay(false), onMouseLeave: () => autoPlay && setIsAutoPlay(true), children: [_jsx("div", { className: "flex overflow-hidden", children: children.map((item, idx) => (_jsx("div", { className: `flex-shrink-0 transition-all duration-500 ${itemsPerView === 1 ? 'w-full' : itemsPerView === 2 ? 'w-1/2' : 'w-1/3'} ${idx === currentIndex ? 'opacity-100' : 'opacity-50'}`, children: item }, idx))) }), _jsx("button", { onClick: prev, className: "absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-accent text-dark rounded-full hover:bg-yellow-400", children: "\u2190" }), _jsx("button", { onClick: next, className: "absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-accent text-dark rounded-full hover:bg-yellow-400", children: "\u2192" }), _jsx("div", { className: "flex justify-center gap-2 mt-4", children: children.map((_, idx) => (_jsx("button", { onClick: () => goTo(idx), className: `h-2 rounded-full transition-all ${idx === currentIndex ? 'bg-accent w-8' : 'bg-gray-300 w-2'}` }, idx))) })] }));
-}
-//# sourceMappingURL=Carousel.js.map

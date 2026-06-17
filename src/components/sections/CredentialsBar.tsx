@@ -26,7 +26,7 @@ export default function CredentialsBar() {
   }, [ref.current?.classList.contains('is-visible'), state.numbers])
 
   return (
-    <section ref={ref} className="fade-in bg-primary text-white py-16">
+    <section ref={ref} className="fade-in bg-primary text-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {state.numbers.map((_, idx) => (

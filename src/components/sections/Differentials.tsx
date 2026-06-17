@@ -10,7 +10,7 @@ const items = [
 export default function Differentials() {
   const ref = useIntersectionObserver()
   return (
-    <section ref={ref} className="fade-in py-20 bg-white">
+    <section ref={ref} className="fade-in bg-light">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-6">
           {items.map((item, idx) => (

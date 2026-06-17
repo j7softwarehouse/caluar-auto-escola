@@ -13,9 +13,9 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contato" className="py-20 bg-white">
+    <section id="contato" className="bg-primary">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl font-manrope font-700 mb-12">Entre em Contato</h2>
+        <h2 className="text-4xl font-manrope font-700 mb-12 text-white">Fale com a gente agora</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"

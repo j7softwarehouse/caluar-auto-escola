@@ -1,15 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Button from '../ui/Button'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 60)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const navLinks = [
     { label: 'Sobre', href: '#sobre' },
@@ -20,38 +13,27 @@ export default function Navbar() {
   ]
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-primary/95 backdrop-blur-xl shadow-lg py-3'
-          : 'bg-white/80 backdrop-blur-xl py-4'
-      }`}
-    >
+    <nav className="fixed top-0 w-full z-40 transition-all duration-300 bg-white backdrop-blur-xl py-4 shadow-sm">
+
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="text-2xl font-manrope font-800 text-primary">
-          CALUAR
+        <a href="#" className="flex-shrink-0">
+          <img src="/images/logo.jpeg" alt="Caluar" className="h-12 w-auto" />
         </a>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Menu + CTA */}
+        <div className="hidden md:flex items-center gap-8 ml-auto">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className={`font-medium transition-colors ${
-                isScrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-accent'
-              }`}
+              className="font-inter font-500 transition-colors text-sm text-primary hover:text-accent"
             >
               {link.label}
             </a>
           ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="hidden md:block">
           <Button href="https://wa.me/5531988508599?text=Oi%20Caluar!" variant="accent" size="md">
-            Falar no WhatsApp
+            Fale conosco
           </Button>
         </div>
 
@@ -82,7 +64,7 @@ export default function Navbar() {
               </a>
             ))}
             <Button href="https://wa.me/5531988508599?text=Oi%20Caluar!" variant="accent" className="w-full">
-              Falar no WhatsApp
+              Fale conosco
             </Button>
           </div>
         </div>

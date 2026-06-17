@@ -2,6 +2,7 @@ import { AdminProvider } from './context/AdminContext'
 import Navbar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
 import CredentialsBar from './components/sections/CredentialsBar'
+import Dores from './components/sections/Dores'
 import About from './components/sections/About'
 import Differentials from './components/sections/Differentials'
 import Services from './components/sections/Services'
@@ -20,6 +21,7 @@ function App() {
       <Navbar />
       <Hero />
       <CredentialsBar />
+      <Dores />
       <About />
       <Differentials />
       <Services />
