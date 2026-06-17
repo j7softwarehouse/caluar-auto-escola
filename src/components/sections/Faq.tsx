@@ -13,7 +13,7 @@ export default function Faq() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="bg-white">
+    <section id="faq" className="bg-white py-20">
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-16">
           <div className="text-accent font-inter font-600 text-xs uppercase tracking-widest mb-3">

@@ -13,7 +13,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contato" className="bg-light">
+    <section id="contato" className="bg-light py-20">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-4xl font-manrope font-700 mb-12 text-primary">Fale com a gente agora</h2>
         <form onSubmit={handleSubmit} className="space-y-4">

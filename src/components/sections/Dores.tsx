@@ -11,7 +11,7 @@ const dores = [
 
 export default function Dores() {
   return (
-    <section className="bg-light">
+    <section className="bg-light py-20">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

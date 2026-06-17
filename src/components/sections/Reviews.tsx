@@ -21,7 +21,7 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function Reviews() {
   return (
-    <section id="avaliacoes" className="bg-light">
+    <section id="avaliacoes" className="bg-light py-20">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-manrope font-700 mb-12">Avaliações de Alunos</h2>
         <Carousel itemsPerView={3}>

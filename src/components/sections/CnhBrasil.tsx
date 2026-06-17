@@ -2,7 +2,7 @@ import Button from '../ui/Button'
 
 export default function CnhBrasil() {
   return (
-    <section className="bg-white">
+    <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-manrope font-700 mb-6 text-primary">CNH Brasil — Gratuita para quem precisa</h2>
         <p className="text-lg mb-8 text-tx-muted">Programa de habilitacao subsidiada para pessoas em vulnerabilidade</p>

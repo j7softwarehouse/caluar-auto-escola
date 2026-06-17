@@ -12,7 +12,7 @@ export default function Gallery() {
   ]
 
   return (
-    <section id="galeria" className="bg-dark">
+    <section id="galeria" className="bg-dark py-20">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-manrope font-700 mb-12 text-white">Nossa Galeria</h2>
         <Carousel itemsPerView={3}>
