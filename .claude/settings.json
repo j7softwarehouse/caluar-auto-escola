@@ -38,7 +38,12 @@
       "Bash(sed -i \"s/5173/3002/g\" screenshot.mjs)",
       "Bash(node screenshot.mjs)",
       "Bash(node final-screenshot.mjs)",
-      "Bash(node final-screenshot2.mjs)"
+      "Bash(node final-screenshot2.mjs)",
+      "Bash(gh auth *)",
+      "Bash(gh secret *)",
+      "Bash(git push *)",
+      "Bash(gh repo *)",
+      "Bash(git remote *)"
     ],
     "additionalDirectories": [
       "\\tmp",

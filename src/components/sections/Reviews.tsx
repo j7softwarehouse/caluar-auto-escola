@@ -43,7 +43,7 @@ export default function Reviews() {
           </div>
           {/* Google Score Card */}
           <div className="flex items-center gap-5 bg-white border border-border rounded-lg p-5">
-            <div className="text-4xl font-manrope font-800 text-primary leading-none">4.9</div>
+            <div className="text-4xl font-manrope font-800 text-primary leading-none">4.6</div>
             <div>
               <StarRating rating={5} />
               <div className="text-xs text-tx-muted font-300 mt-2">131 avaliações</div>

@@ -67,7 +67,7 @@ export default function Hero() {
                     <span key={i} className="text-accent text-lg">★</span>
                   ))}
                 </div>
-                <span className="text-white/70 font-inter text-sm">4.9 no Google</span>
+                <span className="text-white/70 font-inter text-sm">4.6 no Google</span>
                 <span className="text-white/30">|</span>
                 <span className="text-white/70 font-inter text-sm">+5.000 alunos formados</span>
                 <span className="text-white/30">|</span>
@@ -81,11 +81,11 @@ export default function Hero() {
                 {/* Stats Grid 2x2 */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-white">23</div>
+                    <div className="text-3xl font-manrope font-800 text-white">24</div>
                     <div className="text-xs font-inter text-white/40 uppercase mt-1">Anos</div>
                   </div>
                   <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-accent">4.9</div>
+                    <div className="text-3xl font-manrope font-800 text-accent">4.6</div>
                     <div className="text-xs font-inter text-white/40 uppercase mt-1">Google</div>
                   </div>
                   <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
