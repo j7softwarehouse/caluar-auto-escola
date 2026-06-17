@@ -11,7 +11,7 @@ const dores = [
 
 export default function Dores() {
   return (
-    <section className="bg-white">
+    <section className="bg-light">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -28,7 +28,7 @@ export default function Dores() {
           {dores.map((dor, idx) => (
             <div
               key={idx}
-              className="bg-light border-l-4 border-accent rounded-lg p-6 fade-in"
+              className="bg-white border-l-4 border-accent rounded-lg p-6 fade-in"
             >
               <p className="font-inter font-500 text-tx text-base">
                 {dor.title}

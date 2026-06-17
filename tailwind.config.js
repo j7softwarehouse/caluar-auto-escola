@@ -6,13 +6,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1B2B5E',
-        'primary-mid': '#2E4A9E',
+        primary: '#0F1F45',
+        'primary-mid': '#1B2B5E',
         accent: '#F5A800',
-        dark: '#0D1A3A',
-        light: '#F8F9FC',
+        'accent-dark': '#D48900',
+        dark: '#070E1C',
+        light: '#F4F7FC',
+        white: '#FFFFFF',
         tx: '#1A1A2E',
-        'tx-muted': '#6B7280',
+        'tx-muted': '#64748B',
+        border: '#E5E7EB',
       },
       fontFamily: {
         manrope: ['Manrope', 'sans-serif'],

@@ -32,7 +32,11 @@
       "mcp__claude_ai_Linear__get_issue",
       "Bash(curl -s http://localhost:3001/)",
       "Bash(\n# Verificar se há .git em algum lugar\nfind C:/Users/User/github -name \".git\" -type d 2>/dev/null | head -5\n)",
-      "Read(//c/Users/User/github/**)"
+      "Read(//c/Users/User/github/**)",
+      "Bash(tee build.log)",
+      "Bash(curl -I http://localhost:5173)",
+      "Bash(sed -i \"s/5173/3002/g\" screenshot.mjs)",
+      "Bash(node screenshot.mjs)"
     ],
     "additionalDirectories": [
       "\\tmp",
