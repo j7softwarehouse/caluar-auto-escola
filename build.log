@@ -66,3 +66,5 @@ Port 3001 is in use, trying another one...
 [2m19:35:23[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
 [2m19:35:33[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
 [2m19:46:09[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/sections/Testimonials.tsx, /src/index.css[22m
+[2m20:02:30[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/context/AdminContext.tsx, /src/index.css[22m
+[2m20:02:42[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/sections/CredentialsBar.tsx, /src/index.css[22m
