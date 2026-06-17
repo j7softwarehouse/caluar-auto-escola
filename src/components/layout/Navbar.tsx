@@ -13,9 +13,9 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 w-full z-40 transition-all duration-300 bg-white backdrop-blur-xl py-4 shadow-sm">
+    <nav className="fixed top-0 w-full z-40 h-16 flex items-center bg-primary/95 backdrop-blur-xl border-b border-accent/10">
 
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex-shrink-0">
           <img src="/images/logo.jpeg" alt="Caluar" className="h-12 w-auto" />
@@ -27,7 +27,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="font-inter font-500 transition-colors text-sm text-primary hover:text-accent"
+              className="font-inter font-400 transition-colors text-sm text-white/62 hover:text-white"
             >
               {link.label}
             </a>

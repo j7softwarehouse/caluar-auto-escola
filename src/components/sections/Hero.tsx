@@ -77,41 +77,38 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Right Column - Stats */}
-            <div className="hidden md:block">
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {/* Stats Cards */}
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center">
-                  <div className="text-4xl font-manrope font-800 text-white mb-2">23</div>
-                  <div className="text-sm font-inter text-white/70 uppercase tracking-wide">Anos de tradição</div>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-sm border border-accent/40 rounded-lg p-6 text-center">
-                  <div className="text-4xl font-manrope font-800 text-accent mb-2">4.9</div>
-                  <div className="text-sm font-inter text-white/70 uppercase tracking-wide">Nota Google</div>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 text-center">
-                  <div className="text-4xl font-manrope font-800 text-white mb-2">5mil+</div>
-                  <div className="text-sm font-inter text-white/70 uppercase tracking-wide">Aprovados</div>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-sm border border-accent/40 rounded-lg p-6 text-center">
-                  <div className="text-4xl font-manrope font-800 text-accent mb-2">100%</div>
-                  <div className="text-sm font-inter text-white/70 uppercase tracking-wide">DETRAN-MG</div>
-                </div>
-              </div>
-
-              {/* Image Grid */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-lg overflow-hidden h-32 bg-gradient-to-br from-accent to-accent/50 flex items-center justify-center">
-                  <div className="text-white font-manrope font-700 text-center">
-                    <div className="text-sm">Equipe Caluar</div>
+            {/* Right Column - Hero Card */}
+            <div className="hidden md:flex">
+              <div className="bg-white/6 backdrop-blur-md border border-white/12 rounded-2xl p-6 w-full">
+                {/* Stats Grid 2x2 */}
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
+                    <div className="text-3xl font-manrope font-800 text-white">23</div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Anos</div>
+                  </div>
+                  <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
+                    <div className="text-3xl font-manrope font-800 text-accent">4.9</div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Google</div>
+                  </div>
+                  <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
+                    <div className="text-3xl font-manrope font-800 text-white">5k+</div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Aprovados</div>
+                  </div>
+                  <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
+                    <div className="text-3xl font-manrope font-800 text-accent">100%</div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">DETRAN</div>
                   </div>
                 </div>
-                <div className="rounded-lg overflow-hidden h-32 bg-gradient-to-br from-accent/70 to-accent flex items-center justify-center">
-                  <div className="text-white font-manrope font-700 text-center">
-                    <div className="text-sm">Turma aprovada</div>
+
+                {/* Images Grid */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="rounded-lg overflow-hidden bg-black/20">
+                    <img src="/images/img1.JPG" alt="Equipe Caluar" className="w-full h-24 object-cover brightness-75" />
+                    <div className="px-3 py-2 bg-black/30 text-xs text-white/65">Equipe Caluar</div>
+                  </div>
+                  <div className="rounded-lg overflow-hidden bg-black/20">
+                    <img src="/images/img3.jpeg" alt="Turma aprovada" className="w-full h-24 object-cover brightness-75" />
+                    <div className="px-3 py-2 bg-black/30 text-xs text-white/65">Turma aprovada</div>
                   </div>
                 </div>
               </div>
