@@ -14,14 +14,25 @@ export default function ContactForm() {
 
   return (
     <section id="contato" className="bg-light py-20">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl font-manrope font-700 mb-12 text-primary">Fale com a gente agora</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="max-w-2xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="text-accent font-inter font-600 text-xs uppercase tracking-widest mb-4">
+            Contato
+          </div>
+          <h2 className="text-5xl md:text-6xl font-manrope font-800 text-primary mb-6 leading-tight">
+            Fale com a gente agora
+          </h2>
+          <p className="text-base text-tx-muted font-inter font-300">
+            Preencha o formulário abaixo e em breve entraremos em contato.
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-5">
           <input
             type="text"
             placeholder="Seu nome"
             required
-            className="w-full p-4 border border-gray-300 rounded-lg"
+            className="w-full px-5 py-4 border border-border rounded-lg bg-white font-inter text-sm focus:outline-none focus:border-accent transition-colors"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
@@ -29,14 +40,14 @@ export default function ContactForm() {
             type="email"
             placeholder="seu@email.com"
             required
-            className="w-full p-4 border border-gray-300 rounded-lg"
+            className="w-full px-5 py-4 border border-border rounded-lg bg-white font-inter text-sm focus:outline-none focus:border-accent transition-colors"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           />
           <input
             type="tel"
             placeholder="(31) 9 9999-9999"
-            className="w-full p-4 border border-gray-300 rounded-lg"
+            className="w-full px-5 py-4 border border-border rounded-lg bg-white font-inter text-sm focus:outline-none focus:border-accent transition-colors"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           />
