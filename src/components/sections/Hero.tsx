@@ -1,7 +1,7 @@
 import Button from '../ui/Button'
 
 export default function Hero() {
-  const categories = ['Cat. A', 'Cat. B', 'Cat. AB', 'Cat. C', 'Cat. D', 'Cat. E']
+  const categories = ['Cat. A', 'Cat. B', 'Cat. AB', 'Cat. D']
 
   return (
     <section
@@ -28,12 +28,13 @@ export default function Hero() {
 
               {/* Heading */}
               <h1 className="text-5xl md:text-6xl font-manrope font-800 text-white mb-6 leading-tight tracking-tight">
-                Tirar sua CNH pode ser<br />mais facil do que voce imagina
+                Sua CNH pode estar muito mais perto do que você imagina.
               </h1>
 
               {/* Subheading */}
               <p className="text-lg font-inter font-400 text-white/80 mb-10 leading-relaxed">
-                Aqui voce encontra instrutores <span className="font-600 text-white">pacientes de verdade</span>, parcelamento <span className="font-600 text-white">sem complicacao</span> e a gente <span className="font-600 text-white">cuida de tudo</span> ate voce passar.
+                Pare de adiar sua independência.<br />
+                Aprenda a dirigir com quem entende que confiança vem antes da aprovação.
               </p>
 
               {/* Categories */}
@@ -48,17 +49,14 @@ export default function Hero() {
                 ))}
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex gap-4 mb-8">
+              {/* CTA Button - UNICO (sem "Conhecer a escola") */}
+              <div className="mb-8">
                 <Button
                   href="https://wa.me/5531988508599?text=Quero%20minha%20CNH"
                   variant="accent"
                   size="lg"
                 >
                   Quero minha CNH
-                </Button>
-                <Button href="#sobre" variant="outline" size="lg">
-                  Conhecer a escola
                 </Button>
               </div>
 
