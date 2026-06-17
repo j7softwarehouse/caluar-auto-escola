@@ -6,10 +6,15 @@ export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const images = [
-    { src: '/images/gallery-1.jpg', alt: 'Turma Caluar' },
-    { src: '/images/gallery-2.jpg', alt: 'Aula Pratica' },
-    { src: '/images/gallery-3.jpg', alt: 'Aprovado' },
-    { src: '/images/img1.JPG', alt: 'Equipe' },
+    { src: '/images/IMG_0334.jpg', alt: 'Turma Caluar' },
+    { src: '/images/IMG_0345.jpg', alt: 'Aula Prática' },
+    { src: '/images/IMG_0367.jpg', alt: 'Aprovado' },
+    { src: '/images/IMG_0373.jpg', alt: 'Turma em ação' },
+    { src: '/images/IMG_0380.jpg', alt: 'Aluno dirigindo' },
+    { src: '/images/IMG_1550.jpg', alt: 'Equipe Caluar' },
+    { src: '/images/IMG_1558.jpg', alt: 'Aula teórica' },
+    { src: '/images/IMG_2314.jpg', alt: 'Turma' },
+    { src: '/images/IMG_9122.jpg', alt: 'Prática na pista' },
   ]
 
   const itemsPerView = 3
