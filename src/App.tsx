@@ -12,7 +12,8 @@ import Gallery from './components/sections/Gallery'
 import Reviews from './components/sections/Reviews'
 import Faq from './components/sections/Faq'
 import ContactForm from './components/sections/ContactForm'
-import Map from './components/sections/Map'
+import CoursesSpecialized from './components/sections/CoursesSpecialized'
+import LocationInfo from './components/sections/LocationInfo'
 import Footer from './components/layout/Footer'
 import AdminToggle from './components/admin/AdminToggle'
 import PromoPopup from './components/ui/PromoPopup'
@@ -33,7 +34,8 @@ function App() {
       <Reviews />
       <Faq />
       <ContactForm />
-      <Map />
+      <CoursesSpecialized />
+      <LocationInfo />
       <Footer />
       <AdminToggle />
       <PromoPopup />
