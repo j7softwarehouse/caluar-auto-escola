@@ -36,7 +36,9 @@
       "Bash(tee build.log)",
       "Bash(curl -I http://localhost:5173)",
       "Bash(sed -i \"s/5173/3002/g\" screenshot.mjs)",
-      "Bash(node screenshot.mjs)"
+      "Bash(node screenshot.mjs)",
+      "Bash(node final-screenshot.mjs)",
+      "Bash(node final-screenshot2.mjs)"
     ],
     "additionalDirectories": [
       "\\tmp",
