@@ -34,7 +34,7 @@ const services = [
   },
   {
     num: 'D',
-    title: 'Categoria D — Onibus e Transporte de Passageiros',
+    title: 'Categoria D — Ônibus e Transporte de Passageiros',
     list: [
       'Categoria profissional para transporte de passageiros',
       'Ideal para ônibus, vans e oportunidades profissionais',

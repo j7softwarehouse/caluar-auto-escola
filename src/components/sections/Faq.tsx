@@ -19,9 +19,15 @@ export default function Faq() {
           <div className="text-accent font-inter font-600 text-xs uppercase tracking-widest mb-3">
             Duvidas?
           </div>
-          <h2 className="text-5xl font-manrope font-800 text-tx mb-4 leading-tight">
-            Perguntas Frequentes
+          <h2 className="text-5xl font-manrope font-800 text-tx mb-4 leading-relaxed">
+            Ainda ficou com alguma dúvida?
           </h2>
+          <p className="text-base font-inter font-300 text-tx-muted mb-6 leading-relaxed">
+            Respondemos as perguntas mais comuns sobre matrícula, aulas, exames, documentos, pagamentos e todo o processo da habilitação.
+          </p>
+          <p className="text-base font-inter font-300 text-tx-muted mb-12 leading-relaxed">
+            Tudo para que você comece sua jornada com mais segurança, tranquilidade e confiança.
+          </p>
         </div>
 
         <div className="space-y-0 divide-y divide-border">

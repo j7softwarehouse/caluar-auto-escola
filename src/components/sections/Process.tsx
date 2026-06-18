@@ -1,24 +1,24 @@
 export default function Process() {
   const steps = [
     {
-      num: '1',
-      title: 'Agende sua avaliacao',
-      description: 'Entre em contato e escolha o melhor horario para conhecer nossa escola.'
+      num: '01',
+      title: 'Matrícula',
+      description: 'Orientamos você sobre documentação, categoria ideal e condições de pagamento para que você comece com segurança e sem dúvidas.'
     },
     {
-      num: '2',
-      title: 'Comece as aulas teóricas',
-      description: 'Aprenda as regras de trânsito, sinalizacao e seguranca com instrutores experientes.'
+      num: '02',
+      title: 'Aulas Teóricas',
+      description: 'Aulas presenciais ou on-line, salas informatizadas e preparação focada no que realmente cai na prova.'
     },
     {
-      num: '3',
-      title: 'Aulas praticas na pista',
-      description: 'Dirija com seguranca sob a orientacao de nossos instrutores credenciados.'
+      num: '03',
+      title: 'Aulas Práticas',
+      description: 'Veículos modernos com duplo comando, motopista própria e instrutores pacientes para você ganhar mais confiança.'
     },
     {
-      num: '4',
-      title: 'Aprovacao garantida',
-      description: 'Com nosso acompanhamento, você estará 100% pronto para passar no DETRAN.'
+      num: '04',
+      title: 'Aprovação',
+      description: 'No dia do exame, você conta com apoio da equipe e toda preparação necessária para chegar mais tranquilo, confiante e preparado para a prova.'
     }
   ]
 
@@ -36,11 +36,14 @@ export default function Process() {
           <div className="text-accent font-inter font-600 text-xs uppercase tracking-widest mb-3">
             Como funciona
           </div>
-          <h2 className="text-5xl md:text-6xl font-manrope font-800 text-white mb-4 leading-tight">
-            Nosso <em className="text-accent italic">processo</em> e simples
+          <h2 className="text-5xl md:text-6xl font-manrope font-800 text-white mb-4 leading-relaxed">
+            Um processo simples, com todo suporte e sem complicação
           </h2>
+          <p className="text-base font-inter font-300 text-white/50 max-w-2xl mx-auto mb-2 leading-relaxed">
+            Da matrícula até sua CNH em mãos
+          </p>
           <p className="text-lg font-inter font-300 text-white/45 max-w-2xl mx-auto leading-relaxed">
-            Acompanhamos voce do primeiro dia ate conseguir sua CNH com seguranca e confianca.
+            Cuidamos de tudo para você se preocupar apenas em aprender.
           </p>
         </div>
 

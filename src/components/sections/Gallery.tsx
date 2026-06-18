@@ -32,7 +32,7 @@ export default function Gallery() {
             <div className="text-xs uppercase tracking-widest text-accent font-600 mb-3">
               Galeria
             </div>
-            <h2 className="text-5xl md:text-6xl font-manrope font-800 text-white leading-tight">
+            <h2 className="text-5xl md:text-6xl font-manrope font-800 text-white leading-relaxed">
               Nossa galeria de aprovados
             </h2>
           </div>
