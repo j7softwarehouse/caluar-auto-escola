@@ -60,19 +60,6 @@ export default function Hero() {
                 </Button>
               </div>
 
-              {/* Prova Social */}
-              <div className="flex flex-wrap gap-4 items-center">
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-accent text-lg">★</span>
-                  ))}
-                </div>
-                <span className="text-white/70 font-inter text-sm">4.6 no Google</span>
-                <span className="text-white/30">|</span>
-                <span className="text-white/70 font-inter text-sm">+5.000 alunos formados</span>
-                <span className="text-white/30">|</span>
-                <span className="text-white/70 font-inter text-sm">+20 anos em Itabirito</span>
-              </div>
             </div>
 
             {/* Right Column - Hero Card */}
@@ -82,26 +69,30 @@ export default function Hero() {
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
                     <div className="text-3xl font-manrope font-800 text-white">24</div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Anos</div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Anos de Tradição</div>
                   </div>
                   <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-accent">4.6</div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Google</div>
+                    <div className="text-3xl font-manrope font-800 text-accent">4.6<span className="text-lg">⭐</span></div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Nota Google</div>
+                  </div>
+                  <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
+                    <div className="text-3xl font-manrope font-800 text-white">5mil+</div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Aprovados</div>
                   </div>
                   <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-accent">✓</div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Motopista Própria</div>
+                    <div className="text-3xl font-manrope font-800 text-accent">100%</div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Detran-MG</div>
                   </div>
                 </div>
 
                 {/* Images Grid */}
                 <div className="grid grid-cols-2 gap-3">
                   <div className="rounded-lg overflow-hidden bg-black/20">
-                    <img src="/images/img1.JPG" alt="Equipe Caluar" className="w-full h-24 object-cover brightness-75" />
-                    <div className="px-3 py-2 bg-black/30 text-xs text-white/65">Equipe Caluar</div>
+                    <img src="/images/img1.JPG" alt="Motopista Própria" className="w-full h-24 object-cover brightness-75" />
+                    <div className="px-3 py-2 bg-black/30 text-xs text-white/65">Motopista Própria</div>
                   </div>
                   <div className="rounded-lg overflow-hidden bg-black/20">
-                    <img src="/images/img3.jpeg" alt="Turma aprovada" className="w-full h-24 object-cover brightness-75" />
+                    <img src="/images/img13.jpeg" alt="Turma aprovada" className="w-full h-24 object-cover brightness-75" />
                     <div className="px-3 py-2 bg-black/30 text-xs text-white/65">Turma aprovada</div>
                   </div>
                 </div>

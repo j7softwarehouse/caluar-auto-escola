@@ -13,21 +13,21 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 w-full z-40 h-16 flex items-center bg-primary/95 backdrop-blur-xl border-b border-accent/10">
+    <nav className="fixed top-0 w-full z-40 h-16 flex items-center bg-white border-b border-gray-200">
 
       <div className="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex-shrink-0">
-          <img src="/images/logo.jpeg" alt="Caluar" className="h-12 w-auto" />
+          <img src="/logos/logo_caluar.jpeg" alt="Caluar" className="h-12 w-auto" />
         </a>
 
         {/* Desktop Menu + CTA */}
-        <div className="hidden md:flex items-center gap-8 ml-auto">
+        <div className="hidden md:flex items-center gap-12 ml-auto">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="font-inter font-400 transition-colors text-sm text-white/62 hover:text-white"
+              className="font-inter font-400 transition-colors text-sm text-gray-700 hover:text-primary"
             >
               {link.label}
             </a>
@@ -40,7 +40,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2"
+          className="md:hidden p-2 text-gray-700"
           aria-label="Menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,10 +56,10 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-primary text-white py-4">
+        <div className="md:hidden bg-white border-t border-gray-200 py-4">
           <div className="max-w-6xl mx-auto px-4 flex flex-col gap-3">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className="font-medium hover:text-accent">
+              <a key={link.label} href={link.href} className="font-medium text-gray-700 hover:text-primary">
                 {link.label}
               </a>
             ))}
