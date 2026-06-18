@@ -1,30 +1,8 @@
-import { useEffect, useState } from 'react'
-import { useAdmin } from '../../context/AdminContext'
-import { useIntersectionObserver } from '../../hooks/useIntersectionObserver'
-
 const labels = ['ANOS NO MERCADO', 'CONDUTORES FORMADOS', 'NOTA GOOGLE', 'CREDENCIADA DETRAN-MG']
 const suffixes = ['+', '+', '⭐', '%']
 const staticValues = ['24', '5mil', '4.6', '100']
 
 export default function CredentialsBar() {
-  const { state } = useAdmin()
-  const ref = useIntersectionObserver()
-  const [counts, setCounts] = useState<Record<number, number>>({})
-
-  useEffect(() => {
-    if (!ref.current?.classList.contains('is-visible')) return
-
-    state.numbers.forEach((target, idx) => {
-      const interval = setInterval(() => {
-        setCounts((prev) => {
-          const current = prev[idx] || 0
-          const next = Math.min(current + Math.ceil(target / 50), target)
-          if (next >= target) clearInterval(interval)
-          return { ...prev, [idx]: next }
-        })
-      }, 30)
-    })
-  }, [ref.current?.classList.contains('is-visible'), state.numbers])
 
   return (
     <>
@@ -53,7 +31,7 @@ export default function CredentialsBar() {
         }
       `}</style>
 
-      <section ref={ref} className="fade-in bg-white border-b border-[rgba(0,0,0,0.07)] py-12">
+      <section className="bg-white border-b border-[rgba(0,0,0,0.07)] py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-4 gap-0">
             {staticValues.map((value, idx) => (
