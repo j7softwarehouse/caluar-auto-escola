@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react'
 
 const reviews = [
-  { name: 'Pedro Henrique', text: 'Equipe Caluar com todo suporte nesse processo. Aulas teóricas com clareza e paciência. Aulas práticas com muita calma. Consegui tirar minha primeira habilitação.', rating: 5, source: 'Google' },
-  { name: 'Josilene Barreto', text: 'Super recomendo! Ótima experiência durante todo esse processo. Os instrutores Ian e Washington são extremamente pacientes e didáticos. Atendimento de qualidade!', rating: 5, source: 'Google' },
-  { name: 'Daiane Mara', text: 'Super indico a Auto Escola Caluar. Minha instrutora Luciana Pereira é nota 1000. Ensina com muita clareza e carinho pela profissão.', rating: 5, source: 'Google' },
-  { name: 'Cristiane Silva', text: 'Gratidão a Equipe Caluar! Tirei minhas 2 habilitações pela Caluar e sempre vou indicar. Agradeço aos instrutores Alípio, Lucas e Luciana.', rating: 5, source: 'Google' },
-  { name: 'Isaah neves', text: 'Imensamente grato à Autoescola Caluar. A equipe é atenciosa, os instrutores são pacientes e se importam com o aprendizado. Recomendo!', rating: 5, source: 'Google' },
-  { name: 'Aline Raquel', text: 'Imensa gratidão à equipe CALUAR. O processo foi conduzido com competência, profissionalismo e organização. Aprovada de primeira!', rating: 5, source: 'Google' },
+  { name: 'Pedro Henrique', role: 'Aluno', text: 'Equipe Caluar com todo suporte nesse processo. Aulas teóricas com clareza e paciência. Aulas práticas com muita calma. Consegui tirar minha primeira habilitação.', rating: 5, initials: 'PH' },
+  { name: 'Josilene Barreto', role: 'Aluna', text: 'Super recomendo! Ótima experiência durante todo esse processo. Os instrutores Ian e Washington são extremamente pacientes e didáticos. Atendimento de qualidade!', rating: 5, initials: 'JB' },
+  { name: 'Daiane Mara', role: 'Aluna', text: 'Super indico a Auto Escola Caluar. Minha instrutora Luciana Pereira é nota 1000. Ensina com muita clareza e carinho pela profissão.', rating: 5, initials: 'DM' },
+  { name: 'Cristiane Silva', role: 'Aluna', text: 'Gratidão a Equipe Caluar! Tirei minhas 2 habilitações pela Caluar e sempre vou indicar. Agradeço aos instrutores.', rating: 5, initials: 'CS' },
+  { name: 'Isaah neves', role: 'Aluno', text: 'Imensamente grato à Autoescola Caluar. A equipe é atenciosa, os instrutores são pacientes e se importam com o aprendizado.', rating: 5, initials: 'IN' },
+  { name: 'Aline Raquel', role: 'Aluna', text: 'Imensa gratidão à equipe CALUAR. O processo foi conduzido com competência, profissionalismo e organização. Aprovada de primeira!', rating: 5, initials: 'AR' },
 ]
 
 function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex gap-0.5">
       {[...Array(5)].map((_, i) => (
-        <span key={i} className={`text-lg ${i < rating ? 'text-amber-400' : 'text-gray-300'}`}>
+        <span key={i} className={`text-sm ${i < rating ? 'text-amber-400' : 'text-gray-300'}`}>
           ★
         </span>
       ))}
@@ -59,41 +59,56 @@ export default function Reviews() {
         </div>
 
         {/* Carousel */}
-        <div>
+        <div className="relative">
           {/* Cards Container - 3 per view */}
-          <div className="mb-8 overflow-hidden">
+          <div className="mb-12 overflow-hidden">
             <div
-              className="flex gap-5 transition-transform duration-700 ease-out"
+              className="flex gap-6 transition-transform duration-700 ease-out"
               style={{
-                transform: `translateX(-${currentIndex * (100 / itemsPerView + 1.67)}%)`
+                transform: `translateX(-${currentIndex * (100 / itemsPerView + 2)}%)`
               }}
             >
-                {reviews.map((rev, idx) => (
-                  <div
-                    key={idx}
-                    className="flex-shrink-0 w-full md:w-1/3"
-                  >
-                    <div className="bg-white border border-border rounded-lg p-6 h-full w-full aspect-square flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                      {/* Stars */}
-                      <div className="mb-3">
-                        <StarRating rating={rev.rating} />
+              {reviews.map((rev, idx) => (
+                <div
+                  key={idx}
+                  className="flex-shrink-0 w-full md:w-1/3"
+                >
+                  <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:bg-white relative">
+                    {/* Quote marks */}
+                    <div className="text-6xl text-accent opacity-20 absolute -top-4 left-4 leading-none">"</div>
+
+                    {/* Quote text */}
+                    <p className="text-sm font-inter font-300 text-tx-muted italic mb-6 leading-relaxed flex-grow pt-4">
+                      {rev.text}
+                    </p>
+
+                    {/* Divider */}
+                    <div className="border-t border-gray-200 pt-4 mt-auto">
+                      {/* Avatar & Name */}
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-manrope font-700 text-sm">{rev.initials}</span>
+                        </div>
+                        <div className="flex-grow min-w-0">
+                          <p className="font-manrope font-700 text-primary text-sm">{rev.name}</p>
+                          <p className="text-xs text-tx-muted font-300">{rev.role}</p>
+                        </div>
                       </div>
 
-                      {/* Quote text */}
-                      <p className="text-xs font-inter font-300 text-tx-muted italic mb-auto leading-relaxed line-clamp-6">
-                        "{rev.text}"
-                      </p>
-
-                      {/* Name & Source */}
-                      <div className="pt-3 border-t border-border mt-3">
-                        <p className="font-manrope font-700 text-primary text-xs mb-0.5">{rev.name}</p>
-                        <p className="text-xs text-tx-muted font-300">via {rev.source}</p>
+                      {/* Google Review Badge */}
+                      <div className="flex items-center gap-2 text-xs">
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="#4285F4">
+                          <circle cx="12" cy="12" r="11" fill="none" stroke="#4285F4" strokeWidth="1" opacity="0.2"/>
+                        </svg>
+                        <span className="text-gray-600 font-500">GOOGLE REVIEW</span>
+                        <StarRating rating={rev.rating} />
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
+          </div>
 
           {/* Controls */}
           <div className="flex items-center justify-center gap-4">
@@ -106,18 +121,20 @@ export default function Reviews() {
             </button>
 
             {/* Dots */}
-            <div className="flex gap-1.5">
-              {reviews.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentIndex(idx)}
-                  className={`transition-all duration-300 ${
-                    currentIndex === idx
-                      ? 'w-6 h-2 bg-primary rounded-full'
-                      : 'w-2 h-2 bg-border rounded-full hover:bg-primary'
-                  }`}
-                />
-              ))}
+            <div className="flex gap-2">
+              {Array(Math.ceil(reviews.length / itemsPerView))
+                .fill(0)
+                .map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`transition-all duration-300 rounded-full ${
+                      currentIndex === idx
+                        ? 'w-3 h-3 bg-accent'
+                        : 'w-2 h-2 bg-gray-300 hover:bg-accent'
+                    }`}
+                  />
+                ))}
             </div>
 
             {/* Next Button */}
