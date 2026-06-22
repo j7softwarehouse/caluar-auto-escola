@@ -12,6 +12,15 @@ node_modules/
 
 # Production
 /build
+/dist
+*.d.ts
+*.d.ts.map
+*.js
+*.js.map
+src/**/*.d.ts
+src/**/*.d.ts.map
+src/**/*.js
+src/**/*.js.map
 
 # Environment variables
 .env
@@ -33,6 +42,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+build.log
+
+# Screenshots & Images
+*.png
+*.jpg
+*.jpeg
+screenshot-*.js
 
 # OS
 Thumbs.db
