@@ -43,7 +43,11 @@
       "Bash(gh secret *)",
       "Bash(git push *)",
       "Bash(gh repo *)",
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\User\\\\github\\\\j7\\\\Clientes\\\\caluar-auto-escola\\\\.claude\\\\skills\\\\\" -ErrorAction SilentlyContinue | ForEach-Object { $_.Name })",
+      "PowerShell(Get-Process node | Where-Object { $_.ProcessName -eq \"node\" } | Select-Object Id, ProcessName)",
+      "PowerShell(Get-Process node | Where-Object { $_.ProcessName -eq \"node\" } | Stop-Process -Force; Start-Sleep -Seconds 2)",
+      "Bash(git rm *)"
     ],
     "additionalDirectories": [
       "\\tmp",
