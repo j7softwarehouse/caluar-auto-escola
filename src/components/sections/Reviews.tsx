@@ -94,7 +94,6 @@ export default function Reviews() {
                 ))}
               </div>
             </div>
-          </div>
 
           {/* Controls */}
           <div className="flex items-center justify-center gap-4">
