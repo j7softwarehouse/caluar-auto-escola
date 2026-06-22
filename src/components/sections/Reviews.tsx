@@ -23,6 +23,7 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const itemsPerView = 3
 
   const handlePrev = () => setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length)
   const handleNext = () => setCurrentIndex((prev) => (prev + 1) % reviews.length)
@@ -59,21 +60,20 @@ export default function Reviews() {
 
         {/* Carousel */}
         <div>
-          {/* Cards Container - 1:1 Square */}
-          <div className="mb-8 flex justify-center">
-            <div className="w-full md:w-80 h-80 overflow-hidden">
-              <div
-                className="flex gap-5 transition-transform duration-700 ease-out"
-                style={{
-                  transform: `translateX(-${currentIndex * 100}%)`
-                }}
-              >
+          {/* Cards Container - 3 per view */}
+          <div className="mb-8 overflow-hidden">
+            <div
+              className="flex gap-5 transition-transform duration-700 ease-out"
+              style={{
+                transform: `translateX(-${currentIndex * (100 / itemsPerView + 1.67)}%)`
+              }}
+            >
                 {reviews.map((rev, idx) => (
                   <div
                     key={idx}
-                    className="flex-shrink-0 w-full aspect-square"
+                    className="flex-shrink-0 w-full md:w-1/3"
                   >
-                    <div className="bg-white border border-border rounded-lg p-6 h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div className="bg-white border border-border rounded-lg p-6 h-full w-full aspect-square flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                       {/* Stars */}
                       <div className="mb-3">
                         <StarRating rating={rev.rating} />
