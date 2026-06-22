@@ -52,7 +52,7 @@ export default function CredentialsBar() {
                     <span className="text-[#F5A800]">{suffixes[idx]}</span>
                   )}
                 </div>
-                <p className="text-xs md:text-sm text-[#64748b] uppercase tracking-wider font-300 mt-1">
+                <p className="text-xs md:text-sm text-[#64748b] uppercase tracking-wider font-inter font-light mt-1">
                   {labels[idx]}
                 </p>
               </div>
