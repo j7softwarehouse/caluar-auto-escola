@@ -32,7 +32,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <Button href="https://wa.me/553135633619?text=Oi%20Caluar!" variant="accent" size="md">
+          <Button href="https://wa.me/553135633619?text=Oi%20Caluar,%20quero%20minha%20CNH." variant="accent" size="md">
             Fale conosco
           </Button>
         </div>
@@ -63,7 +63,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button href="https://wa.me/553135633619?text=Oi%20Caluar!" variant="accent" className="w-full">
+            <Button href="https://wa.me/553135633619?text=Oi%20Caluar,%20quero%20minha%20CNH." variant="accent" className="w-full">
               Fale conosco
             </Button>
           </div>
