@@ -55,30 +55,33 @@ export default function Services() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {services.map((srv, idx) => (
             <div
               key={idx}
-              className="bg-light border border-border rounded-lg p-8 relative overflow-hidden transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 hover:border-accent/20 group"
+              className="bg-light border border-border rounded-lg p-8 md:p-10 relative overflow-hidden transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 hover:border-accent/20 group flex flex-col"
             >
-              {/* Large category number in background */}
-              <div className="absolute top-0 left-0 right-0 text-7xl font-manrope font-800 text-accent/12 leading-none pointer-events-none translate-y-1">
-                {srv.num}
-              </div>
-
               {/* Top orange line on hover */}
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400" />
 
               {/* Content */}
-              <div className="relative z-10">
-                <h3 className="text-base font-manrope font-700 text-primary mb-4">
-                  {srv.title}
-                </h3>
-                <ul className="space-y-2">
+              <div className="relative z-10 flex flex-col h-full">
+                {/* Category number and title */}
+                <div className="mb-6">
+                  <div className="text-7xl md:text-8xl font-manrope font-800 text-primary leading-none mb-2">
+                    {srv.num}
+                  </div>
+                  <h3 className="text-base md:text-lg font-manrope font-700 text-primary">
+                    {srv.title}
+                  </h3>
+                </div>
+
+                {/* List */}
+                <ul className="space-y-3 flex-1">
                   {srv.list.map((item, i) => (
-                    <li key={i} className="text-sm text-tx-muted font-inter font-300 flex gap-3">
-                      <span className="text-accent flex-shrink-0">•</span>
-                      <span>{item}</span>
+                    <li key={i} className="text-sm md:text-base text-tx-muted font-inter font-300 flex gap-3 items-start">
+                      <span className="text-accent flex-shrink-0 mt-1">•</span>
+                      <span className="leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
