@@ -73,7 +73,7 @@ export default function Reviews() {
                   key={idx}
                   className="flex-shrink-0 w-full md:w-1/3"
                 >
-                  <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:bg-white relative">
+                  <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 aspect-square flex flex-col transition-all duration-300 hover:shadow-lg hover:bg-white relative">
                     {/* Quote marks */}
                     <div className="text-6xl text-accent opacity-20 absolute -top-4 left-4 leading-none">"</div>
 
