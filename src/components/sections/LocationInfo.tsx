@@ -44,14 +44,7 @@ export default function LocationInfo() {
                 variant="accent"
                 size="lg"
               >
-                WhatsApp
-              </Button>
-              <Button
-                href="tel:+553135633619"
-                variant="outline"
-                size="lg"
-              >
-                Ligar
+                Quero minha CNH
               </Button>
             </div>
           </div>
