@@ -67,7 +67,7 @@ export default function Process() {
               </h3>
 
               {/* Step Description */}
-              <p className="text-xs font-inter font-300 text-white/42 leading-relaxed">
+              <p className="text-xs font-inter font-300 text-white leading-relaxed">
                 {step.description}
               </p>
             </div>
