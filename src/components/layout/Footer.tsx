@@ -77,9 +77,14 @@ export default function Footer() {
         <div className="border-t border-white/8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-inter">
             <p className="text-white/35">© 2026 Auto Escola Caluar. Todos os direitos reservados.</p>
-            <p className="text-white/45 hover:text-white/65 transition-colors">
+            <a
+              href="https://www.j7softwarehouse.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/45 hover:text-accent transition-colors"
+            >
               Desenvolvido por J7 Software House
-            </p>
+            </a>
           </div>
         </div>
       </div>
