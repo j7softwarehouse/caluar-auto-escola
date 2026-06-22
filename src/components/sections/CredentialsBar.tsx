@@ -40,7 +40,7 @@ export default function CredentialsBar() {
                 className="stat-item relative px-8 py-7 border-r border-[rgba(0,0,0,0.07)] text-left"
                 style={{ borderRight: (idx === staticValues.length - 1 || idx === 2) ? 'none' : '1px solid rgba(0,0,0,0.07)' }}
               >
-                <div className="text-4xl md:text-5xl font-manrope font-800 leading-none">
+                <div className="text-5xl md:text-6xl font-manrope font-800 leading-none">
                   <span className="text-[#0F1F45]">{value}</span>
                   {idx === 2 ? (
                     <span className="text-[#F5A800] inline-block">
