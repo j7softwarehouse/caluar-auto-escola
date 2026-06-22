@@ -6,16 +6,40 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 py-16">
           {/* Col 1 - Logo & Slogan */}
           <div>
-            <h3 className="text-2xl font-manrope font-800 mb-4">CALUAR</h3>
-            <p className="text-sm font-inter text-white/55 leading-relaxed mb-6">
+            <div className="mb-4 h-12 w-32">
+              <img
+                src="/logos/logo_caluar_branca.jpg"
+                alt="Caluar Logo"
+                className="h-full w-full object-contain"
+              />
+            </div>
+            <p className="text-sm font-inter text-white/55 leading-relaxed mb-8">
               Formando condutores seguros<br />desde 2002 em Itabirito/MG
             </p>
-            <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-white/8 hover:bg-accent/20 rounded-lg flex items-center justify-center transition-colors text-white/50">
-                f
+            <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/caluar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/10 hover:bg-accent hover:text-dark rounded-lg flex items-center justify-center transition-all duration-300 text-white/70"
+                aria-label="Facebook"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
               </a>
-              <a href="#" className="w-10 h-10 bg-white/8 hover:bg-accent/20 rounded-lg flex items-center justify-center transition-colors text-white/50">
-                in
+              <a
+                href="https://www.instagram.com/caluar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/10 hover:bg-accent hover:text-dark rounded-lg flex items-center justify-center transition-all duration-300 text-white/70"
+                aria-label="Instagram"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" fill="currentColor"/>
+                  <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                </svg>
               </a>
             </div>
           </div>
