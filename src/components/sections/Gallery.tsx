@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import Lightbox from '../ui/Lightbox'
 
 export default function Gallery() {
