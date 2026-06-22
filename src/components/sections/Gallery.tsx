@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import Image from 'next/image'
+import { useState, useRef, useEffect } from 'react'
 import Lightbox from '../ui/Lightbox'
 
 export default function Gallery() {
@@ -67,19 +66,15 @@ export default function Gallery() {
             {images.map((img, idx) => (
               <div
                 key={idx}
-                className="flex-0 w-full md:w-1/3 cursor-pointer relative h-72 rounded-xl overflow-hidden group"
+                className="flex-0 w-full md:w-1/3 cursor-pointer"
                 onClick={() => setLightboxIndex(idx)}
               >
-                <Image
+                <img
                   src={img.src}
                   alt={img.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  quality={75}
                   loading="lazy"
-                  placeholder="blur"
-                  blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23666' width='400' height='300'/%3E%3C/svg%3E"
-                  className="object-cover w-full h-full rounded-xl transition-transform duration-300 group-hover:scale-105"
+                  decoding="async"
+                  className="rounded-xl h-72 object-cover w-full transition-transform duration-300 hover:scale-105"
                 />
               </div>
             ))}
@@ -106,16 +101,13 @@ export default function Gallery() {
         {/* Lightbox */}
         <Lightbox isOpen={lightboxIndex !== null} onClose={() => setLightboxIndex(null)}>
           {lightboxIndex !== null && (
-            <div className="relative w-full h-96">
-              <Image
-                src={images[lightboxIndex].src}
-                alt="Gallery"
-                fill
-                quality={90}
-                sizes="90vw"
-                className="object-contain rounded-lg"
-              />
-            </div>
+            <img
+              src={images[lightboxIndex].src}
+              alt="Gallery"
+              loading="lazy"
+              decoding="async"
+              className="w-full rounded-lg"
+            />
           )}
         </Lightbox>
       </div>
