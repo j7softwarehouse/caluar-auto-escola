@@ -1,4 +1,4 @@
-const labels = ['ANOS NO MERCADO', 'CONDUTORES FORMADOS', 'NOTA GOOGLE', 'CREDENCIADA DETRAN-MG']
+const labels = ['ANOS DE CONFIANÇA', 'CONDUTORES FORMADOS', 'NOTA GOOGLE', 'CREDENCIADA DETRAN-MG']
 const suffixes = ['+', '+', '⭐', '%']
 const staticValues = ['24', '5mil', '4.6', '100']
 
