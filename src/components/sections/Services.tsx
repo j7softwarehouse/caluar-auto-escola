@@ -1,6 +1,6 @@
 const services = [
   {
-    num: 'A',
+    num: '🏍️',
     title: 'Categoria A — Moto',
     list: [
       'Pista própria de treinamento para motociclistas',
@@ -11,7 +11,7 @@ const services = [
     ]
   },
   {
-    num: 'B',
+    num: '🚗',
     title: 'Categoria B — Carro',
     list: [
       'Frota moderna com duplo comando',
@@ -22,7 +22,7 @@ const services = [
     ]
   },
   {
-    num: 'AB',
+    num: '🏍️🚗',
     title: 'Categoria AB — Moto e Carro',
     list: [
       'Tire moto e carro no mesmo processo',
@@ -33,7 +33,7 @@ const services = [
     ]
   },
   {
-    num: 'D',
+    num: '🚌',
     title: 'Categoria D — Ônibus e Transporte de Passageiros',
     list: [
       'Categoria profissional para transporte de passageiros',
@@ -43,19 +43,55 @@ const services = [
       'Treinamento em veículo moderno'
     ]
   },
+  {
+    num: '♻️',
+    title: 'Renovação e Reciclagem de CNH',
+    list: [
+      'Renovação da CNH comum ou suspensa',
+      'Curso obrigatório para condutores infratores',
+      'Modalidade presencial e EAD',
+      'Processo simplificado e orientado',
+      'Certificado reconhecido pelo DETRAN'
+    ]
+  },
+  {
+    num: '💻',
+    title: 'Cursos Especializados EAD',
+    list: [
+      'MOPP — Transporte de Produtos Perigosos',
+      'Transporte Coletivo de Passageiros',
+      'Transporte Escolar',
+      'Veículos de Emergência',
+      'Carga Indivisível'
+    ]
+  },
 ]
+
+import Button from '../ui/Button'
 
 export default function Services() {
   return (
     <section id="servicos" className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-4">
+        {/* Header */}
         <div className="mb-16">
           <h2 className="text-5xl md:text-6xl font-manrope font-800 text-primary mb-6 leading-tight">
             Todas as Categorias
           </h2>
+          <div className="max-w-2xl">
+            <h3 className="text-2xl md:text-3xl font-manrope font-700 text-primary mb-4">
+              A solução está aqui
+            </h3>
+            <p className="text-lg font-inter font-400 text-tx-muted mb-6">
+              Descubra como a gente transforma tudo isso em uma experiência simples e acompanhamento de verdade.
+            </p>
+            <p className="text-base font-inter font-300 text-tx-muted">
+              Tudo o que você precisa para conquistar sua habilitação em um só lugar. Primeira habilitação, curso teórico, adição e mudança de categoria, renovação, reciclagem e cursos especializados para motoristas profissionais.
+            </p>
+          </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-4">
           {services.map((srv, idx) => (
             <div
               key={idx}
@@ -88,6 +124,17 @@ export default function Services() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="mt-16 flex justify-center">
+          <Button
+            href="#contato"
+            variant="accent"
+            size="lg"
+          >
+            Descobrir a melhor categoria
+          </Button>
         </div>
       </div>
     </section>
