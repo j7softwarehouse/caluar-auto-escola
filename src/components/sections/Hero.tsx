@@ -50,7 +50,7 @@ export default function Hero() {
               </div>
 
               {/* CTA Button - UNICO (sem "Conhecer a escola") */}
-              <div className="mb-8">
+              <div className="mb-6">
                 <Button
                   href="https://wa.me/553135633619?text=Oi%20Caluar,%20quero%20minha%20CNH."
                   variant="accent"
@@ -58,6 +58,28 @@ export default function Hero() {
                 >
                   Quero minha CNH
                 </Button>
+              </div>
+
+              {/* Facilidade Badge */}
+              <div className="text-sm font-inter font-300 text-white/70 flex flex-col gap-2">
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Parcelamento em até 12x
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Matrícula 100% online
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Primeiras aulas + teste grátis
+                </span>
               </div>
 
             </div>
