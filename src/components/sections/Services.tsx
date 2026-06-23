@@ -108,15 +108,9 @@ export default function Services() {
 
               {/* Content */}
               <div className="relative z-10 flex flex-col h-full">
-                {/* Category number and title */}
-                <div className="mb-6">
-                  <div
-                    className="text-4xl md:text-5xl font-manrope font-800 leading-none mb-3"
-                    style={{ color: srv.color }}
-                  >
-                    {srv.num}
-                  </div>
-                  <h3 className="text-base md:text-lg font-manrope font-700 text-primary leading-snug">
+                {/* Category title */}
+                <div className="mb-8 pb-6 border-b-2" style={{ borderColor: srv.color }}>
+                  <h3 className="text-lg md:text-xl font-manrope font-800 leading-snug" style={{ color: srv.color }}>
                     {srv.title}
                   </h3>
                 </div>
