@@ -52,7 +52,7 @@ export default function Hero() {
               {/* CTA Button - UNICO (sem "Conhecer a escola") */}
               <div className="mb-8">
                 <Button
-                  href="https://wa.me/5531988508599?text=Quero%20minha%20CNH"
+                  href="https://wa.me/553135633619?text=Oi%20Caluar,%20quero%20minha%20CNH."
                   variant="accent"
                   size="lg"
                 >
@@ -69,14 +69,14 @@ export default function Hero() {
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
                     <div className="text-3xl font-manrope font-800 text-white">24</div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Anos de Tradição</div>
+                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Anos de Confiança</div>
                   </div>
                   <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
                     <div className="text-3xl font-manrope font-800 text-accent">4.6<span className="text-lg">⭐</span></div>
                     <div className="text-xs font-inter text-white/40 uppercase mt-1">Nota Google</div>
                   </div>
                   <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-white">5mil+</div>
+                    <div className="text-3xl font-manrope font-800 text-white">1mil+</div>
                     <div className="text-xs font-inter text-white/40 uppercase mt-1">Aprovados</div>
                   </div>
                   <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
