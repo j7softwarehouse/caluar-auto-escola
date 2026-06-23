@@ -28,13 +28,13 @@ export default function Hero() {
 
               {/* Heading */}
               <h1 className="text-5xl md:text-6xl font-manrope font-800 text-white mb-6 leading-tight tracking-tight">
-                Sua CNH pode estar muito mais perto do que você imagina.
+                Conquiste sua liberdade de dirigir com quem é especialista em aprovação.
               </h1>
 
               {/* Subheading */}
               <p className="text-lg font-inter font-400 text-white/80 mb-10 leading-relaxed">
-                Pare de adiar sua independência.<br />
-                Aprenda a dirigir com quem entende que confiança vem antes da aprovação.
+                Deixe a insegurança para trás.<br />
+                Com nossos instrutores pacientes e 24 anos de experiência, sua aprovação é certa.
               </p>
 
               {/* Categories */}
