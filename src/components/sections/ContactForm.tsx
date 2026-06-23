@@ -64,7 +64,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           />
-            <Button type="submit" variant="accent" size="lg" className="w-full">
+            <Button type="submit" variant="cta" size="lg" className="w-full">
               Enviar via WhatsApp
             </Button>
           </form>
