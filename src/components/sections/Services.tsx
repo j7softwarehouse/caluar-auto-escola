@@ -1,81 +1,98 @@
-const services = [
-  {
-    num: 'A',
-    title: 'Categoria A — Moto',
-    color: '#0F1F45',
-    list: [
-      'Pista própria de treinamento para motociclistas',
-      'Instrutores especializados e acompanhamento próximo',
-      'Treinamento pré-exame para mais confiança',
-      'Aulas flexíveis pela manhã, tarde e noite',
-      'Processo mais seguro para quem nunca pilotou'
-    ]
-  },
-  {
-    num: 'B',
-    title: 'Categoria B — Carro',
-    color: '#1e40af',
-    list: [
-      'Frota moderna com duplo comando',
-      'Instrutores preparados para ensinar no seu ritmo',
-      'Aulas flexíveis pela manhã, tarde e noite',
-      'Mais segurança e tranquilidade durante o aprendizado',
-      'Atendimento próximo do início ao fim do processo'
-    ]
-  },
-  {
-    num: 'AB',
-    title: 'Categoria AB — Moto e Carro',
-    color: '#F5A800',
-    list: [
-      'Tire moto e carro no mesmo processo',
-      'Mais praticidade para sua rotina',
-      'Melhor custo-benefício para conquistar as duas categorias',
-      'Processo unificado e acompanhado',
-      'Mais liberdade e mais oportunidades para você'
-    ]
-  },
-  {
-    num: 'D',
-    title: 'Categoria D — Ônibus e Transporte de Passageiros',
-    color: '#059669',
-    list: [
-      'Categoria profissional para transporte de passageiros',
-      'Ideal para ônibus, vans e oportunidades profissionais',
-      'Possibilidade de recolocação e crescimento profissional',
-      'Processo acompanhado do início ao fim',
-      'Treinamento em veículo moderno'
-    ]
-  },
-  {
-    num: 'R',
-    title: 'Renovação e Reciclagem de CNH',
-    color: '#7c3aed',
-    list: [
-      'Renovação da CNH comum ou suspensa',
-      'Curso obrigatório para condutores infratores',
-      'Modalidade presencial e EAD',
-      'Processo simplificado e orientado',
-      'Certificado reconhecido pelo DETRAN'
-    ]
-  },
-  {
-    num: 'E',
-    title: 'Cursos Especializados',
-    color: '#dc2626',
-    list: [
-      'MOPP — Transporte de Produtos Perigosos',
-      'Transporte Coletivo de Passageiros',
-      'Transporte Escolar',
-      'Veículos de Emergência',
-      'Carga Indivisível'
-    ]
-  },
-]
-
+import { useState } from 'react'
 import Button from '../ui/Button'
 
+const servicesData = {
+  categorias: [
+    {
+      num: 'A',
+      title: 'Categoria A — Moto',
+      color: '#0F1F45',
+      list: [
+        'Pista própria de treinamento para motociclistas',
+        'Instrutores especializados e acompanhamento próximo',
+        'Treinamento pré-exame para mais confiança',
+        'Aulas flexíveis pela manhã, tarde e noite',
+        'Processo mais seguro para quem nunca pilotou'
+      ]
+    },
+    {
+      num: 'B',
+      title: 'Categoria B — Carro',
+      color: '#1e40af',
+      list: [
+        'Frota moderna com duplo comando',
+        'Instrutores preparados para ensinar no seu ritmo',
+        'Aulas flexíveis pela manhã, tarde e noite',
+        'Mais segurança e tranquilidade durante o aprendizado',
+        'Atendimento próximo do início ao fim do processo'
+      ]
+    },
+    {
+      num: 'AB',
+      title: 'Categoria AB — Moto e Carro',
+      color: '#F5A800',
+      list: [
+        'Tire moto e carro no mesmo processo',
+        'Mais praticidade para sua rotina',
+        'Melhor custo-benefício para conquistar as duas categorias',
+        'Processo unificado e acompanhado',
+        'Mais liberdade e mais oportunidades para você'
+      ]
+    },
+    {
+      num: 'D',
+      title: 'Categoria D — Ônibus e Transporte de Passageiros',
+      color: '#059669',
+      list: [
+        'Categoria profissional para transporte de passageiros',
+        'Ideal para ônibus, vans e oportunidades profissionais',
+        'Possibilidade de recolocação e crescimento profissional',
+        'Processo acompanhado do início ao fim',
+        'Treinamento em veículo moderno'
+      ]
+    }
+  ],
+  renovacao: [
+    {
+      num: 'R',
+      title: 'Renovação e Reciclagem de CNH',
+      color: '#7c3aed',
+      list: [
+        'Renovação da CNH comum ou suspensa',
+        'Curso obrigatório para condutores infratores',
+        'Modalidade presencial e EAD',
+        'Processo simplificado e orientado',
+        'Certificado reconhecido pelo DETRAN'
+      ]
+    }
+  ],
+  especializados: [
+    {
+      num: 'E',
+      title: 'Cursos Especializados',
+      color: '#dc2626',
+      list: [
+        'MOPP — Transporte de Produtos Perigosos',
+        'Transporte Coletivo de Passageiros',
+        'Transporte Escolar',
+        'Veículos de Emergência',
+        'Carga Indivisível'
+      ]
+    }
+  ]
+}
+
+const tabs = [
+  { id: 'categorias', label: 'Categorias Principais' },
+  { id: 'renovacao', label: 'Renovação e Reciclagem' },
+  { id: 'especializados', label: 'Cursos Especializados' }
+]
+
 export default function Services() {
+  const [activeTab, setActiveTab] = useState<'categorias' | 'renovacao' | 'especializados'>('categorias')
+
+  const currentServices = servicesData[activeTab]
+
   return (
     <section id="servicos" className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-4">
@@ -97,8 +114,26 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((srv, idx) => (
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12 border-b border-border pb-6">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id as typeof activeTab)}
+              className={`px-6 py-3 rounded-lg font-manrope font-600 text-sm md:text-base transition-all duration-300 ${
+                activeTab === tab.id
+                  ? 'bg-accent text-white'
+                  : 'bg-light border border-border text-tx hover:border-accent'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Cards Grid */}
+        <div className={`grid md:grid-cols-${activeTab === 'especializados' || activeTab === 'renovacao' ? '1' : '2'} lg:grid-cols-${activeTab === 'especializados' || activeTab === 'renovacao' ? '1' : '2'} gap-8 mb-12`}>
+          {currentServices.map((srv, idx) => (
             <div
               key={idx}
               className="bg-light border border-border rounded-lg p-8 relative overflow-hidden transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-2 hover:border-accent/20 group flex flex-col"
@@ -130,7 +165,7 @@ export default function Services() {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-16 flex justify-center">
+        <div className="flex justify-center">
           <Button
             href="#contato"
             variant="accent"
