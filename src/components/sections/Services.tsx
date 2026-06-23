@@ -55,11 +55,11 @@ export default function Services() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {services.map((srv, idx) => (
             <div
               key={idx}
-              className="bg-light border border-border rounded-lg p-8 md:p-10 relative overflow-hidden transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 hover:border-accent/20 group flex flex-col"
+              className="bg-light border border-border rounded-lg p-5 relative overflow-hidden transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 hover:border-accent/20 group flex flex-col"
             >
               {/* Top orange line on hover */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400" />
@@ -67,20 +67,20 @@ export default function Services() {
               {/* Content */}
               <div className="relative z-10 flex flex-col h-full">
                 {/* Category number and title */}
-                <div className="mb-6">
-                  <div className="text-7xl md:text-8xl font-manrope font-800 text-primary leading-none mb-2">
+                <div className="mb-4">
+                  <div className="text-5xl md:text-6xl font-manrope font-800 text-primary leading-none mb-2">
                     {srv.num}
                   </div>
-                  <h3 className="text-base md:text-lg font-manrope font-700 text-primary">
+                  <h3 className="text-sm md:text-base font-manrope font-700 text-primary">
                     {srv.title}
                   </h3>
                 </div>
 
                 {/* List */}
-                <ul className="space-y-3 flex-1">
+                <ul className="space-y-2 flex-1">
                   {srv.list.map((item, i) => (
-                    <li key={i} className="text-sm md:text-base text-tx-muted font-inter font-300 flex gap-3 items-start">
-                      <span className="text-accent flex-shrink-0 mt-1">•</span>
+                    <li key={i} className="text-xs md:text-sm text-tx-muted font-inter font-300 flex gap-2 items-start">
+                      <span className="text-accent flex-shrink-0 mt-0.5">•</span>
                       <span className="leading-relaxed">{item}</span>
                     </li>
                   ))}
