@@ -2,6 +2,7 @@ const services = [
   {
     num: 'A',
     title: 'Categoria A — Moto',
+    color: '#0F1F45',
     list: [
       'Pista própria de treinamento para motociclistas',
       'Instrutores especializados e acompanhamento próximo',
@@ -13,6 +14,7 @@ const services = [
   {
     num: 'B',
     title: 'Categoria B — Carro',
+    color: '#1e40af',
     list: [
       'Frota moderna com duplo comando',
       'Instrutores preparados para ensinar no seu ritmo',
@@ -24,6 +26,7 @@ const services = [
   {
     num: 'AB',
     title: 'Categoria AB — Moto e Carro',
+    color: '#F5A800',
     list: [
       'Tire moto e carro no mesmo processo',
       'Mais praticidade para sua rotina',
@@ -35,6 +38,7 @@ const services = [
   {
     num: 'D',
     title: 'Categoria D — Ônibus e Transporte de Passageiros',
+    color: '#059669',
     list: [
       'Categoria profissional para transporte de passageiros',
       'Ideal para ônibus, vans e oportunidades profissionais',
@@ -46,6 +50,7 @@ const services = [
   {
     num: 'R',
     title: 'Renovação e Reciclagem de CNH',
+    color: '#7c3aed',
     list: [
       'Renovação da CNH comum ou suspensa',
       'Curso obrigatório para condutores infratores',
@@ -57,6 +62,7 @@ const services = [
   {
     num: 'E',
     title: 'Cursos Especializados',
+    color: '#dc2626',
     list: [
       'MOPP — Transporte de Produtos Perigosos',
       'Transporte Coletivo de Passageiros',
@@ -104,7 +110,10 @@ export default function Services() {
               <div className="relative z-10 flex flex-col h-full">
                 {/* Category number and title */}
                 <div className="mb-6">
-                  <div className="text-5xl md:text-6xl font-manrope font-800 text-primary leading-none mb-3">
+                  <div
+                    className="text-4xl md:text-5xl font-manrope font-800 leading-none mb-3"
+                    style={{ color: srv.color }}
+                  >
                     {srv.num}
                   </div>
                   <h3 className="text-base md:text-lg font-manrope font-700 text-primary leading-snug">
