@@ -63,20 +63,20 @@ export default function Gallery() {
         {/* Carousel */}
         <div className="overflow-hidden mb-8">
           <div
-            className="flex gap-5 transition-transform duration-500"
+            className="flex gap-6 transition-transform duration-500"
             style={{
-              transform: `translateX(-${currentIndex * (100 / itemsPerView + 1.67)}%)`
+              transform: `translateX(-${currentIndex * (100 / itemsPerView + 2)}%)`
             }}
           >
             {images.map((img, idx) => (
               <div
                 key={idx}
-                className="flex-0 w-full md:w-1/3 cursor-pointer relative bg-white/5 rounded-xl overflow-hidden"
+                className="flex-shrink-0 w-full md:w-1/3 cursor-pointer relative bg-white/5 rounded-xl overflow-hidden"
                 onClick={() => setLightboxIndex(idx)}
               >
                 {/* Placeholder skeleton */}
                 {!loadedImages.has(img.src) && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 animate-pulse rounded-xl h-72" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 animate-pulse rounded-xl h-96" />
                 )}
                 {/* Image */}
                 <img
@@ -85,7 +85,7 @@ export default function Gallery() {
                   loading="lazy"
                   decoding="async"
                   onLoad={() => handleImageLoad(img.src)}
-                  className={`rounded-xl h-72 object-cover w-full transition-all duration-300 hover:scale-105 ${
+                  className={`rounded-xl h-96 object-cover w-full transition-all duration-300 hover:scale-105 ${
                     loadedImages.has(img.src) ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
