@@ -2,13 +2,12 @@ const highlights = [
   { text: 'CNH BRASIL', highlight: true },
   { text: 'Reciclagem' },
   { text: 'ALTO ÍNDICE DE APROVAÇÃO', highlight: true },
-  { text: 'Transporte ao exame' },
+  { text: 'Cursos especializados' },
   { text: 'CREDENCIADA DETRAN-MG', highlight: true },
-  { text: 'Itabirito/MG' },
+  { text: 'Legislação' },
   { text: 'HABILITAÇÃO A', highlight: true },
   { text: 'HABILITAÇÃO B' },
   { text: 'HABILITAÇÃO AB' },
-  { text: 'HABILITAÇÃO C' },
   { text: 'HABILITAÇÃO D', highlight: true },
 ]
 
