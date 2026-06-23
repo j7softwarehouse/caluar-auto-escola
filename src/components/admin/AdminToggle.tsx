@@ -1,7 +1,7 @@
 export default function AdminToggle() {
   return (
     <a
-      href="https://api.whatsapp.com/send/?phone=553135633619&text=Oi+Caluar%21&type=phone_number&app_absent=0"
+      href="https://wa.me/553135633619?text=Oi%20Caluar,%20quero%20minha%20CNH!"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#1BAD56] z-30 flex items-center justify-center transition-transform hover:scale-110"
