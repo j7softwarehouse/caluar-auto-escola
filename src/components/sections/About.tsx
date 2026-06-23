@@ -9,14 +9,14 @@ export default function About() {
             <img
               src="/images/img1.JPG"
               alt="Equipe Caluar"
-              className="absolute top-0 left-0 w-[74%] h-64 object-cover rounded-xl shadow-md"
+              className="absolute top-0 left-0 w-[74%] h-64 object-cover object-top rounded-xl shadow-md"
             />
 
             {/* Secondary image - bottom right with white border */}
             <img
               src="/images/img3.jpeg"
               alt="Turma Caluar"
-              className="absolute bottom-0 right-0 w-[54%] h-40 object-cover rounded-xl shadow-lg border-4 border-white"
+              className="absolute bottom-0 right-0 w-[54%] h-40 object-cover object-top rounded-xl shadow-lg border-4 border-white"
             />
           </div>
 
