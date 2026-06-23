@@ -4,6 +4,7 @@ import Lightbox from '../ui/Lightbox'
 export default function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set())
 
   const images = [
     { src: '/images/IMG_0334.jpg', alt: 'Turma Caluar' },
@@ -22,6 +23,10 @@ export default function Gallery() {
 
   const handlePrev = () => setCurrentIndex(Math.max(0, currentIndex - 1))
   const handleNext = () => setCurrentIndex(Math.min(maxIndex, currentIndex + 1))
+
+  const handleImageLoad = (src: string) => {
+    setLoadedImages(prev => new Set(prev).add(src))
+  }
 
   return (
     <section id="galeria" className="bg-dark py-20">
@@ -66,15 +71,23 @@ export default function Gallery() {
             {images.map((img, idx) => (
               <div
                 key={idx}
-                className="flex-0 w-full md:w-1/3 cursor-pointer"
+                className="flex-0 w-full md:w-1/3 cursor-pointer relative bg-white/5 rounded-xl overflow-hidden"
                 onClick={() => setLightboxIndex(idx)}
               >
+                {/* Placeholder skeleton */}
+                {!loadedImages.has(img.src) && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 animate-pulse rounded-xl h-72" />
+                )}
+                {/* Image */}
                 <img
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
                   decoding="async"
-                  className="rounded-xl h-72 object-cover w-full transition-transform duration-300 hover:scale-105"
+                  onLoad={() => handleImageLoad(img.src)}
+                  className={`rounded-xl h-72 object-cover w-full transition-all duration-300 hover:scale-105 ${
+                    loadedImages.has(img.src) ? 'opacity-100' : 'opacity-0'
+                  }`}
                 />
               </div>
             ))}
