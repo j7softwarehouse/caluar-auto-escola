@@ -110,7 +110,7 @@ export default function Hero() {
                 {/* Images Grid */}
                 <div className="grid grid-cols-2 gap-3">
                   <div className="rounded-lg overflow-hidden bg-black/20">
-                    <img src="/images/img1.JPG" alt="Motopista Própria" className="w-full h-24 object-cover brightness-75" />
+                    <img src="/images/d097762dfc.jpg" alt="Motopista Própria" className="w-full h-24 object-cover brightness-75" />
                     <div className="px-3 py-2 bg-black/30 text-xs text-white/65">Motopista Própria</div>
                   </div>
                   <div className="rounded-lg overflow-hidden bg-black/20">
