@@ -38,7 +38,7 @@ export default function ContactForm() {
             type="text"
             placeholder="Seu nome"
             required
-            className="w-full px-5 py-4 border border-border rounded-lg bg-white font-inter text-sm focus:outline-none focus:border-accent transition-colors"
+            className="w-full px-5 py-3 md:py-4 border border-border rounded-lg bg-white font-inter text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-colors min-h-[48px]"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
@@ -46,14 +46,14 @@ export default function ContactForm() {
             type="email"
             placeholder="seu@email.com"
             required
-            className="w-full px-5 py-4 border border-border rounded-lg bg-white font-inter text-sm focus:outline-none focus:border-accent transition-colors"
+            className="w-full px-5 py-3 md:py-4 border border-border rounded-lg bg-white font-inter text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-colors min-h-[48px]"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           />
           <input
             type="tel"
             placeholder="(31) 9 9999-9999"
-            className="w-full px-5 py-4 border border-border rounded-lg bg-white font-inter text-sm focus:outline-none focus:border-accent transition-colors"
+            className="w-full px-5 py-3 md:py-4 border border-border rounded-lg bg-white font-inter text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-colors min-h-[48px]"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           />
