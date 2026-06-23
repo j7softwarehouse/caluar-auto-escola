@@ -12,7 +12,6 @@ node_modules/
 
 # Production
 /build
-/dist
 *.d.ts
 *.d.ts.map
 *.js
