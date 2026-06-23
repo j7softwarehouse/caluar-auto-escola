@@ -104,10 +104,10 @@ export default function Services() {
               <div className="relative z-10 flex flex-col h-full">
                 {/* Category number and title */}
                 <div className="mb-6">
-                  <div className="text-7xl md:text-8xl font-manrope font-800 text-primary leading-none mb-3">
+                  <div className="text-5xl md:text-6xl font-manrope font-800 text-primary leading-none mb-3">
                     {srv.num}
                   </div>
-                  <h3 className="text-base md:text-lg font-manrope font-700 text-primary">
+                  <h3 className="text-base md:text-lg font-manrope font-700 text-primary leading-snug">
                     {srv.title}
                   </h3>
                 </div>
