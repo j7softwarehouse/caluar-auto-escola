@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 interface ButtonProps {
   children: ReactNode
-  variant?: 'primary' | 'accent' | 'outline'
+  variant?: 'primary' | 'accent' | 'cta' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   href?: string
   onClick?: () => void
@@ -24,14 +24,15 @@ export default function Button({
 
   const variants = {
     primary: 'bg-primary text-white hover:bg-primary-mid',
-    accent: 'bg-accent text-dark hover:bg-yellow-400',
+    accent: 'bg-accent text-dark hover:bg-yellow-500',
+    cta: 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-lg hover:shadow-emerald-600/50',
     outline: 'border-2 border-accent text-accent hover:bg-accent hover:text-dark',
   }
 
   const sizes = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'px-4 py-2 text-sm min-h-[40px]',
+    md: 'px-6 py-3 text-base min-h-[48px]',
+    lg: 'px-8 py-4 text-lg min-h-[56px]',
   }
 
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`

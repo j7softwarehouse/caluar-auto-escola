@@ -64,24 +64,24 @@ export default function Hero() {
 
             {/* Right Column - Hero Card */}
             <div className="hidden md:flex">
-              <div className="bg-white/6 backdrop-blur-md border border-white/12 rounded-2xl p-6 w-full">
+              <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-3xl p-8 w-full shadow-2xl">
                 {/* Stats Grid 2x2 */}
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-white">24</div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Anos de Confiança</div>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-xl p-6 text-center hover:border-accent/30 transition-all">
+                    <div className="text-4xl font-manrope font-800 text-white mb-2">24</div>
+                    <div className="text-xs font-inter text-white/50 uppercase tracking-wide">Anos de Confiança</div>
                   </div>
-                  <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-accent">4.6<span className="text-lg">⭐</span></div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Nota Google</div>
+                  <div className="bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30 rounded-xl p-6 text-center hover:border-accent/50 transition-all">
+                    <div className="text-4xl font-manrope font-800 text-accent mb-2">4.6<span className="text-lg ml-1">⭐</span></div>
+                    <div className="text-xs font-inter text-white/50 uppercase tracking-wide">Nota Google</div>
                   </div>
-                  <div className="bg-white/7 border border-white/10 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-white">1mil+</div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Aprovados</div>
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-xl p-6 text-center hover:border-accent/30 transition-all">
+                    <div className="text-4xl font-manrope font-800 text-white mb-2">1mil+</div>
+                    <div className="text-xs font-inter text-white/50 uppercase tracking-wide">Aprovados</div>
                   </div>
-                  <div className="bg-white/7 border border-accent/25 rounded-lg p-4 text-center">
-                    <div className="text-3xl font-manrope font-800 text-accent">100%</div>
-                    <div className="text-xs font-inter text-white/40 uppercase mt-1">Detran-MG</div>
+                  <div className="bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30 rounded-xl p-6 text-center hover:border-accent/50 transition-all">
+                    <div className="text-4xl font-manrope font-800 text-accent mb-2">100%</div>
+                    <div className="text-xs font-inter text-white/50 uppercase tracking-wide">Detran-MG</div>
                   </div>
                 </div>
 
