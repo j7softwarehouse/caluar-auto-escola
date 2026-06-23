@@ -10,9 +10,16 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://caluar-auto-escola.pages.dev",
       "name": "Caluar Auto Escola",
-      "image": "/logos/logo_caluar.jpeg",
-      "description": "Auto Escola em Itabirito com 24 anos de experiência. Categorias A, B, AB, D. 1mil+ aprovados, taxa 90%+.",
+      "image": [
+        "https://caluar-auto-escola.pages.dev/logos/logo_caluar.jpeg",
+        "https://caluar-auto-escola.pages.dev/images/hero-banner.jpg"
+      ],
+      "description": "Auto Escola em Itabirito com 24 anos de experiência. Categorias A, B, AB, D. 1mil+ aprovados, taxa de aprovação 90%+. Instrutores pacientes, motopista própria, aulas flexíveis.",
+      "url": "https://caluar-auto-escola.pages.dev",
+      "telephone": "+553135633619",
+      "email": "contato@caluar-auto-escola.com.br",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Domingos Michel, 120",
@@ -21,16 +28,32 @@
         "postalCode": "35680-000",
         "addressCountry": "BR"
       },
-      "telephone": "(31) 3563-3619",
-      "url": "https://caluar-auto-escola.pages.dev",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-20.4521",
+        "longitude": "-43.8304"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+553135633619",
+        "contactType": "Customer Service",
+        "areaServed": ["Itabirito", "Minas Gerais", "BR"],
+        "availableLanguage": ["pt-BR", "pt"]
+      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.6",
         "ratingCount": "131",
         "bestRating": "5",
-        "worstRating": "1"
+        "worstRating": "1",
+        "reviewCount": "131"
       },
       "priceRange": "R$ 1500 - R$ 3000",
+      "foundingDate": "2002",
+      "areaServed": {
+        "@type": "City",
+        "name": "Itabirito, Minas Gerais"
+      },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -47,8 +70,31 @@
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Sunday",
-          "opens": "closed"
+          "opens": "closed",
+          "closes": "closed"
         }
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Primeira Habilitação (Categorias A, B, AB, D)",
+          "description": "Aulas teóricas, práticas e exame com nossos instrutores especializados",
+          "priceCurrency": "BRL",
+          "price": "1500-2000",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Renovação de CNH",
+          "description": "Renovação de CNH com curso obrigatório",
+          "priceCurrency": "BRL",
+          "price": "500-800",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "sameAs": [
+        "https://www.google.com/maps/place/Caluar+Auto+Escola",
+        "https://www.facebook.com/caluar"
       ]
     }
     </script>
