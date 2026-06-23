@@ -11,8 +11,6 @@ import CnhBrasil from './components/sections/CnhBrasil'
 import Process from './components/sections/Process'
 import Gallery from './components/sections/Gallery'
 import Testimonials from './components/sections/Testimonials'
-import TestimonialsWithPhotos from './components/sections/TestimonialsWithPhotos'
-import ApprovedGallery from './components/sections/ApprovedGallery'
 import Faq from './components/sections/Faq'
 import ContactForm from './components/sections/ContactForm'
 import CoursesSpecialized from './components/sections/CoursesSpecialized'
@@ -36,8 +34,6 @@ function App() {
       <Process />
       <Gallery />
       <Testimonials />
-      <TestimonialsWithPhotos />
-      <ApprovedGallery />
       <Faq />
       <ContactForm />
       <CoursesSpecialized />
