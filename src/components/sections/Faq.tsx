@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
 const faqs = [
-  { q: 'Quanto custa?', a: 'Oferecemos pacotes a partir de R$ 1.500. Temos opcoes para todos os orcamentos e ainda parcelamos sem juros. Fale conosco para ajustarmos o melhor valor para seu caso.' },
-  { q: 'Quantas aulas preciso fazer?', a: 'O minimo e 20 aulas praticas, conforme a legislacao DETRAN. Mas cada aluno tem seu ritmo. Alguns precisam de mais aulas e nos oferecemos aulas adicionais sem problema algum.' },
-  { q: 'Posso parcelar?', a: 'Sim! Oferecemos parcelamento em ate 12x sem juros. A gente trabalha com voce para tornar sua CNH acessivel financeiramente. Sem surpresas, sem taxas escondidas.' },
-  { q: 'Qual a taxa de aprovacao de voces?', a: 'Nossa taxa e de mais de 90% na primeira tentativa. Isso porque a gente nao so ensina: a gente cuida de voce do primeiro dia ate voce passar.' },
-  { q: 'Vocês têm simulados?', a: 'Sim! Simulados estao inclusos em todas as aulas e voce ainda tem acesso a plataforma on-line 24h para treinar quando quiser. Voce estara 100% pronto para a prova.' },
-  { q: 'Qual o horario de atendimento?', a: 'Segunda a sabado das 7h as 18h. Domingo fechado. Mas voce pode chamar a gente no WhatsApp a qualquer hora que a gente responde rapidinho.' },
+  { q: 'Tenho medo de dirigir, vocês têm instrutores pacientes?', a: 'Com certeza! Sabemos que o medo é normal e nossos instrutores são treinados para isso. Começamos do zero, com respeito ao seu ritmo. Aulas teóricas com foco em confiança, aulas práticas em ambientes controlados (nossa motopista própria), e você no comando. Dezenas de alunos que chegaram com pavor conseguiram sua CNH com a gente. Você não está sozinho nessa.' },
+  { q: 'Qual o melhor parcelamento?', a: 'Oferecemos parcelamento em até 12x sem juros. A gente trabalha com você para tornar sua CNH acessível financeiramente. Pacotes a partir de R$ 1.500. Sem surpresas, sem taxas escondidas. Fale conosco no WhatsApp e a gente ajusta o melhor valor para seu caso.' },
+  { q: 'Como funcionam as aulas nos fins de semana?', a: 'Oferecemos aulas nas manhãs, tardes e noites. Segunda a sexta: 7h às 20h. Sábados: 9h às 12h. Você escolhe os horários que combinam com sua rotina. Flexibilidade total para quem trabalha ou estuda. Agende com a gente e ajustamos conforme sua disponibilidade.' },
+  { q: 'Qual a taxa de aprovação de vocês?', a: 'Nossa taxa é de mais de 90% na primeira tentativa. Isso porque a gente não só ensina: a gente cuida de você do primeiro dia até você passar. Simulados inclusos, plataforma online 24h para treinar, e instrutores que realmente se importam com sua aprovação. Você estará 100% pronto para a prova.' },
+  { q: 'Preciso de documentos especiais?', a: 'Você precisa de: RG, CPF, comprovante de endereço e foto 3x4. Se for mudança de categoria ou renovação, leve sua CNH antiga. A gente orienta tudo na matrícula. Nenhuma burocracia desnecessária. Nosso time cuida de toda a parte documental com você.' },
+  { q: 'Quanto tempo leva para tirar a CNH?', a: 'Em média, 2 a 3 meses do primeiro atendimento até a CNH em mãos, dependendo da sua disponibilidade. O processo tem 5 etapas: matrícula, exames teóricos, aulas práticas, exame prático e emissão. A gente acelera o máximo possível sem comprometer sua aprendizagem. Alguns conseguem em 45 dias, outros em 4 meses. Depende do seu ritmo.' },
 ]
 
 export default function Faq() {
