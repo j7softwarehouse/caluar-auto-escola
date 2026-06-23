@@ -80,11 +80,11 @@ export default function Services() {
     <section id="servicos" className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-16 text-center">
           <h2 className="text-5xl md:text-6xl font-manrope font-800 text-primary mb-6 leading-tight">
             Todas as Categorias
           </h2>
-          <div className="max-w-2xl">
+          <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-manrope font-700 text-primary mb-4">
               A solução está aqui
             </h3>
