@@ -3,22 +3,32 @@ export default function Process() {
     {
       num: '01',
       title: 'Matrícula',
+      time: '1-2 dias',
       description: 'Orientamos você sobre documentação, categoria ideal e condições de pagamento para que você comece com segurança e sem dúvidas.'
     },
     {
       num: '02',
       title: 'Aulas Teóricas',
+      time: '2-3 semanas',
       description: 'Aulas presenciais ou on-line, salas informatizadas e preparação focada no que realmente cai na prova.'
     },
     {
       num: '03',
       title: 'Aulas Práticas',
+      time: '3-4 semanas',
       description: 'Veículos modernos com duplo comando, motopista própria e instrutores pacientes para você ganhar mais confiança.'
     },
     {
       num: '04',
-      title: 'Aprovação',
-      description: 'No dia do exame, você conta com apoio da equipe e toda preparação necessária para chegar mais tranquilo, confiante e preparado para a prova.'
+      title: 'Exame Final',
+      time: '1 dia',
+      description: 'No dia do exame, você conta com apoio da equipe e toda preparação necessária para chegar mais tranquilo, confiante e preparado.'
+    },
+    {
+      num: '05',
+      title: 'CNH em Mãos',
+      time: '1-2 dias',
+      description: 'Sua habilitação é entregue! Você agora está preparado, confiante e pronto para dirigir com segurança e responsabilidade.'
     }
   ]
 
@@ -48,17 +58,22 @@ export default function Process() {
         </div>
 
         {/* Process Steps Grid */}
-        <div className="grid md:grid-cols-4 gap-0 relative mt-16">
+        <div className="grid md:grid-cols-5 gap-0 relative mt-16">
           {/* Connecting line */}
-          <div className="absolute top-[30px] left-[calc(12.5%+16px)] right-[calc(12.5%+16px)] h-px bg-gradient-to-r from-transparent via-accent/35 to-transparent md:block hidden" />
+          <div className="absolute top-[30px] left-[calc(10%+16px)] right-[calc(10%+16px)] h-px bg-gradient-to-r from-transparent via-accent/35 to-transparent md:block hidden" />
 
           {steps.map((step, idx) => (
-            <div key={idx} className="px-4 text-center relative z-1">
+            <div key={idx} className="px-3 text-center relative z-1">
               {/* Step Number Circle */}
-              <div className="w-[60px] h-[60px] rounded-full bg-accent/10 border border-accent/22 flex items-center justify-center mx-auto mb-5 transition-all duration-250 hover:bg-accent hover:text-primary hover:shadow-[0_0_0_8px_rgba(245,168,0,0.1)]">
+              <div className="w-[60px] h-[60px] rounded-full bg-accent/10 border border-accent/22 flex items-center justify-center mx-auto mb-4 transition-all duration-250 hover:bg-accent hover:text-primary hover:shadow-[0_0_0_8px_rgba(245,168,0,0.1)]">
                 <div className="font-manrope font-800 text-lg text-accent">
                   {step.num}
                 </div>
+              </div>
+
+              {/* Step Time Badge */}
+              <div className="inline-block bg-white/10 px-2 py-1 rounded text-xs text-accent font-inter font-500 mb-3">
+                {step.time}
               </div>
 
               {/* Step Title */}
@@ -67,7 +82,7 @@ export default function Process() {
               </h3>
 
               {/* Step Description */}
-              <p className="text-xs font-inter font-300 text-white leading-relaxed">
+              <p className="text-xs font-inter font-300 text-white/80 leading-relaxed">
                 {step.description}
               </p>
             </div>
