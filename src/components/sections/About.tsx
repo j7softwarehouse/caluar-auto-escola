@@ -27,22 +27,70 @@ export default function About() {
             </div>
 
             <h2 className="text-5xl md:text-6xl font-manrope font-800 text-primary mb-8 leading-tight">
-              Uma escola que cuida de voce<br />do primeiro dia ate a CNH
+              Há 24 anos transformando sonhos em liberdade
             </h2>
 
-            <p className="text-base font-inter font-300 text-tx-muted mb-6 leading-relaxed">
-              Ha mais de duas decadas, a Caluar trabalha com paixao na formacao de <span className="font-600 text-tx">condutores responsaveis e confiantes</span>. Cada aluno e unico, e nos respeitamos isso.
+            <p className="text-base font-inter font-600 text-tx-muted mb-6 leading-relaxed">
+              Quem aprende com a Caluar sente a diferença desde o primeiro atendimento.
             </p>
 
-            <p className="text-base font-inter font-300 text-tx-muted mb-8 leading-relaxed">
-              <span className="font-600 text-tx">Credenciada pelo DETRAN-MG</span>, possuimos toda a estrutura necessaria e instrutores que realmente se importam com sua aprovacao. Aqui voce nao e numero.
+            <p className="text-sm font-inter font-300 text-tx-muted mb-6 leading-relaxed">
+              A Caluar nasceu em 2002, em Itabirito, com um propósito simples: ajudar pessoas comuns a conquistarem independência, novas oportunidades, superar medos e receios, tudo com acompanhamento de verdade.
+            </p>
+
+            <p className="text-sm font-inter font-300 text-tx-muted mb-6 leading-relaxed">
+              Ao longo de mais de 24 anos, a Caluar passou a fazer parte da história de milhares de pessoas em Itabirito, ajudando gerações inteiras a conquistarem mais liberdade, autonomia e oportunidades através de credibilidade e sem enrolação.
+            </p>
+
+            <p className="text-sm font-inter font-300 text-tx-muted mb-6 leading-relaxed">
+              <span className="font-600 text-tx">Credenciada pelo DETRAN-MG</span> e reconhecida pelo alto índice de aprovação, a Caluar reúne:
+            </p>
+
+            {/* Features List */}
+            <ul className="space-y-3 mb-8">
+              <li className="text-sm font-inter font-300 text-tx-muted flex gap-3 items-start">
+                <span className="text-accent flex-shrink-0 mt-1">•</span>
+                <span>Instrutores qualificados e pacientes</span>
+              </li>
+              <li className="text-sm font-inter font-300 text-tx-muted flex gap-3 items-start">
+                <span className="text-accent flex-shrink-0 mt-1">•</span>
+                <span>Frota moderna e revisada</span>
+              </li>
+              <li className="text-sm font-inter font-300 text-tx-muted flex gap-3 items-start">
+                <span className="text-accent flex-shrink-0 mt-1">•</span>
+                <span>Salas informatizadas</span>
+              </li>
+              <li className="text-sm font-inter font-300 text-tx-muted flex gap-3 items-start">
+                <span className="text-accent flex-shrink-0 mt-1">•</span>
+                <span>Motopista própria para treinamento</span>
+              </li>
+              <li className="text-sm font-inter font-300 text-tx-muted flex gap-3 items-start">
+                <span className="text-accent flex-shrink-0 mt-1">•</span>
+                <span>Atendimento próximo e humanizado</span>
+              </li>
+            </ul>
+
+            <p className="text-sm font-inter font-300 text-tx-muted mb-8 leading-relaxed italic">
+              Tudo para que você chegue mais preparado, mais tranquilo e mais confiante para conquistar sua CNH.
             </p>
 
             {/* Pills */}
-            <div className="flex gap-3 flex-wrap">
+            <div className="grid grid-cols-2 gap-3">
               <div className="bg-white border border-border rounded-lg px-4 py-3">
-                <div className="text-2xl font-manrope font-800 text-primary leading-none">24+</div>
-                <div className="text-xs text-tx-muted uppercase tracking-wider font-300 mt-1">Anos de exp</div>
+                <div className="text-lg font-manrope font-800 text-primary leading-none">2002</div>
+                <div className="text-xs text-tx-muted uppercase tracking-wider font-300 mt-1">Fundação</div>
+              </div>
+              <div className="bg-white border border-border rounded-lg px-4 py-3">
+                <div className="text-lg font-manrope font-800 text-primary leading-none">Pista própria</div>
+                <div className="text-xs text-tx-muted uppercase tracking-wider font-300 mt-1">Motopista</div>
+              </div>
+              <div className="bg-white border border-border rounded-lg px-4 py-3">
+                <div className="text-lg font-manrope font-800 text-primary leading-none">A, B, AB, D</div>
+                <div className="text-xs text-tx-muted uppercase tracking-wider font-300 mt-1">Categorias</div>
+              </div>
+              <div className="bg-white border border-border rounded-lg px-4 py-3">
+                <div className="text-lg font-manrope font-800 text-primary leading-none">CNH Brasil</div>
+                <div className="text-xs text-tx-muted uppercase tracking-wider font-300 mt-1">Programa</div>
               </div>
             </div>
           </div>
