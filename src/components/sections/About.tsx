@@ -4,19 +4,19 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-20 items-center">
           {/* Imagens (aparece primeiro mobile) */}
-          <div className="order-2 md:order-1 relative h-96 md:h-96">
+          <div className="order-2 md:order-1 relative h-full md:h-96" style={{ minHeight: '500px' }}>
             {/* Main image - top left */}
             <img
               src="/images/img1.JPG"
               alt="Equipe Caluar"
-              className="absolute top-0 left-0 w-[74%] h-64 object-cover object-top rounded-xl shadow-md"
+              className="absolute top-0 left-0 w-[74%] h-80 object-cover object-top rounded-xl shadow-md"
             />
 
             {/* Secondary image - bottom right with white border */}
             <img
               src="/images/img3.jpeg"
               alt="Turma Caluar"
-              className="absolute bottom-0 right-0 w-[54%] h-40 object-cover object-top rounded-xl shadow-lg border-4 border-white"
+              className="absolute bottom-0 right-0 w-[54%] h-56 object-cover object-top rounded-xl shadow-lg border-4 border-white"
             />
           </div>
 
