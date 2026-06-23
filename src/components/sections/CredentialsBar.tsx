@@ -1,6 +1,6 @@
 const labels = ['ANOS DE CONFIANÇA', 'CONDUTORES FORMADOS', 'NOTA GOOGLE', 'CREDENCIADA DETRAN-MG']
 const suffixes = ['+', '+', '⭐', '%']
-const staticValues = ['24', 'mais de 1mil', '4.6', '100']
+const staticValues = ['24', '1mil', '4.6', '100']
 
 export default function CredentialsBar() {
 
