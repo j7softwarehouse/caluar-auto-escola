@@ -164,16 +164,6 @@ export default function Services() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="flex justify-center">
-          <Button
-            href="#contato"
-            variant="accent"
-            size="lg"
-          >
-            Descobrir a melhor categoria
-          </Button>
-        </div>
       </div>
     </section>
   )
