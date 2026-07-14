@@ -73,7 +73,7 @@ export default function Hero() {
                     <div className="text-xs font-inter text-white/50 uppercase tracking-wide leading-tight">Anos de Tradição</div>
                   </div>
                   <div className="bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30 rounded-xl p-5 text-left hover:bg-accent/25 transition-all duration-300">
-                    <div className="text-3xl font-manrope font-800 text-accent mb-2">4.6 ⭐</div>
+                    <div className="text-3xl font-manrope font-800 text-accent mb-2">4.6<span className="text-2xl ml-1">✨</span></div>
                     <div className="text-xs font-inter text-white/50 uppercase tracking-wide leading-tight">Nota Google</div>
                   </div>
                   <div className="bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-xl p-5 text-left hover:bg-white/12 hover:border-white/30 transition-all duration-300">
