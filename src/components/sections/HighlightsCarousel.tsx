@@ -1,14 +1,14 @@
 const highlights = [
   { text: 'CNH BRASIL', highlight: true },
-  { text: 'Reciclagem' },
+  { text: 'RECICLAGEM' },
   { text: 'ALTO ÍNDICE DE APROVAÇÃO', highlight: true },
-  { text: 'Cursos especializados' },
-  { text: 'CREDENCIADA DETRAN-MG', highlight: true },
-  { text: 'Legislação' },
+  { text: 'CURSOS ESPECIALIZADOS' },
+  { text: 'MOTOPISTA PRÓPRIA', highlight: true },
+  { text: 'LEGISLAÇÃO' },
   { text: 'HABILITAÇÃO A', highlight: true },
   { text: 'HABILITAÇÃO B' },
-  { text: 'HABILITAÇÃO AB' },
-  { text: 'HABILITAÇÃO D', highlight: true },
+  { text: 'HABILITAÇÃO AB', highlight: true },
+  { text: 'HABILITAÇÃO D' },
 ]
 
 export default function HighlightsCarousel() {
