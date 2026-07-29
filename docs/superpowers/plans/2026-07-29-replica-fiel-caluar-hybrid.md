@@ -17,7 +17,15 @@
 - **Nenhuma informação inventada.** Slot da referência sem dado correspondente é preenchido com informação real reformatada (ver Task 12 e Task 13), nunca com dado fictício.
 - **WhatsApp de todo CTA:** `553135633619`.
 - **Números:** 24 anos (derivado de `FUNDACAO = 2002`), 4.6★, 131 avaliações, 7mil+ aprovados, 100% DETRAN-MG.
-- **Duas — e apenas duas — divergências permitidas em relação ao arquivo de referência:** adicionar `.gal{background:var(--nv)}` (a referência não tem regra de fundo na galeria e renderiza texto branco sobre branco); e não portar o CSS morto de `.gal-grid`/`.gi`/`.gi.r2`/`.gi.c2` (linhas 343–345, 351–352, 368), que não tem markup correspondente.
+- **Divergências autorizadas em relação ao arquivo de referência — esta lista é exaustiva.** Qualquer outra diferença é defeito de implementação:
+  1. Adicionar `.gal{background:var(--nv)}` — a referência não tem regra de fundo na galeria e renderiza texto branco sobre branco (Task 3).
+  2. Não portar o CSS morto de `.gal-grid`/`.gi`/`.gi.r2`/`.gi.c2`, linhas 343–345, 351–352 e 368, que não tem markup correspondente (Task 3).
+  3. `.proc-steps` em 5 colunas com a linha conectora em `10%` — decorre de o site ter 5 etapas e a referência 4 (Task 12).
+  4. Não reproduzir o defeito da linha 442, onde o rótulo "Condutores formados" ficou dentro do `.stat-num` e o `.stat-lbl` vazio (Task 8).
+  5. `loading="lazy"` no iframe do mapa (Task 17).
+  6. Âncora `#servicos` em vez de `#categorias` — âncora é URL, e trocá-la quebraria links em circulação (Tasks 6 e 10).
+  7. Contagem e conteúdo de itens seguem a produção, não a referência: 4 categorias no hero (não 6), 5 etapas no processo (não 4), 6 depoimentos reais, os horários reais de atendimento. Isso é a regra de conteúdo, não uma exceção de forma.
+- **Sem testes automatizados.** A spec põe testes fora de escopo: o projeto não tem suíte, e a verificação deste trabalho é a comparação visual da Task 2 — teste unitário não detecta divergência de layout, que é justamente o defeito sendo corrigido. Ausência de testes não é achado de revisão neste plano.
 - **`tsconfig.json` tem `noUnusedLocals` e `noUnusedParameters` ligados.** Import ou parâmetro não usado quebra `npm run build`. Ao remover um componente, remova o import no mesmo commit.
 - **Dev server roda na porta 3000** (`vite.config.ts`), não 5173.
 - **Fora de escopo:** SEO/meta tags, otimização de imagens, testes automatizados, qualquer mudança de conteúdo além do que já está em produção.
