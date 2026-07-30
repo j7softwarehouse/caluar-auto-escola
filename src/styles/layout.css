@@ -1,0 +1,26 @@
+/* === LAYOUT === */
+.c{max-width:1140px;margin:0 auto;padding:0 1.5rem;width:100%}
+.sec{padding:5rem 0}
+.sec-sm{padding:3.5rem 0}
+
+/* === TYPE === */
+.t-disp{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.018em;line-height:1.08}
+.t-head{font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:-.015em;line-height:1.15}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ad);background:rgba(245,168,0,.10);border:1px solid rgba(245,168,0,.22);padding:4px 12px;border-radius:20px}
+.chip::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--ad)}
+
+/* === BUTTONS === */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;padding:13px 26px;border-radius:8px;border:none;cursor:pointer;transition:.22s}
+.btn svg{width:17px;height:17px;flex-shrink:0}
+.btn-am{background:var(--am);color:var(--nv)}
+.btn-am:hover{background:var(--ad);transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,168,0,.35)}
+.btn-nv{background:var(--nv2);color:#fff}
+.btn-nv:hover{background:var(--nv);transform:translateY(-2px)}
+.btn-ot{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+.btn-ot:hover{border-color:var(--am);color:var(--am)}
+.btn-lg{padding:15px 32px;font-size:1rem}
+
+/* === FADE === */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}

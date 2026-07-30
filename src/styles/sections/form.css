@@ -1,0 +1,22 @@
+/* === FORM === */
+.form-sec{background:var(--bg)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.form-l h2{font-size:clamp(1.9rem,3vw,2.5rem);color:var(--nv2);margin:.75rem 0 .85rem}
+.form-l h2 em{font-style:italic;color:var(--ad)}
+.form-l p{color:var(--mt);font-size:.93rem;line-height:1.75;font-weight:300;margin-bottom:2rem}
+.cinfo{display:flex;flex-direction:column;gap:.9rem}
+.ci{display:flex;align-items:center;gap:11px}
+.ci-ic{width:38px;height:38px;border-radius:8px;background:var(--nv2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-ic svg{width:16px;height:16px;color:var(--am)}
+.ci-tx strong{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mt);font-weight:600}
+.ci-tx a, .ci-tx span{font-size:.88rem;color:var(--nv2);font-weight:500}
+.ci-tx a:hover{color:var(--ad)}
+.fbox{background:var(--wh);border:1px solid var(--bd);border-radius:14px;padding:2.25rem;box-shadow:var(--sh)}
+.fbox h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:1.3rem;color:var(--nv2);margin-bottom:.35rem}
+.fbox > p{font-size:.82rem;color:var(--mt);margin-bottom:1.5rem;line-height:1.6}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:.8rem}
+.fg label{font-size:.69rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--nv2)}
+.fg input,.fg select,.fg textarea{padding:11px 13px;border:1px solid var(--bd);border-radius:8px;font-family:'Inter',sans-serif;font-size:.88rem;color:var(--tx);background:var(--bg);outline:none;transition:.22s;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--ad);background:var(--wh)}
+.fg textarea{min-height:80px;resize:vertical}

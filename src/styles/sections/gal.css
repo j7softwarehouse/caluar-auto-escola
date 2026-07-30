@@ -1,0 +1,47 @@
+/* === GALERIA === */
+/* A referencia nao tem regra de fundo para .gal, mas todos os filhos assumem
+   fundo escuro (.gs-lbl e branco a 65%, .gs-item e branco a 5%). Sem isto,
+   a secao renderiza texto branco sobre branco. Mesmo tom que .proc usa. */
+.gal{background:var(--nv)}
+
+.gal-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.25rem;gap:2rem;flex-wrap:wrap}
+.gal-ctrl{display:flex;gap:.6rem;flex-shrink:0}
+.gc-btn{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;transition:.22s;flex-shrink:0}
+.gc-btn:hover{background:var(--am);border-color:var(--am);color:var(--nv)}
+.gc-btn svg{width:17px;height:17px}
+.gs-wrap{overflow:hidden;margin:0 -.5rem}
+.gs-track{display:flex;gap:1rem;padding:.5rem;transition:transform .5s cubic-bezier(.25,0,0,1)}
+.gs-item{flex:0 0 calc(33.333% - .68rem);cursor:pointer;border-radius:12px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:.3s}
+.gs-item:hover{border-color:rgba(245,168,0,.35);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.gs-img{position:relative;overflow:hidden;aspect-ratio:4/3}
+.gs-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.6s;filter:brightness(.82)}
+.gs-item:hover .gs-img img{transform:scale(1.05);filter:brightness(.65)}
+.gs-cap{display:flex;align-items:center;gap:.75rem;padding:.85rem 1rem;background:rgba(0,0,0,.25)}
+.gs-num{font-family:'Manrope',sans-serif;font-weight:800;font-size:.72rem;color:rgba(245,168,0,.5);letter-spacing:.08em;flex-shrink:0}
+.gs-lbl{font-size:.79rem;color:rgba(255,255,255,.65);font-weight:400;flex:1;line-height:1.3}
+.gs-arrow{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(245,168,0,.15);display:flex;align-items:center;justify-content:center;transition:.22s}
+.gs-arrow svg{width:11px;height:11px;color:var(--am)}
+.gs-item:hover .gs-arrow{background:var(--am)}
+.gs-item:hover .gs-arrow svg{color:var(--nv)}
+.gs-dots{display:flex;justify-content:center;gap:6px;margin-top:1.5rem}
+.gs-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);transition:.3s;cursor:pointer;border:none;padding:0}
+.gs-dot.on{background:var(--am);width:20px;border-radius:4px}
+.lb{position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.lb.on{opacity:1;pointer-events:all}
+.lb-bg{position:absolute;inset:0;background:rgba(7,14,30,.96);backdrop-filter:blur(14px)}
+.lb-inner{position:relative;z-index:2;width:100%;max-width:880px;margin:0 auto;padding:1.5rem}
+.lb-close{position:fixed;top:1.25rem;right:1.25rem;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;transition:.22s;z-index:10}
+.lb-close:hover{background:rgba(255,255,255,.22)}
+.lb-close svg{width:18px;height:18px}
+.lb-slides{border-radius:12px;overflow:hidden;background:#000;line-height:0}
+.lb-slide{display:none}
+.lb-slide.on{display:block}
+.lb-slide img{width:100%;max-height:72vh;object-fit:contain;display:block;margin:0 auto}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;transition:.22s;z-index:10}
+.lb-nav:hover{background:var(--am);border-color:var(--am);color:var(--nv)}
+.lb-nav svg{width:18px;height:18px}
+.lb-prev{left:1.25rem}
+.lb-next{right:1.25rem}
+.lb-info{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0 0}
+.lb-lbl{color:rgba(255,255,255,.65);font-size:.875rem;font-weight:400}
+.lb-counter{color:rgba(255,255,255,.32);font-size:.78rem;font-family:'Manrope',sans-serif;font-weight:700}

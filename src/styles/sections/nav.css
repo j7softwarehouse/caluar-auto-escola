@@ -1,0 +1,13 @@
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;display:flex;align-items:center;background:rgba(15,31,69,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(245,168,0,.1)}
+.nav-w{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1140px;margin:0 auto;padding:0 1.5rem}
+.nav-logo img{height:32px;filter:brightness(0) invert(1)}
+.nav-ul{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-ul a{color:rgba(255,255,255,.62);font-size:.875rem;font-weight:400;transition:.2s}
+.nav-ul a:hover{color:#fff}
+.bur{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.bur span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+.mob{display:none;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(15,31,69,.99);border-bottom:1px solid rgba(245,168,0,.12);padding:1.5rem;gap:.7rem;z-index:99}
+.mob.on{display:flex}
+.mob a{color:rgba(255,255,255,.75);font-size:.95rem;padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.mob .btn-am{border:none;text-align:center;justify-content:center}
