@@ -90,7 +90,13 @@ Remover as três linhas `"declaration": true,`, `"declarationMap": true,`, `"sou
 find src -name '*.js' -o -name '*.d.ts' -o -name '*.map' | xargs rm -f
 git rm -q screenshot*.js screenshot*.mjs test-*.mjs test.cjs verify-page.mjs final-screenshot*.mjs check-updates.mjs optimize-images.sh
 git rm -q carousel.png full-page.png hero-cards.png hero-full.png navbar-hover.png navbar-mobile.png navbar-mobile-open.png navbar-white.png page-complete.png page-with-carousel.png stats-section.png whatsapp-button.png favicon-tab.png build.log
-rm -rf .next dist
+rm -rf .next
+```
+
+**`dist/` é caso à parte: está versionado no git** (commit `d197740`, "incluir dist/ no git para Cloudflare Pages"), mas `wrangler.toml` já tem `build = { command = "npm run build" }` — o Cloudflare reconstrói o site a cada deploy, então o conteúdo commitado de `dist/` é artefato redundante, não fonte. Desfazer o rastreamento em vez de só apagar do disco, senão o próximo commit mostra uma exclusão maciça sem explicação:
+
+```bash
+git rm -rq dist
 ```
 
 - [ ] **Step 4: Cobrir os artefatos no `.gitignore`**
@@ -102,6 +108,9 @@ Acrescentar ao final:
 src/**/*.js
 src/**/*.d.ts
 src/**/*.map
+
+# Build de producao — o Cloudflare Pages reconstroi via wrangler.toml
+dist/
 
 # Screenshots de verificação visual
 docs/superpowers/screenshots/
