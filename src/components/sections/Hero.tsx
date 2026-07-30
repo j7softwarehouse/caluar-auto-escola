@@ -1,5 +1,6 @@
 import { STATS_HERO } from '../../data/stats'
 import { waLink } from '../../data/contato'
+import { Icone } from '../icons'
 
 const CATEGORIAS = ['Cat. A', 'Cat. B', 'Cat. AB', 'Cat. D']
 
@@ -34,6 +35,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <Icone nome="whatsapp" />
                 Quero minha CNH
               </a>
               <a href="#sobre" className="btn btn-ot btn-lg">
