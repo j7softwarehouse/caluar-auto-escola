@@ -1,22 +1,13 @@
 import { useState } from 'react'
 import Lightbox from '../ui/Lightbox'
+import { GALERIA } from '../../data/galeria'
 
 export default function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set())
 
-  const images = [
-    { src: '/images/IMG_0334.jpg', alt: 'Turma Caluar' },
-    { src: '/images/IMG_0345.jpg', alt: 'Aula Prática' },
-    { src: '/images/IMG_0367.jpg', alt: 'Aprovado' },
-    { src: '/images/IMG_0373.jpg', alt: 'Turma em ação' },
-    { src: '/images/IMG_0380.jpg', alt: 'Aluno dirigindo' },
-    { src: '/images/IMG_1550.jpg', alt: 'Equipe Caluar' },
-    { src: '/images/IMG_1558.jpg', alt: 'Aula teórica' },
-    { src: '/images/IMG_2314.jpg', alt: 'Turma' },
-    { src: '/images/IMG_9122.jpg', alt: 'Prática na pista' },
-  ]
+  const images = GALERIA.map((foto) => ({ src: foto.src, alt: foto.legenda }))
 
   const itemsPerView = 3
   const maxIndex = Math.max(0, images.length - itemsPerView)

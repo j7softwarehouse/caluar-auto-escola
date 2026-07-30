@@ -1,6 +1,8 @@
-const labels = ['ANOS DE TRADIÇÃO', 'CONDUTORES FORMADOS', 'NOTA GOOGLE', 'CREDENCIADA DETRAN-MG']
-const suffixes = ['+', '+', '⭐', '%']
-const staticValues = ['24', '7mil', '4.6', '100']
+import { STATS } from '../../data/stats'
+
+const labels = STATS.map((s) => s.rotulo.toUpperCase())
+const suffixes = STATS.map((s) => (s.sufixo === '★' ? '⭐' : s.sufixo))
+const staticValues = STATS.map((s) => s.valor)
 
 export default function CredentialsBar() {
 

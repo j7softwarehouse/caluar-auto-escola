@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
+import { DEPOIMENTOS } from '../../data/depoimentos'
 
-const testimonials = [
-  { name: 'Pedro Henrique', role: 'Aluno', text: 'Equipe Caluar com todo suporte nesse processo. Aulas teóricas com clareza e paciência. Aulas práticas com muita calma. Consegui tirar minha primeira habilitação. Só tenho a agradecer!', rating: 5, initials: 'P' },
-  { name: 'Josilene Barreto', role: 'Aluna', text: 'Super recomendo! Ótima experiência durante todo esse processo. Os instrutores Ian e Washington são extremamente pacientes e didáticos. Atendimento de qualidade e profissionalismo do início ao fim!', rating: 5, initials: 'J' },
-  { name: 'Daiane Mara', role: 'Aluna', text: 'Super indico a Auto Escola Caluar. Minha instrutora Luciana Pereira é nota 1000. Ensina com muita clareza e tem o coração gigante. Indicaria ela de olhos fechados. Ensina muito bem com amor e carinho pela profissão.', rating: 5, initials: 'D' },
-  { name: 'Cristiane Silva', role: 'Aluna', text: 'Gratidão a Equipe Caluar! Tirei minhas 2 habilitações pela Caluar e sempre vou indicar. Agradeço aos instrutores Alípio, Lucas e Luciana. Deus abençoe sempre a toda Equipe Caluar!', rating: 5, initials: 'C' },
-  { name: 'Isaah neves', role: 'Aluno', text: 'Imensamente grato à Autoescola Caluar. A equipe é atenciosa, os instrutores são pacientes e se importam com o aprendizado dos alunos. Recomendo de olhos fechados!', rating: 5, initials: 'I' },
-  { name: 'Aline Raquel', role: 'Aluna', text: 'Imensa gratidão à equipe CALUAR. O processo foi conduzido com extrema competência, profissionalismo e organização. Agradecimento especial ao Alípio pelas aulas teóricas e ao Lucas pela paciência. Aprovada de primeira!', rating: 5, initials: 'A' },
-]
+const testimonials = DEPOIMENTOS.map((dep) => ({
+  name: dep.nome,
+  role: dep.papel,
+  text: dep.texto,
+  rating: 5,
+  initials: dep.iniciais,
+}))
 
 function StarRating({ rating }: { rating: number }) {
   return (

@@ -1,84 +1,24 @@
 import { useState } from 'react'
+import { CATEGORIAS } from '../../data/categorias'
+
+const corPorSigla: Record<string, string> = {
+  A: '#0F1F45',
+  B: '#1e40af',
+  AB: '#F5A800',
+  D: '#059669',
+  R: '#7c3aed',
+  S: '#dc2626',
+}
+
+const toSrv = (sigla: string) => {
+  const cat = CATEGORIAS.find((c) => c.sigla === sigla)!
+  return { num: cat.sigla, title: cat.titulo, color: corPorSigla[cat.sigla], list: cat.itens }
+}
 
 const servicesData = {
-  categorias: [
-    {
-      num: 'A',
-      title: 'Categoria A — Moto',
-      color: '#0F1F45',
-      list: [
-        'Pista própria de treinamento para motociclistas',
-        'Instrutores especializados e acompanhamento próximo',
-        'Treinamento pré-exame para mais confiança',
-        'Aulas flexíveis pela manhã, tarde e noite',
-        'Processo mais seguro para quem nunca pilotou'
-      ]
-    },
-    {
-      num: 'B',
-      title: 'Categoria B — Carro',
-      color: '#1e40af',
-      list: [
-        'Frota moderna com duplo comando',
-        'Instrutores preparados para ensinar no seu ritmo',
-        'Aulas flexíveis pela manhã, tarde e noite',
-        'Mais segurança e tranquilidade durante o aprendizado',
-        'Atendimento próximo do início ao fim do processo'
-      ]
-    },
-    {
-      num: 'AB',
-      title: 'Categoria AB — Moto e Carro',
-      color: '#F5A800',
-      list: [
-        'Tire moto e carro no mesmo processo',
-        'Mais praticidade para sua rotina',
-        'Melhor custo-benefício para conquistar as duas categorias',
-        'Processo unificado e acompanhado',
-        'Mais liberdade e mais oportunidades para você'
-      ]
-    },
-    {
-      num: 'D',
-      title: 'Categoria D — Ônibus e Transporte de Passageiros',
-      color: '#059669',
-      list: [
-        'Categoria profissional para transporte de passageiros',
-        'Ideal para ônibus, vans e oportunidades profissionais',
-        'Possibilidade de recolocação e crescimento profissional',
-        'Processo acompanhado do início ao fim',
-        'Treinamento em veículo moderno'
-      ]
-    }
-  ],
-  renovacao: [
-    {
-      num: 'R',
-      title: 'Renovação e Reciclagem de CNH',
-      color: '#7c3aed',
-      list: [
-        'Renovação da CNH comum ou suspensa',
-        'Curso obrigatório para condutores infratores',
-        'Modalidade presencial e EAD',
-        'Processo simplificado e orientado',
-        'Certificado reconhecido pelo DETRAN'
-      ]
-    }
-  ],
-  especializados: [
-    {
-      num: 'E',
-      title: 'Cursos Especializados',
-      color: '#dc2626',
-      list: [
-        'MOPP — Transporte de Produtos Perigosos',
-        'Transporte Coletivo de Passageiros',
-        'Transporte Escolar',
-        'Veículos de Emergência',
-        'Carga Indivisível'
-      ]
-    }
-  ]
+  categorias: ['A', 'B', 'AB', 'D'].map(toSrv),
+  renovacao: ['R'].map(toSrv),
+  especializados: ['S'].map(toSrv),
 }
 
 const tabs = [

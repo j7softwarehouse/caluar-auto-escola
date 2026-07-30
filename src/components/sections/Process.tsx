@@ -1,36 +1,20 @@
+import { PROCESSO } from '../../data/processo'
+
+const tempos: Record<string, string> = {
+  '01': '1-2 dias',
+  '02': '2-3 semanas',
+  '03': '3-4 semanas',
+  '04': '1 dia',
+  '05': '1-2 dias',
+}
+
 export default function Process() {
-  const steps = [
-    {
-      num: '01',
-      title: 'Matrícula',
-      time: '1-2 dias',
-      description: 'Orientamos você sobre documentação, categoria ideal e condições de pagamento para que você comece com segurança e sem dúvidas.'
-    },
-    {
-      num: '02',
-      title: 'Aulas Teóricas',
-      time: '2-3 semanas',
-      description: 'Aulas presenciais ou on-line, salas informatizadas e preparação focada no que realmente cai na prova.'
-    },
-    {
-      num: '03',
-      title: 'Aulas Práticas',
-      time: '3-4 semanas',
-      description: 'Veículos modernos com duplo comando, motopista própria e instrutores pacientes para você ganhar mais confiança.'
-    },
-    {
-      num: '04',
-      title: 'Exame Final',
-      time: '1 dia',
-      description: 'No dia do exame, você conta com apoio da equipe e toda preparação necessária para chegar mais tranquilo, confiante e preparado.'
-    },
-    {
-      num: '05',
-      title: 'CNH em Mãos',
-      time: '1-2 dias',
-      description: 'Sua habilitação é entregue! Você agora está preparado, confiante e pronto para dirigir com segurança e responsabilidade.'
-    }
-  ]
+  const steps = PROCESSO.map((etapa) => ({
+    num: etapa.numero,
+    title: etapa.titulo,
+    time: tempos[etapa.numero],
+    description: etapa.texto,
+  }))
 
   return (
     <section className="bg-primary relative overflow-hidden py-20">
