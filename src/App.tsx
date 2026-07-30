@@ -7,7 +7,7 @@ import HighlightsCarousel from './components/sections/HighlightsCarousel'
 import Dores from './components/sections/Dores'
 import Sobre from './components/sections/Sobre'
 import Categorias from './components/sections/Categorias'
-import Process from './components/sections/Process'
+import Processo from './components/sections/Processo'
 import Gallery from './components/sections/Gallery'
 import Testimonials from './components/sections/Testimonials'
 import Faq from './components/sections/Faq'
@@ -28,7 +28,7 @@ function App() {
       <Dores />
       <Sobre />
       <Categorias />
-      <Process />
+      <Processo />
       <Gallery />
       <Testimonials />
       <Faq />
