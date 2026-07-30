@@ -25,7 +25,7 @@ export default function Navbar() {
       <nav style={{ background: rolou ? 'rgba(15,31,69,1)' : 'rgba(15,31,69,.96)' }}>
         <div className="nav-w">
           <a href="#" className="nav-logo">
-            <img src="/logos/logo_caluar.jpeg" alt="Caluar" />
+            <img src="/logos/logo_caluar_branca.jpg" alt="Caluar" />
           </a>
           <ul className="nav-ul">
             {navLinks.map((link) => (
