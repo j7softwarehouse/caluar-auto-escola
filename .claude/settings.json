@@ -47,7 +47,18 @@
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\User\\\\github\\\\j7\\\\Clientes\\\\caluar-auto-escola\\\\.claude\\\\skills\\\\\" -ErrorAction SilentlyContinue | ForEach-Object { $_.Name })",
       "PowerShell(Get-Process node | Where-Object { $_.ProcessName -eq \"node\" } | Select-Object Id, ProcessName)",
       "PowerShell(Get-Process node | Where-Object { $_.ProcessName -eq \"node\" } | Stop-Process -Force; Start-Sleep -Seconds 2)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "Bash(taskkill //F //PID 16940)",
+      "Bash(taskkill //F //PID 44292)",
+      "Bash(file public/logos/*.png public/logos/*.svg)",
+      "Bash(bash __TRACKED_VAR__/review-package docs/superpowers/plans/2026-07-29-replica-fiel-caluar-hybrid.md 7ead49091852a92905e755775263b644b3885629 HEAD)",
+      "Bash(awk 'NR==380,NR==403' docs/caluar_hybrid.html)",
+      "Bash(awk 'NR==382' docs/caluar_hybrid.html)",
+      "Bash(awk 'NR==384' docs/caluar_hybrid.html)",
+      "Bash(awk 'NR==384' \"c:\\\\Users\\\\User\\\\github\\\\j7\\\\Clientes\\\\caluar-auto-escola\\\\docs\\\\caluar_hybrid.html\")",
+      "Bash(awk 'NR==384{print length\\($0\\)}' docs/caluar_hybrid.html)",
+      "Bash(awk 'NR==384{print substr\\($0,1,80\\)}' docs/caluar_hybrid.html)",
+      "Bash(taskkill //F //PID 39784)"
     ],
     "additionalDirectories": [
       "\\tmp",
