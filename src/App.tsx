@@ -7,14 +7,12 @@ import HighlightsCarousel from './components/sections/HighlightsCarousel'
 import Dores from './components/sections/Dores'
 import About from './components/sections/About'
 import Differentials from './components/sections/Differentials'
-import Services from './components/sections/Services'
-import CnhBrasil from './components/sections/CnhBrasil'
+import Categorias from './components/sections/Categorias'
 import Process from './components/sections/Process'
 import Gallery from './components/sections/Gallery'
 import Testimonials from './components/sections/Testimonials'
 import Faq from './components/sections/Faq'
 import ContactForm from './components/sections/ContactForm'
-import CoursesSpecialized from './components/sections/CoursesSpecialized'
 import LocationInfo from './components/sections/LocationInfo'
 import Footer from './components/layout/Footer'
 import AdminToggle from './components/admin/AdminToggle'
@@ -31,14 +29,12 @@ function App() {
       <Dores />
       <About />
       <Differentials />
-      <Services />
-      <CnhBrasil />
+      <Categorias />
       <Process />
       <Gallery />
       <Testimonials />
       <Faq />
       <ContactForm />
-      <CoursesSpecialized />
       <LocationInfo />
       <Footer />
       <AdminToggle />
