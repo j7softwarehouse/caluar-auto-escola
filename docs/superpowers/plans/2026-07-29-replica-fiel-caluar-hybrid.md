@@ -682,7 +682,7 @@ git commit -m "feat: Icones SVG extraidos da referencia"
 
 1. Criar o componente reproduzindo o markup da faixa indicada de `docs/caluar_hybrid.html`, com **as mesmas classes**, trocando o conteúdo estático pelo módulo de dados.
 2. Converter atributos para JSX (`class` → `className`, `for` → `htmlFor`, atributos de SVG em camelCase).
-3. Manter as classes de animação `rv`, `d1`–`d4` exatamente onde a referência as põe, e aplicar `useIntersectionObserver` no elemento raiz da seção.
+3. ~~Manter as classes de animação `rv`, `d1`–`d4` exatamente onde a referência as põe, e aplicar `useIntersectionObserver` no elemento raiz da seção.~~ **Removido durante a execução (decisão do usuário após a Task 10):** é um efeito decorativo de fade-in ao rolar, sem efeito em layout, conteúdo ou funcionalidade — fora da prioridade de "fidelidade visual e de conteúdo" que definiu o escopo deste plano. Hero, Dores e Categorias (Tasks 7, 9, 10) já foram concluídas sem essas classes; as tasks seguintes (11–17) não devem incluí-las. O `useIntersectionObserver` existente usa a classe `is-visible`, incompatível com o `.rv.in` esperado pelo CSS portado — não precisa de ajuste, pois não será usado por este plano.
 4. Trocar o componente antigo pelo novo em `src/App.tsx`, **removendo o import antigo no mesmo commit** (`noUnusedLocals`).
 5. `npm run build` — esperado: limpo.
 6. `node scripts/compare-visual.mjs <nome> <seletor>` com o dev server no ar, e **abrir os seis PNGs** para comparar. Divergência de layout em qualquer uma das três larguras é falha da task.
