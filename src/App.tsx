@@ -9,7 +9,7 @@ import Sobre from './components/sections/Sobre'
 import Categorias from './components/sections/Categorias'
 import Processo from './components/sections/Processo'
 import Gallery from './components/sections/Gallery'
-import Testimonials from './components/sections/Testimonials'
+import Avaliacoes from './components/sections/Avaliacoes'
 import Faq from './components/sections/Faq'
 import ContactForm from './components/sections/ContactForm'
 import LocationInfo from './components/sections/LocationInfo'
@@ -30,7 +30,7 @@ function App() {
       <Categorias />
       <Processo />
       <Gallery />
-      <Testimonials />
+      <Avaliacoes />
       <Faq />
       <ContactForm />
       <LocationInfo />
