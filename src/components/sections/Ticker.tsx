@@ -10,10 +10,7 @@ export default function Ticker() {
     <div className="ticker">
       <div className="t-track">
         {[...TICKER, ...TICKER].map((item, idx) => (
-          <span key={idx}>
-            <b>{item.destaque}</b>
-            {item.texto ? ` ${item.texto}` : null}
-          </span>
+          <span key={idx}>{item.destaque ? <b>{item.destaque}</b> : item.texto}</span>
         ))}
       </div>
     </div>

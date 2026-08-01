@@ -13,7 +13,7 @@ export default function Processo() {
         <div>
           <span className="chip">Um processo acompanhado em cada etapa</span>
           <h2 className="t-head">
-            Do cadastro a <em>CNH na mão.</em>
+            Do cadastro à <em>CNH na mão.</em>
           </h2>
           <p className="sub">Cuidamos de tudo para você se preocupar apenas em aprender.</p>
         </div>

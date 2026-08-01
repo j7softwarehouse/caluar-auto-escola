@@ -11,9 +11,9 @@ export default function Faq() {
       <div className="c">
         <div className="faq-grid">
           <div>
-            <span className="chip">Tire suas duvidas</span>
+            <span className="chip">Tire suas dúvidas</span>
             <h2 className="t-head">Perguntas frequentes</h2>
-            <p>Respondemos as duvidas mais comuns para voce chegar com mais seguranca a sua primeira aula.</p>
+            <p>Respondemos as dúvidas mais comuns para você chegar com mais segurança à sua primeira aula.</p>
             <div className="faq-img">
               <img src="/images/img14.jpeg" alt="Aluno da Caluar Auto-Escola" />
             </div>

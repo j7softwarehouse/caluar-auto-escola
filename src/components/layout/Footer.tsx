@@ -1,11 +1,14 @@
 import { CONTATO, anosDeTradicao, waLink } from '../../data/contato'
+import { CATEGORIAS } from '../../data/categorias'
 import { Icone } from '../icons'
 
 /**
  * Footer (referencia, linhas 748-786).
  * Divergencia deliberada: `.ft-tag` usa anosDeTradicao() em vez do "23 anos" literal da
  * referencia, para nao envelhecer de novo. Links de "Categorias" apontam para #servicos
- * (id real da secao, ver Categorias.tsx), nao #categorias como na referencia.
+ * (id real da secao, ver Categorias.tsx), nao #categorias como na referencia. A lista de
+ * categorias e gerada a partir de CATEGORIAS (fonte unica de verdade, tambem usada em
+ * Contato.tsx) para nunca mais anunciar categorias que a autoescola nao oferece.
  */
 export default function Footer() {
   return (
@@ -38,11 +41,9 @@ export default function Footer() {
           <div className="ft-col">
             <h4>Categorias</h4>
             <ul>
-              <li><a href="#servicos">Categoria A (Moto)</a></li>
-              <li><a href="#servicos">Categoria B (Carro)</a></li>
-              <li><a href="#servicos">Categoria AB</a></li>
-              <li><a href="#servicos">C, D e E</a></li>
-              <li><a href="#servicos">Reciclagem e CNH Social</a></li>
+              {CATEGORIAS.map((cat) => (
+                <li key={cat.sigla}><a href="#servicos">{cat.titulo}</a></li>
+              ))}
             </ul>
           </div>
 
