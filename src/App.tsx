@@ -10,7 +10,7 @@ import Processo from './components/sections/Processo'
 import Galeria from './components/sections/Galeria'
 import Avaliacoes from './components/sections/Avaliacoes'
 import Faq from './components/sections/Faq'
-import ContactForm from './components/sections/ContactForm'
+import Contato from './components/sections/Contato'
 import LocationInfo from './components/sections/LocationInfo'
 import Footer from './components/layout/Footer'
 import AdminToggle from './components/admin/AdminToggle'
@@ -30,7 +30,7 @@ function App() {
       <Galeria />
       <Avaliacoes />
       <Faq />
-      <ContactForm />
+      <Contato />
       <LocationInfo />
       <Footer />
       <AdminToggle />
