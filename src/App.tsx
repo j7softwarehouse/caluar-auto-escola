@@ -11,10 +11,11 @@ import Galeria from './components/sections/Galeria'
 import Avaliacoes from './components/sections/Avaliacoes'
 import Faq from './components/sections/Faq'
 import Contato from './components/sections/Contato'
-import LocationInfo from './components/sections/LocationInfo'
+import Mapa from './components/sections/Mapa'
 import Footer from './components/layout/Footer'
 import AdminToggle from './components/admin/AdminToggle'
 import PromoPopup from './components/ui/PromoPopup'
+import WhatsAppFloat from './components/ui/WhatsAppFloat'
 
 function App() {
   return (
@@ -31,10 +32,11 @@ function App() {
       <Avaliacoes />
       <Faq />
       <Contato />
-      <LocationInfo />
+      <Mapa />
       <Footer />
       <AdminToggle />
       <PromoPopup />
+      <WhatsAppFloat />
     </AdminProvider>
   )
 }
