@@ -4,6 +4,13 @@
    a secao renderiza texto branco sobre branco. Mesmo tom que .proc usa. */
 .gal{background:var(--nv)}
 
+/* A referencia tambem nao da cor de texto branco para .gal (mesmo defeito
+   do fundo, corrigido acima) - .t-head e .sub nao tem regra de cor propria
+   fora de .proc. Mesmo padrao que .proc ja usa para fundo escuro. */
+.gal h2{color:#fff}
+.gal h2 em{color:var(--am)}
+.gal .sub{color:rgba(255,255,255,.45)}
+
 .gal-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.25rem;gap:2rem;flex-wrap:wrap}
 .gal-ctrl{display:flex;gap:.6rem;flex-shrink:0}
 .gc-btn{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;transition:.22s;flex-shrink:0}
