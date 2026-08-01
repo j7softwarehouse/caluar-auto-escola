@@ -3,12 +3,11 @@ import Navbar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
 import Ticker from './components/sections/Ticker'
 import StatsBar from './components/sections/StatsBar'
-import HighlightsCarousel from './components/sections/HighlightsCarousel'
 import Dores from './components/sections/Dores'
 import Sobre from './components/sections/Sobre'
 import Categorias from './components/sections/Categorias'
 import Processo from './components/sections/Processo'
-import Gallery from './components/sections/Gallery'
+import Galeria from './components/sections/Galeria'
 import Avaliacoes from './components/sections/Avaliacoes'
 import Faq from './components/sections/Faq'
 import ContactForm from './components/sections/ContactForm'
@@ -24,12 +23,11 @@ function App() {
       <Hero />
       <Ticker />
       <StatsBar />
-      <HighlightsCarousel />
       <Dores />
       <Sobre />
       <Categorias />
       <Processo />
-      <Gallery />
+      <Galeria />
       <Avaliacoes />
       <Faq />
       <ContactForm />
