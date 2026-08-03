@@ -2,7 +2,7 @@ import type { Pill } from './types'
 import { anosDeTradicao } from './contato'
 
 /** Chip do topo, recortado de About.tsx */
-export const SOBRE_CHIP = 'Nossa Historia'
+export const SOBRE_CHIP = 'Nossa História'
 
 /** O h2 tem uma parte em italico ambar (.sobre-txt h2 em). Dividido em dois
  *  para a Task 11 montar <h2>{INICIO} <em>{ENFASE}</em></h2> sem innerHTML.
@@ -25,14 +25,13 @@ export const SOBRE_ITENS: string[] = [
   'Motopista própria para treinamento',
   'Atendimento próximo e humanizado',
   'Instrutores Pacientes',
-  'Aprovacao Garantida',
-  'Parcelamento Facil',
+  'Aprovação Garantida',
+  'Parcelamento Fácil',
   'Atendimento Humano',
 ]
 
 export const SOBRE_PILLS: Pill[] = [
   { valor: '2002', rotulo: 'Fundação' },
   { valor: 'Pista própria', rotulo: 'Motopista' },
-  { valor: 'A, B, AB, D', rotulo: 'Categorias' },
-  { valor: 'CNH Brasil', rotulo: 'Programa' },
+  { valor: '100%', rotulo: 'Detran-MG' },
 ]

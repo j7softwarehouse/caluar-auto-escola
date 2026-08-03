@@ -20,8 +20,10 @@
 .gs-track{display:flex;gap:1rem;padding:.5rem;transition:transform .5s cubic-bezier(.25,0,0,1)}
 .gs-item{flex:0 0 calc(33.333% - .68rem);cursor:pointer;border-radius:12px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:.3s}
 .gs-item:hover{border-color:rgba(245,168,0,.35);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
-.gs-img{position:relative;overflow:hidden;aspect-ratio:4/3}
-.gs-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.6s;filter:brightness(.82)}
+/* object-fit:contain (nao cover) para exibir a foto inteira, sem cortar,
+   no formato/proporcao original de cada imagem. */
+.gs-img{position:relative;overflow:hidden;aspect-ratio:4/3;background:rgba(0,0,0,.2)}
+.gs-img img{width:100%;height:100%;object-fit:contain;display:block;transition:.6s;filter:brightness(.82)}
 .gs-item:hover .gs-img img{transform:scale(1.05);filter:brightness(.65)}
 .gs-cap{display:flex;align-items:center;gap:.75rem;padding:.85rem 1rem;background:rgba(0,0,0,.25)}
 .gs-num{font-family:'Manrope',sans-serif;font-weight:800;font-size:.72rem;color:rgba(245,168,0,.5);letter-spacing:.08em;flex-shrink:0}

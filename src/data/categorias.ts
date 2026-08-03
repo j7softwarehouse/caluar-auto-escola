@@ -65,7 +65,7 @@ export const CATEGORIAS: Categoria[] = [
       'Transporte Escolar — Modalidade especializada',
       'Emergência — Veículos de Emergência',
       'Carga Indivisível — Especialização profissional',
-      'CNH Brasil — Gratuita para quem precisa: Programa de habilitacao subsidiada para pessoas em vulnerabilidade',
+      'CNH Brasil — Gratuita para quem precisa: Programa de habilitação subsidiada para pessoas em vulnerabilidade',
     ],
   },
 ]

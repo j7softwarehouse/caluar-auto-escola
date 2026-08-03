@@ -61,7 +61,6 @@ export default function Footer() {
             <h4>Contato</h4>
             <ul>
               <li><a href={CONTATO.telefoneHref}>{CONTATO.telefone}</a></li>
-              <li><a href={waLink('Vim pelo site da Caluar e quero saber mais.')} target="_blank" rel="noopener noreferrer">{CONTATO.telefone}</a></li>
               <li><a href={`mailto:${CONTATO.email}`}>{CONTATO.email}</a></li>
               <li><a href="#">{CONTATO.endereco}</a></li>
               <li><a href="#">{CONTATO.bairroCidade}</a></li>

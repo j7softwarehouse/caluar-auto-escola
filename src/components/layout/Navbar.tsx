@@ -1,31 +1,24 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const navLinks = [
   { label: 'Sobre', href: '#sobre' },
-  { label: 'Servicos', href: '#servicos' },
+  { label: 'Serviços', href: '#servicos' },
   { label: 'Galeria', href: '#galeria' },
-  { label: 'Avaliacoes', href: '#avaliacoes' },
+  { label: 'Avaliações', href: '#avaliacoes' },
   { label: 'Contato', href: '#contato' },
 ]
 
 export default function Navbar() {
   const [aberto, setAberto] = useState(false)
-  const [rolou, setRolou] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setRolou(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   const fechar = () => setAberto(false)
 
   return (
     <>
-      <nav style={{ background: rolou ? 'rgba(15,31,69,1)' : 'rgba(15,31,69,.96)' }}>
+      <nav>
         <div className="nav-w">
           <a href="#" className="nav-logo">
-            <img src="/logos/logo_caluar_branca.jpg" alt="Caluar" />
+            <img src="/logos/logo_caluar.jpeg" alt="Caluar" />
           </a>
           <ul className="nav-ul">
             {navLinks.map((link) => (
