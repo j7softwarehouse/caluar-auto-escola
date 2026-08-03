@@ -1,74 +1,54 @@
 import { useState } from 'react'
-import Button from '../ui/Button'
+
+const navLinks = [
+  { label: 'Sobre', href: '#sobre' },
+  { label: 'Serviços', href: '#servicos' },
+  { label: 'Galeria', href: '#galeria' },
+  { label: 'Avaliações', href: '#avaliacoes' },
+  { label: 'Contato', href: '#contato' },
+]
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [aberto, setAberto] = useState(false)
 
-  const navLinks = [
-    { label: 'Sobre', href: '#sobre' },
-    { label: 'Servicos', href: '#servicos' },
-    { label: 'Galeria', href: '#galeria' },
-    { label: 'Avaliacoes', href: '#avaliacoes' },
-    { label: 'Contato', href: '#contato' },
-  ]
+  const fechar = () => setAberto(false)
 
   return (
-    <nav className="fixed top-0 w-full z-40 h-16 flex items-center bg-white border-b border-gray-200">
-
-      <div className="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="flex-shrink-0">
-          <img src="/logos/logo_caluar.jpeg" alt="Caluar" className="h-12 w-auto" />
-        </a>
-
-        {/* Desktop Menu + CTA */}
-        <div className="hidden md:flex items-center gap-12 ml-auto">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="font-inter font-400 transition-colors text-sm text-gray-700 hover:text-primary"
-            >
-              {link.label}
-            </a>
-          ))}
-          <Button href="https://wa.me/553135633619?text=Oi%20Caluar,%20quero%20minha%20CNH." variant="accent" size="md">
-            Fale conosco
-          </Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-gray-700"
-          aria-label="Menu"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-            />
-          </svg>
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 py-4">
-          <div className="max-w-6xl mx-auto px-4 flex flex-col gap-3">
+    <>
+      <nav>
+        <div className="nav-w">
+          <a href="#" className="nav-logo">
+            <img src="/logos/logo_caluar.jpeg" alt="Caluar" />
+          </a>
+          <ul className="nav-ul">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className="font-medium text-gray-700 hover:text-primary">
-                {link.label}
-              </a>
+              <li key={link.label}>
+                <a href={link.href}>{link.label}</a>
+              </li>
             ))}
-            <Button href="https://wa.me/553135633619?text=Oi%20Caluar,%20quero%20minha%20CNH." variant="accent" className="w-full">
-              Fale conosco
-            </Button>
-          </div>
+            <li>
+              <a href="#contato" className="btn btn-am" style={{ padding: '9px 20px', fontSize: '.875rem' }}>
+                Fale conosco
+              </a>
+            </li>
+          </ul>
+          <button className="bur" id="bur" onClick={() => setAberto((v) => !v)} aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-      )}
-    </nav>
+      </nav>
+      <div className={`mob${aberto ? ' on' : ''}`} id="mob">
+        {navLinks.map((link) => (
+          <a key={link.label} href={link.href} onClick={fechar}>
+            {link.label}
+          </a>
+        ))}
+        <a href="#contato" className="btn btn-am" onClick={fechar}>
+          Fale conosco
+        </a>
+      </div>
+    </>
   )
 }

@@ -1,0 +1,10 @@
+/* === STATS BAR === */
+.stats-bar{background:var(--wh);border-bottom:1px solid var(--bd);padding:3rem 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{padding:1.75rem 2rem;border-right:1px solid var(--bd);position:relative}
+.stat-item:last-child{border-right:none}
+.stat-item::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--am);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.stat-item:hover::after{transform:scaleX(1)}
+.stat-num{font-family:'Manrope',sans-serif;font-weight:800;font-size:2.6rem;color:var(--nv2);line-height:1}
+.stat-num b{color:var(--am)}
+.stat-lbl{font-size:.76rem;color:var(--mt);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}

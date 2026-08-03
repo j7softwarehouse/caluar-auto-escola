@@ -1,0 +1,15 @@
+/* === SERVICOS === */
+.serv{background:var(--wh)}
+.serv-head{margin-bottom:3rem}
+.serv-head h2{font-size:clamp(1.9rem,3vw,2.6rem);color:var(--nv2);margin:.75rem 0 .85rem}
+.serv-head p{color:var(--mt);font-size:.95rem;line-height:1.75;font-weight:300;max-width:520px}
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.serv-card{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:2rem 1.75rem;position:relative;overflow:hidden;transition:.3s;cursor:default}
+.serv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--am);transform:scaleX(0);transform-origin:left;transition:.4s}
+.serv-card:hover{background:var(--wh);box-shadow:var(--sh);border-color:rgba(245,168,0,.2);transform:translateY(-5px)}
+.serv-card:hover::before{transform:scaleX(1)}
+.serv-cat{font-family:'Manrope',sans-serif;font-weight:800;font-size:2.4rem;color:rgba(245,168,0,.15);line-height:1;margin-bottom:.35rem}
+.serv-card h3{font-size:1.05rem;font-weight:600;color:var(--nv2);margin-bottom:.6rem}
+.serv-list{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.serv-list li{font-size:.83rem;color:var(--mt);font-weight:300;padding-left:.95rem;position:relative}
+.serv-list li::before{content:'';position:absolute;left:0;top:.45em;width:5px;height:5px;border-radius:50%;background:var(--am)}

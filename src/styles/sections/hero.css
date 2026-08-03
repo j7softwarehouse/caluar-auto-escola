@@ -1,0 +1,29 @@
+/* === HERO === */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-top:64px;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:60% center}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,21,52,.97) 0%,rgba(15,31,69,.92) 50%,rgba(15,31,69,.55) 100%)}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1fr minmax(0,400px);gap:3rem;align-items:center;padding:5rem 0;width:100%}
+.hero-l{}
+.hero-chip{margin-bottom:1.25rem}
+.hero h1{font-size:clamp(2rem,4.5vw,3.8rem);color:#fff;margin-bottom:1.1rem;word-break:break-word;overflow-wrap:break-word}
+.hero-sub{font-size:1rem;line-height:1.82;font-weight:300;color:rgba(255,255,255,.6);max-width:480px;margin-bottom:2rem}
+.hero-cats{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:2.25rem}
+.hero-cats span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.85);font-size:.76rem;font-weight:500;letter-spacing:.05em;padding:5px 13px;border-radius:20px}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
+
+/* Hero card */
+.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1.5rem;display:flex;flex-direction:column;gap:.85rem;min-width:0;overflow:hidden}
+.hc-top{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.hc-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:1.2rem 1rem;transition:.25s}
+.hc-stat:hover{background:rgba(255,255,255,.12);border-color:rgba(245,168,0,.3)}
+.hc-stat.ac{background:rgba(245,168,0,.1);border-color:rgba(245,168,0,.25)}
+.hc-num{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.85rem;color:#fff;line-height:1}
+.hc-stat.ac .hc-num{color:var(--am)}
+.hc-num small{font-size:.95rem;color:rgba(255,255,255,.4)}
+.hc-stat.ac .hc-num small{color:rgba(245,168,0,.55)}
+.hc-lbl{font-size:.68rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+.hc-imgs{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.hc-img{border-radius:10px;overflow:hidden;position:relative}
+.hc-img img{width:100%;height:120px;object-fit:cover;filter:brightness(.75)}
+.hc-img span{position:absolute;bottom:0;left:0;right:0;padding:.4rem .6rem;background:linear-gradient(to top,rgba(15,31,69,.85),transparent);font-size:.65rem;color:rgba(255,255,255,.8);letter-spacing:.03em}
