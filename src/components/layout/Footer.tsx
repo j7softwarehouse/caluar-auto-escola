@@ -20,7 +20,7 @@ export default function Footer() {
                branca sobre fundo opaco (mesmo motivo documentado em nav.css); o filtro
                brightness/invert da referencia pressupoe PNG com transparencia e, aplicado a
                este JPEG opaco, produz um retangulo branco solido. */}
-            <img src="/logos/logo_caluar_branca.jpg" alt="Caluar" style={{ filter: 'none' }} />
+            <img src="/logos/logo_caluar_branca.jpg" alt="Caluar" style={{ filter: 'none' }} loading="lazy" />
             <p className="ft-tag">
               Centro de Formação de Condutores credenciado pelo DETRAN-MG. Há mais de{' '}
               {anosDeTradicao()} anos formando motoristas responsáveis em Itabirito e região.
@@ -71,7 +71,7 @@ export default function Footer() {
         <div className="ft-bot">
           <p className="ft-copy">© 2026 Auto Escola Caluar. Todos os direitos reservados.</p>
           <a href="https://www.j7softwarehouse.com.br" target="_blank" rel="noopener noreferrer" className="ft-by">
-            Desenvolvido por <img src="/logos/logo_j7.png" alt="J7 Software House" />
+            Desenvolvido por <img src="/logos/logo_j7.png" alt="J7 Software House" loading="lazy" />
           </a>
         </div>
       </div>

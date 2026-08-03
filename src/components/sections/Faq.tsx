@@ -15,7 +15,7 @@ export default function Faq() {
             <h2 className="t-head">Perguntas frequentes</h2>
             <p>Respondemos as dúvidas mais comuns para você chegar com mais segurança à sua primeira aula.</p>
             <div className="faq-img">
-              <img src="/images/img14.jpeg" alt="Aluno da Caluar Auto-Escola" />
+              <img src="/images/img14.webp" alt="Aluno da Caluar Auto-Escola" loading="lazy" />
             </div>
           </div>
 
