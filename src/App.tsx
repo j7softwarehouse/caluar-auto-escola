@@ -1,48 +1,37 @@
-import { AdminProvider } from './context/AdminContext'
 import Navbar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
-import HighlightsCarousel from './components/sections/HighlightsCarousel'
-import CredentialsBar from './components/sections/CredentialsBar'
+import Ticker from './components/sections/Ticker'
+import StatsBar from './components/sections/StatsBar'
 import Dores from './components/sections/Dores'
-import About from './components/sections/About'
-import Differentials from './components/sections/Differentials'
-import Services from './components/sections/Services'
-import CnhBrasil from './components/sections/CnhBrasil'
-import Process from './components/sections/Process'
-import Gallery from './components/sections/Gallery'
-import Testimonials from './components/sections/Testimonials'
+import Categorias from './components/sections/Categorias'
+import Sobre from './components/sections/Sobre'
+import Processo from './components/sections/Processo'
+import Avaliacoes from './components/sections/Avaliacoes'
+import Galeria from './components/sections/Galeria'
 import Faq from './components/sections/Faq'
-import ContactForm from './components/sections/ContactForm'
-import CoursesSpecialized from './components/sections/CoursesSpecialized'
-import LocationInfo from './components/sections/LocationInfo'
+import Contato from './components/sections/Contato'
+import Mapa from './components/sections/Mapa'
 import Footer from './components/layout/Footer'
-import AdminToggle from './components/admin/AdminToggle'
-import PromoPopup from './components/ui/PromoPopup'
+import WhatsAppFloat from './components/ui/WhatsAppFloat'
 
-function App() {
+export default function App() {
   return (
-    <AdminProvider>
+    <>
       <Navbar />
       <Hero />
-      <HighlightsCarousel />
-      <CredentialsBar />
+      <Ticker />
+      <StatsBar />
       <Dores />
-      <About />
-      <Differentials />
-      <Services />
-      <CnhBrasil />
-      <Process />
-      <Gallery />
-      <Testimonials />
+      <Categorias />
+      <Sobre />
+      <Processo />
+      <Avaliacoes />
+      <Galeria />
       <Faq />
-      <ContactForm />
-      <CoursesSpecialized />
-      <LocationInfo />
+      <Contato />
+      <Mapa />
       <Footer />
-      <AdminToggle />
-      <PromoPopup />
-    </AdminProvider>
+      <WhatsAppFloat />
+    </>
   )
 }
-
-export default App

@@ -1,0 +1,19 @@
+/* === NAV === */
+/* Divergencia deliberada da referencia (fundo navy): usuario pediu para manter
+   o cabecalho como na versao validada em producao (commit 218e282) - fundo
+   branco e logo original colorido, sem filtro. */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;display:flex;align-items:center;background:#fff;border-bottom:1px solid var(--bd)}
+.nav-w{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1140px;margin:0 auto;padding:0 1.5rem}
+.nav-logo img{height:40px}
+.nav-ul{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-ul a{color:var(--mt);font-size:.875rem;font-weight:400;transition:.2s}
+.nav-ul a:hover{color:var(--nv2)}
+/* .nav-ul a tem mais especificidade que .btn-am sozinho e vencia a cor do
+   CTA "Fale conosco", deixando-o cinza-azulado em vez do navy do botao. */
+.nav-ul .btn-am{color:var(--nv)}
+.bur{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.bur span{display:block;width:22px;height:2px;background:var(--nv2);border-radius:2px;transition:.3s}
+.mob{display:none;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--bd);padding:1.5rem;gap:.7rem;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.mob.on{display:flex}
+.mob a{color:var(--mt);font-size:.95rem;padding:.4rem 0;border-bottom:1px solid var(--bd)}
+.mob .btn-am{border:none;text-align:center;justify-content:center}

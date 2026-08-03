@@ -1,0 +1,20 @@
+/* === FOOTER === */
+footer{background:#070e1c;padding:3.5rem 0 1.75rem}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:2.25rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:1.5rem}
+/* filter sobreposto por style={{filter:'none'}} em Footer.tsx: logo_caluar_branca.jpg e JPEG opaco (sem alpha), mesmo motivo documentado em nav.css — este filtro pressupoe PNG com transparencia */
+.ft-brand img{height:28px;margin-bottom:1.1rem;filter:brightness(0) invert(1)}
+.ft-tag{font-size:.8rem;color:rgba(255,255,255,.28);line-height:1.65;font-weight:300;max-width:250px;margin-bottom:1.25rem}
+.ft-soc{display:flex;gap:7px}
+.fsl{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:.22s}
+.fsl:hover{background:var(--am);border-color:var(--am)}
+.fsl:hover svg{color:var(--nv)}
+.fsl svg{width:14px;height:14px;color:rgba(255,255,255,.45);transition:color .22s}
+.ft-col h4{font-family:'Manrope',sans-serif;font-weight:700;font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1rem}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.ft-col ul li a{color:rgba(255,255,255,.32);font-size:.8rem;font-weight:300;transition:.2s}
+.ft-col ul li a:hover{color:#fff}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.ft-copy{font-size:.73rem;color:rgba(255,255,255,.16);font-weight:300}
+.ft-by{display:flex;align-items:center;gap:7px;font-size:.7rem;color:rgba(255,255,255,.18);font-weight:300}
+.ft-by img{height:19px;opacity:.38;transition:.22s;filter:brightness(0) invert(1)}
+.ft-by:hover img{opacity:.65}

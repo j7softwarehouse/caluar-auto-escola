@@ -58,3 +58,14 @@ Thumbs.db
 
 # Misc
 *.pem
+
+# Artefatos de build TypeScript (não devem existir; ver noEmit no tsconfig)
+src/**/*.js
+src/**/*.d.ts
+src/**/*.map
+
+# Build de producao — o Cloudflare Pages reconstroi via wrangler.toml
+dist/
+
+# Screenshots de verificação visual
+docs/superpowers/screenshots/
