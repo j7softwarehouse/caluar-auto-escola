@@ -1,0 +1,17 @@
+.faq{background:var(--wh)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.faq-l h2{font-size:clamp(1.9rem,3vw,2.5rem);color:var(--nv2);margin:.75rem 0 1rem}
+.faq-l p{color:var(--mt);font-size:.93rem;line-height:1.75;font-weight:300;margin-bottom:1.75rem}
+.faq-img{border-radius:12px;overflow:hidden;box-shadow:var(--sh)}
+.faq-img img{width:100%;height:280px;object-fit:cover;object-position:center}
+.faq-r{}
+.fi{border-bottom:1px solid var(--bd)}
+.fq{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 0;cursor:pointer;gap:1rem}
+.fq h3{font-size:.94rem;font-weight:500;color:var(--nv2);line-height:1.45}
+.ftog{width:30px;height:30px;border-radius:50%;background:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.22s}
+.ftog svg{width:14px;height:14px;color:var(--nv2);transition:transform .35s}
+.fi.on .ftog{background:var(--am)}
+.fi.on .ftog svg{transform:rotate(45deg)}
+.fans{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.25,0,0,1)}
+.fans-i{padding:0 0 1.2rem;font-size:.875rem;color:var(--mt);line-height:1.82;font-weight:300}
+.fi.on .fans{max-height:260px}

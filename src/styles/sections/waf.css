@@ -1,0 +1,5 @@
+/* === WA FLOAT === */
+.waf{position:fixed;bottom:24px;right:24px;z-index:200;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 5px 20px rgba(37,211,102,.4);transition:.22s;animation:wap 2.8s infinite}
+.waf:hover{transform:scale(1.09);box-shadow:0 7px 28px rgba(37,211,102,.5)}
+.waf svg{width:25px;height:25px;color:#fff}
+@keyframes wap{0%,100%{box-shadow:0 5px 20px rgba(37,211,102,.4),0 0 0 0 rgba(37,211,102,.2)}55%{box-shadow:0 5px 20px rgba(37,211,102,.4),0 0 0 14px rgba(37,211,102,0)}}

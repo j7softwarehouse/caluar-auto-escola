@@ -1,86 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/layout.css';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import './styles/sections/nav.css';
+@import './styles/sections/hero.css';
+@import './styles/sections/ticker.css';
+@import './styles/sections/stats.css';
+@import './styles/sections/dor.css';
+@import './styles/sections/serv.css';
+@import './styles/sections/sobre.css';
+@import './styles/sections/proc.css';
+@import './styles/sections/avs.css';
+@import './styles/sections/gal.css';
+@import './styles/sections/faq.css';
+@import './styles/sections/form.css';
+@import './styles/sections/map.css';
+@import './styles/sections/footer.css';
+@import './styles/sections/waf.css';
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 72px;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  color: #1A1A2E;
-  background-color: #fff;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Typography - Manrope para títulos */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.018em;
-}
-
-h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-}
-
-h2 {
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
-  font-weight: 700;
-}
-
-h3 {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 700;
-}
-
-h4, h5, h6 {
-  font-weight: 600;
-}
-
-/* Typography - Inter para corpo */
-p, span, a, li {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-}
-
-strong {
-  font-weight: 600;
-}
-
-/* Buttons herdam fontes corretas */
-button {
-  font-family: inherit;
-}
-
-/* Seções - espaçamento padrão */
-section {
-  padding: 5.5rem 0;
-}
-
-/* Animations */
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: all 0.7s ease;
-}
-
-.fade-in.is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-/* Smooth transitions */
-a, button {
-  transition: all 0.3s ease;
-}
+@import './styles/responsive.css';

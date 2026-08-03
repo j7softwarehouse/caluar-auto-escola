@@ -1,0 +1,33 @@
+/* === AVALIAÇÕES === */
+.avs{background:var(--bg)}
+.avs-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1.5rem}
+.avs-score{display:flex;align-items:center;gap:1.25rem}
+.gscore{font-family:'Manrope',sans-serif;font-weight:800;font-size:3.5rem;color:var(--nv2);line-height:1}
+.ginfo{}
+.gstars{display:flex;gap:2px;margin-bottom:4px}
+.gstars svg{width:18px;height:18px;color:#FBBF24}
+.gcnt{font-size:.78rem;color:var(--mt);font-weight:300}
+.avs-head h2{font-size:clamp(1.7rem,2.8vw,2.3rem);color:var(--nv2);margin:.5rem 0 .4rem}
+.avs-head p{font-size:.9rem;color:var(--mt);font-weight:300}
+
+/* carousel */
+.car-wrap{overflow:hidden}
+.car-track{display:flex;gap:1.1rem;transition:transform .5s cubic-bezier(.25,0,0,1)}
+.rev{flex:0 0 calc(33.333% - .75rem);background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.75rem;transition:.25s}
+.rev:hover{box-shadow:var(--sh);transform:translateY(-3px)}
+.rev-top{display:flex;align-items:center;gap:10px;margin-bottom:.85rem}
+.rav{width:40px;height:40px;border-radius:50%;background:var(--nv2);display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:.9rem;color:var(--am);flex-shrink:0}
+.rname{font-weight:600;font-size:.87rem;color:var(--nv2)}
+.rdate{font-size:.72rem;color:var(--mt);font-weight:300}
+.rstars{display:flex;gap:2px;margin-bottom:.7rem}
+.rstars svg{width:13px;height:13px;color:#FBBF24}
+.rtext{font-size:.875rem;color:var(--mt);line-height:1.75;font-weight:300;font-style:italic}
+.rtext::before{content:open-quote;color:var(--am);font-size:1.1rem}
+.rtext::after{content:close-quote;color:var(--am);font-size:1.1rem}
+.car-ctrl{display:flex;gap:.75rem;justify-content:center;margin-top:2rem}
+.cbtn{width:42px;height:42px;border-radius:50%;background:var(--wh);border:2px solid var(--bd);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--nv2);transition:.22s}
+.cbtn:hover{background:var(--nv2);border-color:var(--nv2);color:#fff}
+.cbtn svg{width:16px;height:16px}
+.cdots{display:flex;justify-content:center;gap:6px;margin-top:1rem}
+.cdot{width:7px;height:7px;border-radius:50%;background:var(--bd);transition:.3s;cursor:pointer}
+.cdot.on{background:var(--nv2);width:20px;border-radius:4px}

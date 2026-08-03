@@ -1,22 +1,38 @@
-import { useState, useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
-export function useCarousel(itemCount: number, autoPlayInterval = 5000) {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isAutoPlay, setIsAutoPlay] = useState(true)
+/**
+ * Carousel generico por "itens visiveis por viewport" (spv).
+ * Reescrito na Task 13 a partir da logica original em vanilla JS da
+ * referencia (docs/caluar_hybrid.html, linhas 824-845): recalcula spv e
+ * o indice maximo a cada resize, e prende o indice atual ao novo maximo
+ * (senao o track fica deslocado para fora da tela ao encolher a janela).
+ */
+export function useCarousel(total: number, porView: (largura: number) => number) {
+  const [indice, setIndice] = useState(0)
+  const [spv, setSpv] = useState(() => porView(typeof window === 'undefined' ? 1440 : window.innerWidth))
 
   useEffect(() => {
-    if (!isAutoPlay) return
+    const onResize = () => setSpv(porView(window.innerWidth))
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [porView])
 
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % itemCount)
-    }, autoPlayInterval)
+  const maxIndice = Math.max(0, total - spv)
 
-    return () => clearInterval(timer)
-  }, [isAutoPlay, itemCount, autoPlayInterval])
+  useEffect(() => {
+    setIndice((atual) => Math.min(atual, maxIndice))
+  }, [maxIndice])
 
-  const next = () => setCurrentIndex((prev) => (prev + 1) % itemCount)
-  const prev = () => setCurrentIndex((prev) => (prev - 1 + itemCount) % itemCount)
-  const goTo = (index: number) => setCurrentIndex(Math.max(0, Math.min(index, itemCount - 1)))
+  const irPara = useCallback(
+    (n: number) => setIndice(Math.max(0, Math.min(n, maxIndice))),
+    [maxIndice]
+  )
 
-  return { currentIndex, next, prev, goTo, setIsAutoPlay }
+  return {
+    indice,
+    maxIndice,
+    irPara,
+    anterior: () => irPara(indice - 1),
+    proximo: () => irPara(indice + 1),
+  }
 }

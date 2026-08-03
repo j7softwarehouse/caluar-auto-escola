@@ -1,41 +1,78 @@
-import { ReactNode, useEffect } from 'react'
+import { useEffect } from 'react'
+import { Icone } from '../icons'
+import type { Foto } from '../../data/types'
 
 interface LightboxProps {
-  isOpen: boolean
-  onClose: () => void
-  children: ReactNode
+  fotos: Foto[]
+  indice: number | null
+  aoFechar: () => void
+  aoTrocar: (n: number) => void
 }
 
-export default function Lightbox({ isOpen, onClose, children }: LightboxProps) {
+/**
+ * Lightbox global, reescrito a partir da referencia (docs/caluar_hybrid.html,
+ * linha 634 para o markup e linhas 894-930 para o comportamento original em
+ * vanilla JS: lbOpen/lbClose/lbShow). Aqui o "aberto" e controlado pelo
+ * indice recebido de Galeria (null = fechado).
+ *
+ * O efeito trava o scroll da pagina (`body.style.overflow = 'hidden'`)
+ * enquanto o lightbox esta aberto e SEMPRE restaura no cleanup - inclusive
+ * se o componente for desmontado com o lightbox aberto - senao a pagina
+ * fica travada permanentemente. O listener de teclado (Esc/setas) so fica
+ * ativo enquanto `indice !== null`.
+ */
+export default function Lightbox({ fotos, indice, aoFechar, aoTrocar }: LightboxProps) {
   useEffect(() => {
-    if (!isOpen) return
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
+    if (indice === null) return
+    document.body.style.overflow = 'hidden'
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') aoFechar()
+      if (e.key === 'ArrowLeft') aoTrocar((indice - 1 + fotos.length) % fotos.length)
+      if (e.key === 'ArrowRight') aoTrocar((indice + 1) % fotos.length)
     }
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [indice, fotos.length, aoFechar, aoTrocar])
 
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isOpen, onClose])
-
-  if (!isOpen) return null
+  if (indice === null) return null
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
-      onClick={onClose}
-    >
-      <div className="relative max-w-4xl w-full mx-4" onClick={(e) => e.stopPropagation()}>
-        {children}
-        <button
-          onClick={onClose}
-          className="absolute -top-10 right-0 text-white hover:text-accent transition-colors"
-          aria-label="Fechar"
-        >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
+    <div className="lb on">
+      <div className="lb-bg" onClick={aoFechar} />
+      <div className="lb-inner">
+        <button className="lb-close" onClick={aoFechar} aria-label="Fechar">
+          <Icone nome="fechar" />
         </button>
+        <button
+          className="lb-nav lb-prev"
+          onClick={() => aoTrocar((indice - 1 + fotos.length) % fotos.length)}
+          aria-label="Foto anterior"
+        >
+          <Icone nome="seta-esq" />
+        </button>
+        <div className="lb-slides">
+          {fotos.map((foto, i) => (
+            <div className={`lb-slide${i === indice ? ' on' : ''}`} key={foto.src}>
+              <img src={foto.src} alt={foto.legenda} />
+            </div>
+          ))}
+        </div>
+        <button
+          className="lb-nav lb-next"
+          onClick={() => aoTrocar((indice + 1) % fotos.length)}
+          aria-label="Próxima foto"
+        >
+          <Icone nome="seta-dir" />
+        </button>
+        <div className="lb-info">
+          <span className="lb-lbl">{fotos[indice].legenda}</span>
+          <span className="lb-counter">
+            {indice + 1} / {fotos.length}
+          </span>
+        </div>
       </div>
     </div>
   )
