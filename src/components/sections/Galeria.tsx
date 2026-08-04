@@ -63,7 +63,7 @@ export default function Galeria() {
             {GALERIA.map((foto, i) => (
               <div className="gs-item" key={foto.src} onClick={() => setLightboxIndice(i)}>
                 <div className="gs-img">
-                  <img src={foto.src} alt={foto.legenda} />
+                  <img src={foto.src} alt={foto.legenda} loading="lazy" />
                 </div>
                 <div className="gs-cap">
                   <span className="gs-num">{String(i + 1).padStart(2, '0')}</span>

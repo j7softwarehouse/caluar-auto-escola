@@ -43,10 +43,15 @@ yarn-error.log*
 lerna-debug.log*
 build.log
 
-# Screenshots & Images
+# Screenshots & Images (nao aplica a public/ - essas sao os assets do site)
 *.png
 *.jpg
 *.jpeg
+!public/**/*.png
+!public/**/*.jpg
+!public/**/*.JPG
+!public/**/*.jpeg
+!public/**/*.webp
 screenshot-*.js
 
 # OS

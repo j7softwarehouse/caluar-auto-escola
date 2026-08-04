@@ -20,6 +20,10 @@ export function useCarousel(total: number, porView: (largura: number) => number)
   const maxIndice = Math.max(0, total - spv)
 
   useEffect(() => {
+    // Ajusta o indice quando maxIndice muda (ex: resize encolhe spv) - padrao
+    // documentado pelo proprio React para estado derivado de uma dependencia
+    // (https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIndice((atual) => Math.min(atual, maxIndice))
   }, [maxIndice])
 
