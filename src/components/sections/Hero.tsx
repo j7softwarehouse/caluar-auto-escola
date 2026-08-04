@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-bg">
-        <img src="/images/img2.jpeg" alt="" />
+        <img src="/images/img2.webp" alt="" />
       </div>
       <div className="hero-ov"></div>
       <div className="c" style={{ width: '100%' }}>
@@ -58,11 +58,11 @@ export default function Hero() {
             </div>
             <div className="hc-imgs">
               <div className="hc-img">
-                <img src="/images/img3.jpeg" alt="Equipe Caluar" />
+                <img src="/images/img3.webp" alt="Equipe Caluar" />
                 <span>Equipe Caluar</span>
               </div>
               <div className="hc-img">
-                <img src="/images/img13.jpeg" alt="Turma aprovada" />
+                <img src="/images/img13.webp" alt="Turma aprovada" />
                 <span>Turma aprovada</span>
               </div>
             </div>

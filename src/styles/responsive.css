@@ -38,6 +38,7 @@
 }
 @media(max-width:520px){.hero-in{padding:3rem 0 2.5rem}.hero h1{font-size:clamp(1.9rem,8vw,2.8rem)}
   .stats-grid{grid-template-columns:1fr 1fr}
+  .stat-num{font-size:clamp(1.6rem,7vw,2.6rem)}
   .dor-grid{grid-template-columns:1fr}
   .serv-grid{grid-template-columns:1fr}
   .frow{grid-template-columns:1fr}

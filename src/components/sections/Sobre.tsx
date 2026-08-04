@@ -13,8 +13,8 @@ export default function Sobre() {
       <div className="c">
         <div className="sobre-grid">
           <div className="sobre-imgs">
-            <img src="/images/img1.JPG" alt="Equipe Caluar" className="sim" />
-            <img src="/images/img3.jpeg" alt="Turma Caluar" className="sis" />
+            <img src="/images/img1.webp" alt="Equipe Caluar" className="sim" loading="lazy" />
+            <img src="/images/img3.webp" alt="Turma Caluar" className="sis" loading="lazy" />
           </div>
 
           <div className="sobre-txt">
