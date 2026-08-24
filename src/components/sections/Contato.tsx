@@ -27,13 +27,13 @@ export default function Contato() {
       <div className="c">
         <div className="form-grid">
           <div className="form-l">
-            <span className="chip">Solicite sua matrícula</span>
+            <span className="chip">Sua CNH pode começar hoje</span>
             <h2 className="t-head">
-              Pronto para começar? <em>Fale com a gente.</em>
+              Fale com a equipe da Caluar e descubra a melhor forma de <em>iniciar sua habilitação</em>.
             </h2>
             <p>
-              Preencha o formulário e nossa equipe entra em contato em até 24 horas, ou fale
-              diretamente pelos canais abaixo.
+              Preencha o formulário e nossa equipe entra em contato em até 24 horas. Se preferir,
+              fale diretamente pelos canais abaixo.
             </p>
             <div className="cinfo">
               <div className="ci">
@@ -41,7 +41,7 @@ export default function Contato() {
                   <Icone nome="whatsapp" />
                 </div>
                 <div className="ci-tx">
-                  <strong>WhatsApp</strong>
+                  <strong>Telefone e WhatsApp</strong>
                   <a href={waLink('Oi Caluar, quero minha CNH.')} target="_blank" rel="noopener noreferrer">
                     {CONTATO.telefone}
                   </a>
@@ -49,11 +49,13 @@ export default function Contato() {
               </div>
               <div className="ci">
                 <div className="ci-ic">
-                  <Icone nome="telefone" />
+                  <Icone nome="instagram" />
                 </div>
                 <div className="ci-tx">
-                  <strong>Telefone</strong>
-                  <a href={CONTATO.telefoneHref}>{CONTATO.telefone}</a>
+                  <strong>Instagram</strong>
+                  <a href={CONTATO.instagram} target="_blank" rel="noopener noreferrer">
+                    @autoescolacaluar
+                  </a>
                 </div>
               </div>
               <div className="ci">

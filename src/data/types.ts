@@ -39,7 +39,6 @@ export interface Pergunta {
 
 export interface Foto {
   src: string
-  legenda: string
 }
 
 export interface Stat {

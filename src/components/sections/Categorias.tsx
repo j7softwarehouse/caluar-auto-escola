@@ -12,10 +12,12 @@ export default function Categorias() {
       <div className="c">
         <div className="serv-head">
           <span className="chip">Tudo que você precisa para sua habilitação</span>
-          <h2 className="t-head">Todas as categorias disponíveis</h2>
+          <h2 className="t-head">
+            Da primeira habilitação à <em>carreira profissional</em>
+          </h2>
           <p>
-            Da moto ao caminhão, a Caluar tem o curso certo. Primeira habilitação, adição de
-            categoria ou reciclagem.
+            Primeira habilitação, curso teórico, adição e mudança de categoria, renovação,
+            reciclagem e cursos especializados para motoristas profissionais.
           </p>
         </div>
 

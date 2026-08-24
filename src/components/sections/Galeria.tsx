@@ -14,10 +14,7 @@ const itensPorView = (largura: number) => (largura <= 768 ? 1 : largura <= 1100 
  * 883). Clicar num item abre o lightbox naquele indice.
  */
 export default function Galeria() {
-  const { indice, maxIndice, irPara, anterior, proximo } = useCarousel(
-    GALERIA.length,
-    itensPorView
-  )
+  const { indice, anterior, proximo } = useCarousel(GALERIA.length, itensPorView)
 
   const trackRef = useRef<HTMLDivElement>(null)
   const [passo, setPasso] = useState(0)
@@ -38,11 +35,14 @@ export default function Galeria() {
       <div className="c">
         <div className="gal-hd">
           <div>
-            <span className="chip">Momentos reais</span>
+            <span className="chip">Conquistas reais. Pessoas reais.</span>
             <h2 className="t-head">
-              Nossa galeria de <em style={{ color: 'var(--am)' }}>aprovados</em>
+              Veja alguns dos alunos que conquistaram{' '}
+              <em style={{ color: 'var(--am)' }}>a CNH</em> com a Caluar.
             </h2>
-            <p className="sub">Cada foto é uma história de conquista. Clique para ampliar.</p>
+            <p className="sub">
+              Cada aprovação representa uma nova fase, mais liberdade e um sonho realizado.
+            </p>
           </div>
           <div className="gal-ctrl">
             <button className="gc-btn" onClick={anterior} aria-label="Fotos anteriores">
@@ -63,40 +63,11 @@ export default function Galeria() {
             {GALERIA.map((foto, i) => (
               <div className="gs-item" key={foto.src} onClick={() => setLightboxIndice(i)}>
                 <div className="gs-img">
-                  <img src={foto.src} alt={foto.legenda} loading="lazy" />
-                </div>
-                <div className="gs-cap">
-                  <span className="gs-num">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="gs-lbl">{foto.legenda}</span>
-                  <span className="gs-arrow">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                      />
-                    </svg>
-                  </span>
+                  <img src={foto.src} alt="Aluno aprovado na Caluar Auto-Escola" loading="lazy" />
                 </div>
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="gs-dots">
-          {Array.from({ length: maxIndice + 1 }).map((_, i) => (
-            <div
-              className={`gs-dot${i === indice ? ' on' : ''}`}
-              key={i}
-              onClick={() => irPara(i)}
-            />
-          ))}
         </div>
       </div>
 

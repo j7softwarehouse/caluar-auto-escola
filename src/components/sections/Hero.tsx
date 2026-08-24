@@ -38,9 +38,6 @@ export default function Hero() {
                 <Icone nome="whatsapp" />
                 Quero minha CNH
               </a>
-              <a href="#sobre" className="btn btn-ot btn-lg">
-                Conhecer a escola
-              </a>
             </div>
           </div>
 

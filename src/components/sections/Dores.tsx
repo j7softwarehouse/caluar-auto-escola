@@ -9,10 +9,13 @@ export default function Dores() {
       <div className="c">
         <div className="dor-head">
           <span className="chip">Entendemos você</span>
-          <h2 className="t-head">A CNH parece mais difícil do que deveria?</h2>
+          <h2 className="t-head">
+            Muita gente adia a própria liberdade porque nunca dá o primeiro passo.
+          </h2>
           <p>
-            Uma autoescola de verdade resolve isso com clareza, compromisso e um processo que
-            acompanha você do início ao fim.
+            É medo, insegurança, falta de tempo, dinheiro ou achar que o processo vai ser
+            complicado demais. A Caluar nasceu justamente para ajudar pessoas que se sentem
+            assim.
           </p>
         </div>
 
