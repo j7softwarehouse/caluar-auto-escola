@@ -13,5 +13,5 @@
 .fi.on .ftog{background:var(--am)}
 .fi.on .ftog svg{transform:rotate(45deg)}
 .fans{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.25,0,0,1)}
-.fans-i{padding:0 0 1.2rem;font-size:.875rem;color:var(--mt);line-height:1.82;font-weight:300}
-.fi.on .fans{max-height:260px}
+.fans-i{padding:0 0 1.2rem;font-size:.875rem;color:var(--mt);line-height:1.82;font-weight:300;white-space:pre-line}
+.fi.on .fans{max-height:320px}
