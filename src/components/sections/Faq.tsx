@@ -10,10 +10,14 @@ export default function Faq() {
     <section className="sec faq" id="faq">
       <div className="c">
         <div className="faq-grid">
-          <div>
-            <span className="chip">Tire suas dúvidas</span>
+          <div className="faq-l">
+            <span className="chip">Ainda ficou com alguma dúvida?</span>
             <h2 className="t-head">Perguntas frequentes</h2>
-            <p>Respondemos as dúvidas mais comuns para você chegar com mais segurança à sua primeira aula.</p>
+            <p>
+              Respondemos as perguntas mais comuns sobre matrícula, aulas, exames, documentos,
+              pagamentos e todo o processo da habilitação. Tudo para que você comece sua jornada
+              com mais segurança, tranquilidade e confiança.
+            </p>
             <div className="faq-img">
               <img src="/images/img14.webp" alt="Aluno da Caluar Auto-Escola" loading="lazy" />
             </div>

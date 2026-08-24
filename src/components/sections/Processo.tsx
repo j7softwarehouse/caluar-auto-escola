@@ -11,9 +11,9 @@ export default function Processo() {
     <section className="sec proc">
       <div className="c proc-in">
         <div>
-          <span className="chip">Um processo acompanhado em cada etapa</span>
+          <span className="chip">Um processo simples, com todo suporte e sem complicação</span>
           <h2 className="t-head">
-            Do cadastro à <em>CNH na mão.</em>
+            Da matrícula até sua <em>CNH em mãos</em>
           </h2>
           <p className="sub">Cuidamos de tudo para você se preocupar apenas em aprender.</p>
         </div>

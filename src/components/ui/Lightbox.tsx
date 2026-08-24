@@ -56,7 +56,7 @@ export default function Lightbox({ fotos, indice, aoFechar, aoTrocar }: Lightbox
         <div className="lb-slides">
           {fotos.map((foto, i) => (
             <div className={`lb-slide${i === indice ? ' on' : ''}`} key={foto.src}>
-              <img src={foto.src} alt={foto.legenda} />
+              <img src={foto.src} alt="Aluno aprovado na Caluar Auto-Escola" />
             </div>
           ))}
         </div>
@@ -68,7 +68,6 @@ export default function Lightbox({ fotos, indice, aoFechar, aoTrocar }: Lightbox
           <Icone nome="seta-dir" />
         </button>
         <div className="lb-info">
-          <span className="lb-lbl">{fotos[indice].legenda}</span>
           <span className="lb-counter">
             {indice + 1} / {fotos.length}
           </span>
