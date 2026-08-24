@@ -40,6 +40,7 @@ export const CATEGORIAS: Categoria[] = [
     itens: [
       'Categoria profissional para transporte de passageiros',
       'Ideal para ônibus, vans e oportunidades profissionais',
+      'Permite dirigir caminhões, tratores e máquinas agrícolas',
       'Possibilidade de recolocação e crescimento profissional',
       'Processo acompanhado do início ao fim',
       'Treinamento em veículo moderno',
@@ -60,12 +61,11 @@ export const CATEGORIAS: Categoria[] = [
     sigla: 'S',
     titulo: 'Cursos Especializados',
     itens: [
-      'MOPP — Transporte de Produtos Perigosos',
-      'TCP — Transporte Coletivo de Passageiros',
-      'Transporte Escolar — Modalidade especializada',
-      'Emergência — Veículos de Emergência',
-      'Carga Indivisível — Especialização profissional',
-      'CNH Brasil — Gratuita para quem precisa: Programa de habilitação subsidiada para pessoas em vulnerabilidade',
+      'MOPP: Transporte de Produtos Perigosos',
+      'TCP: Transporte Coletivo de Passageiros',
+      'Transporte Escolar: Modalidade especializada',
+      'Emergência: Veículos de Emergência',
+      'Carga Indivisível: Especialização profissional',
     ],
   },
 ]

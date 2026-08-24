@@ -8,6 +8,9 @@
 .gstars svg{width:18px;height:18px;color:#FBBF24}
 .gcnt{font-size:.78rem;color:var(--mt);font-weight:300}
 .avs-head h2{font-size:clamp(1.7rem,2.8vw,2.3rem);color:var(--nv2);margin:.5rem 0 .4rem}
+/* max-width para o bloco caber ao lado da nota 4.6 (o .avs-top e flex com
+   wrap: sem o limite, o texto mais longo empurra o bloco para a linha de baixo) */
+.avs-head{max-width:620px}
 .avs-head p{font-size:.9rem;color:var(--mt);font-weight:300}
 
 /* carousel */

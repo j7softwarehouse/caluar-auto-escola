@@ -47,9 +47,12 @@ export default function Avaliacoes() {
             </div>
           </div>
           <div className="avs-head">
-            <span className="chip">Quem passa pela Caluar sente a diferença</span>
+            <span className="chip">Mais do que alunos aprovados</span>
             <h2 className="t-head">O que nossos alunos dizem</h2>
-            <p>Aprovados reais, experiências reais.</p>
+            <p>
+              Veja o que alunos reais falam sobre o atendimento, a experiência e a confiança de
+              aprender com quem acompanha você de verdade.
+            </p>
           </div>
         </div>
 
