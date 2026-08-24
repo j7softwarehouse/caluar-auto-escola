@@ -12,14 +12,21 @@ export default function Mapa() {
       <div className="c">
         <div className="map-grid">
           <div className="map-txt">
-            <span className="chip">Visite nossa autoescola</span>
+            <span className="chip">Venha conhecer a Caluar</span>
             <h2 className="t-head">
               Estamos em <em>Itabirito/MG</em>
             </h2>
+            <p>Estamos prontos para ajudar você a dar o primeiro passo rumo à sua habilitação.</p>
             <p>
-              {CONTATO.endereco}, {CONTATO.bairroCidade}.
+              📍 {CONTATO.endereco}, {CONTATO.bairroCidade}
               <br />
-              Segunda a sexta {CONTATO.horarioSemana}. Sábado {CONTATO.horarioSabado}.
+              Segunda a sexta-feira: {CONTATO.horarioSemana}
+              <br />
+              Sábado: {CONTATO.horarioSabado}
+            </p>
+            <p>
+              Fale com nossa equipe, tire suas dúvidas e descubra a melhor forma de começar sua
+              CNH.
             </p>
             <div style={{ display: 'flex', gap: '.85rem', flexWrap: 'wrap', marginTop: '1.5rem' }}>
               <a
