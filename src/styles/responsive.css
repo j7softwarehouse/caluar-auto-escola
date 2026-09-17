@@ -16,8 +16,10 @@
   .serv-grid{grid-template-columns:1fr 1fr}
   .sobre-grid,.faq-grid,.form-grid,.map-grid{grid-template-columns:1fr}
   .sobre-imgs{height:300px}
-  .sim{width:76%;height:260px}
-  .sis{width:57%;height:175px}
+  .sobre-img-lg{flex:0 0 66%;height:300px}
+  .sobre-img-col{flex:0 0 32%;margin-top:0}
+  .sobre-img-col .sobre-img-sm:last-child{display:none}
+  .sobre-img-sm{height:300px}
   .proc-steps{grid-template-columns:repeat(2,1fr);gap:2rem}
   .proc-steps::before{display:none}
   .avs-top{flex-direction:column;align-items:flex-start}
@@ -28,8 +30,10 @@
 
 @media(max-width:768px){
   .sobre-imgs{height:260px}
-  .sim{width:78%;height:230px}
-  .sis{width:58%;height:155px}
+  .sobre-img-lg{flex:0 0 68%;height:260px}
+  .sobre-img-col{flex:0 0 30%;margin-top:0}
+  .sobre-img-col .sobre-img-sm:last-child{display:none}
+  .sobre-img-sm{height:260px}
   .faq-grid{grid-template-columns:1fr}
   .form-grid{grid-template-columns:1fr}
   .map-grid{grid-template-columns:1fr}
