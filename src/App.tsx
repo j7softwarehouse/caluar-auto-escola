@@ -21,13 +21,13 @@ export default function App() {
       <Hero />
       <Ticker />
       <StatsBar />
-      <Dores />
       <Categorias />
-      <Sobre />
       <Processo />
+      <Sobre />
       <Avaliacoes />
       <Galeria />
       <Faq />
+      <Dores />
       <Contato />
       <Mapa />
       <Footer />

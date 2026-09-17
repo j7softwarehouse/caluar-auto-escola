@@ -1,5 +1,8 @@
 /* === AVALIAÇÕES === */
-.avs{background:var(--bg)}
+/* Fundo branco para separar de .sobre (Nossa Historia), que e --bg. Como a
+   secao ficou branca, os cards e os botoes do carousel invertem para --bg:
+   brancos, eles sumiriam no fundo. */
+.avs{background:var(--wh)}
 .avs-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1.5rem}
 .avs-score{display:flex;align-items:center;gap:1.25rem}
 .gscore{font-family:'Manrope',sans-serif;font-weight:800;font-size:3.5rem;color:var(--nv2);line-height:1}
@@ -16,7 +19,7 @@
 /* carousel */
 .car-wrap{overflow:hidden}
 .car-track{display:flex;gap:1.1rem;transition:transform .5s cubic-bezier(.25,0,0,1)}
-.rev{flex:0 0 calc(33.333% - .75rem);background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.75rem;transition:.25s}
+.rev{flex:0 0 calc(33.333% - .75rem);background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);padding:1.75rem;transition:.25s}
 .rev:hover{box-shadow:var(--sh);transform:translateY(-3px)}
 .rev-top{display:flex;align-items:center;gap:10px;margin-bottom:.85rem}
 .rav{width:40px;height:40px;border-radius:50%;background:var(--nv2);display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:.9rem;color:var(--am);flex-shrink:0}
@@ -28,7 +31,7 @@
 .rtext::before{content:open-quote;color:var(--am);font-size:1.1rem}
 .rtext::after{content:close-quote;color:var(--am);font-size:1.1rem}
 .car-ctrl{display:flex;gap:.75rem;justify-content:center;margin-top:2rem}
-.cbtn{width:42px;height:42px;border-radius:50%;background:var(--wh);border:2px solid var(--bd);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--nv2);transition:.22s}
+.cbtn{width:42px;height:42px;border-radius:50%;background:var(--bg);border:2px solid var(--bd);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--nv2);transition:.22s}
 .cbtn:hover{background:var(--nv2);border-color:var(--nv2);color:#fff}
 .cbtn svg{width:16px;height:16px}
 .cdots{display:flex;justify-content:center;gap:6px;margin-top:1rem}

@@ -53,7 +53,11 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-            <div className="hc-imgs">
+            <div className="hc-imgs hc-imgs-3">
+              <div className="hc-img hc-img-tall">
+                <img src="/images/img1.webp" alt="Motopista própria" />
+                <span>Motopista própria</span>
+              </div>
               <div className="hc-img">
                 <img src="/images/img3.webp" alt="Equipe Caluar" />
                 <span>Equipe Caluar</span>
