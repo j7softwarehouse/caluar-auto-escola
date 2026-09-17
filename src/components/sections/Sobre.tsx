@@ -13,8 +13,29 @@ export default function Sobre() {
       <div className="c">
         <div className="sobre-grid">
           <div className="sobre-imgs">
-            <img src="/images/img1.webp" alt="Equipe Caluar" className="sim" loading="lazy" />
-            <img src="/images/img3.webp" alt="Turma Caluar" className="sis" loading="lazy" />
+            <div className="sobre-img-lg">
+              <img
+                src="/images/IMG_1558.webp"
+                alt="Turma aprovada no programa CNH Brasil"
+                loading="lazy"
+              />
+            </div>
+            <div className="sobre-img-col">
+              <div className="sobre-img-sm">
+                <img
+                  src="/images/img3.webp"
+                  alt="Alunos e equipe da Caluar ao lado do carro de aula"
+                  loading="lazy"
+                />
+              </div>
+              <div className="sobre-img-sm">
+                <img
+                  src="/images/img1.webp"
+                  alt="Aluno na motopista própria da Caluar"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="sobre-txt">
